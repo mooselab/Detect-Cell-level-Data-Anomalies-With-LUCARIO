@@ -6,7 +6,7 @@ from sklearn.cluster import KMeans
 from scipy.stats import chisquare
 
 class RangeDetector:
-    def __init__(self, data, coverage_rate=0.89, multiplier=3):
+    def __init__(self, data, coverage_rate=0.95, multiplier=3):
         self.multiplier = multiplier
         self.coverage_rate = coverage_rate
         self.data = [item for item in data if item != '']
