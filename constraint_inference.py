@@ -1,14 +1,8 @@
-from detectors.pattern_alter import PatternDetector
+from detectors.pattern import PatternDetector
 from detectors.range import RangeDetector
 from detectors.utils import Utils
 import pandas as pd
 import numpy as np
-import string
-from sklearn.cluster import KMeans
-import numpy as np
-import math
-import scipy.stats as stats
-import re
 import json
 
 def get_dataframe(path):
@@ -18,7 +12,6 @@ def get_dataframe(path):
     
 # Get all the datasets
 datasets = ['beers', 'flights', 'hospital', 'HOSP-10k', 'HOSP-100k', 'movies_1']
-datasets = ['hospital']
 coverage_rate = 0
 multiplier = 3
 # Predefine null types
