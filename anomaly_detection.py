@@ -1,13 +1,6 @@
-from detectors.pattern_alter import PatternDetector
-from detectors.range import RangeDetector
 from detectors.utils import Utils
 import pandas as pd
 import numpy as np
-import string
-from sklearn.cluster import KMeans
-import numpy as np
-import math
-import scipy.stats as stats
 import re
 import json
 
