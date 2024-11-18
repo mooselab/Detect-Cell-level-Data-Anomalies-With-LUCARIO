@@ -6,10 +6,9 @@ from sklearn.cluster import KMeans
 import pandas as pd
 
 class PatternDetector:
-    def __init__(self, data, coverage_rate=0.89, entropy_increment = 0.1):
+    def __init__(self, data, coverage_rate=0.95):
         self.coverage_rate = coverage_rate
         self.data = pd.Series([str(i) for i in data])
-        self.entropy_increment = entropy_increment
 
         # Create type mappings and all the combinations
         self.type_mapping = {d:'[0-9]' for d in set(str(i) for i in range(10))}
@@ -48,49 +47,44 @@ class PatternDetector:
             else:
                 tr_templates[template] = {'count':1, 'delimiter_bag':delimiter_bag}
         # Sort the templates using length
-        sorted_tr_templates = {item[0]: item[1] for item in sorted(tr_templates.items(), key=lambda x: x[1]['count'], reverse=True)}
+        sorted_tr_templates = {item[0]: item[1] for item in sorted(tr_templates.items(), key=lambda x: x[1]['count'])}
         # At least half of the tokens
         templates, frequencies = list(sorted_tr_templates.keys()), [v['count'] for v in sorted_tr_templates.values()]
         self.accepted_templates = [templates[0]]
-        index = None
-        for i in range(1, len(templates)):
-            index = i
-            current_freq = [tr_templates[t]['count'] for t in self.accepted_templates]
-            appended_freq = current_freq + [tr_templates[templates[i]]['count']]
-            appended_e = Utils.entropy([f/len(self.data) for f in appended_freq])
-            current_e = Utils.entropy([f/len(self.data) for f in current_freq])
-            if appended_e - current_e < self.entropy_increment:
-                break
-            self.accepted_templates.append(templates[i])
-        
-        current_freq = [tr_templates[template]['count'] for template in self.accepted_templates]
-        # Try to merge the rest ones
-        for template in templates[index:-1]:
-            for target in self.accepted_templates:
-                if Utils.list_contains_in_order(tr_templates[template]['delimiter_bag'], tr_templates[target]['delimiter_bag']) and template[0] == target[0] and template[-1] == target[-1]:
-                    i = self.accepted_templates.index(target)
-                    current_freq[i] += tr_templates[template]['count']
-                    break
-        # Sort based on the values of list1
-        sorted_lists = sorted(zip(current_freq, self.accepted_templates))
-        current_freq, self.accepted_templates = (zip(*sorted_lists))
-        current_freq = [1] + current_freq
-        cut = -1
-        max_ratio = 1
-        for i,f in enumerate(current_freq):
-            if i != len(current_freq)-1:
-                if current_freq[i+1]/current_freq[i] > max_ratio:
-                    cut = i
-                    max_ratio = current_freq[i+1]/current_freq[i]
-
         # Update the delimiter bag
-        if len(self.accepted_templates) == 1:
-            self.delimiter_bags = [tr_templates[t]['delimiter_bag'] for t in self.accepted_templates]     
-        elif cut != -1 and len(current_freq[cut:]) <= 16 and sum(current_freq[cut:])/len(self.data) > self.coverage_rate:
-            self.accepted_templates = self.accepted_templates[cut:]
+        if len(templates) == 1:
             self.delimiter_bags = [tr_templates[t]['delimiter_bag'] for t in self.accepted_templates]
+        
         else:
-            self.accepted_templates = []
+            self.accepted_templates = templates
+            current_freq = [tr_templates[template]['count'] for template in self.accepted_templates]
+            # Sort based on the values of list1
+            sorted_lists = sorted(zip(current_freq, self.accepted_templates))
+            current_freq, self.accepted_templates = (zip(*sorted_lists))
+            cut = -1
+            max_ratio = 1
+            current_freq = [1] + list(current_freq)
+            for i,f in enumerate(current_freq):
+                if i != len(current_freq)-1:
+                    if current_freq[i+1]/current_freq[i] > max_ratio:
+                        cut = i
+                        max_ratio = current_freq[i+1]/current_freq[i]
+            # Update the delimiter bag
+            if len(self.accepted_templates) == 1:
+                self.delimiter_bags = [tr_templates[t]['delimiter_bag'] for t in self.accepted_templates]     
+            elif cut != -1:
+                
+                if sum(current_freq[cut+1:])/sum(current_freq) > self.coverage_rate:
+                    self.accepted_templates = self.accepted_templates[cut:]
+                    self.delimiter_bags = [tr_templates[t]['delimiter_bag'] for t in self.accepted_templates]
+                else: self.accepted_templates = []
+            '''
+            elif cut != -1 and sum(current_freq[cut:])/sum(current_freq) > self.coverage_rate:
+                self.accepted_templates = self.accepted_templates[cut:]
+                self.delimiter_bags = [tr_templates[t]['delimiter_bag'] for t in self.accepted_templates]
+            else:
+                self.accepted_templates = []
+                '''
         
     def match_into_templates(self):
         self.template_information = {self.accepted_templates[i]:{'delimiter_bag':self.delimiter_bags[i], 'records':[[] for j in range(self.accepted_templates[i].count('TOKEN'))]} for i in range(len(self.accepted_templates))}
@@ -101,70 +95,9 @@ class PatternDetector:
             (item_template, token_bag, delimiter_bag) = Utils.record_info(self.special_char, str(item))
             for template in sorted_templates_list:
                 # Get the alignment
-                matched, alignment = Utils.list_contains_in_order(delimiter_bag, sorted_templates[template]['delimiter_bag'], True)
-                if matched and item_template[0] == template[0] and item_template[-1] == template[-1]:
-                    if len(sorted_templates[template]['records']) == 1:
-                        token = ''
-                        for i in range(len(token_bag)):
-                            if i < len(delimiter_bag) and len(alignment) == 0:
-                                token += token_bag[i] + re.escape(delimiter_bag[i])
-                            else:
-                                token += token_bag[i]
-                        sorted_templates[template]['records'][0].append(token)
-                        break
-                    else:
-                        # How does it start (start with token/with 0)
-                        if template[0] == 'T' or alignment[0] == '0':
-                            index = 0
-                            if template[0] == 'T':
-                                token = token_bag[0]
-                                token_bag = token_bag[1:]
-                            else: token = ''
-                            for i in range(len(alignment)):
-                                # Append the delimiter and the token
-                                if alignment[i] == index:
-                                    token += delimiter_bag[i]
-                                    if i < len(token_bag):
-                                        token += token_bag[i]
-                                # Push the token
-                                else:
-                                    
-                                    if index != 0 and token == '': break
-                                    sorted_templates[template]['records'][index].append(token)
-                                    index += 1
-                                    if i < len(token_bag):
-                                        token = token_bag[i]
-                                    else:
-                                        # Nothing to append
-                                        token = ''
-                        # Start with delimiter
-                        else:
-                            alignment = [a-1 for a in alignment]
-                            index = 0
-                            delimiter_bag = delimiter_bag[1:]
-                            alignment = alignment[1:]
-                            token = token_bag[0]
-                            token_bag = token_bag[1:]
-                            for i in range(len(alignment)):
-                                # Append the delimiter and the token
-                                if alignment[i] == index:
-                                    token += delimiter_bag[i]
-                                    if i < len(token_bag):
-                                        token += token_bag[i]
-                                # Push the token
-                                else:
-                                    if index != 0 and token == '': break
-                                    sorted_templates[template]['records'][index].append(token)
-                                    index += 1
-                                    if i < len(token_bag):
-                                        token = token_bag[i]
-                                    else:
-                                        # Nothing to append
-                                        token = ''
-                        # Push the last one 
-                        if token != '':
-                            sorted_templates[template]['records'][-1].append(token)
-                        break
+                if item_template == template:
+                    for i, token in enumerate(token_bag):
+                        sorted_templates[template]['records'][i].append(token)
 
     def token_length_constraint_detection(self, split_token_list):
         # Convert to strings to find the length
@@ -181,9 +114,7 @@ class PatternDetector:
         sorted_length = dict(sorted(lengths.items(), key=lambda item: item[1], reverse=True))
         frequencies = list(sorted_length.values())
         
-        e = Utils.entropy([f/sum(frequencies) for f in frequencies])
-        e_threshold = Utils.entropy([1/len(frequencies)]*len(frequencies))
-        if e <= e_threshold/2:
+        if frequencies[0]/sum(frequencies) >= self.coverage_rate:
             return list(sorted_length.keys())[0], True
         else:
             return min(sorted_length.keys()), False
@@ -201,7 +132,27 @@ class PatternDetector:
         for token in token_list:
             if token not in tokens: tokens[token] = 1
             else: tokens[token] += 1
-
+        sorted_tokens = dict(sorted(tokens.items(), key=lambda item: item[1]))
+        categories, frequencies = list(sorted_tokens.keys()), list(sorted_tokens.values())
+        frequencies = [1] + frequencies
+        cut = -1
+        max_ratio = 1
+        # One or more than one
+        if frequencies[-1]/sum(frequencies) > self.coverage_rate:
+            return categories[-1]
+        for i,f in enumerate(frequencies):
+            if i != len(frequencies)-1:
+                if frequencies[i+1]/frequencies[i] > max_ratio:
+                    cut = i
+                    max_ratio = frequencies[i+1]/frequencies[i]
+        if cut != -1: 
+            if len(categories[cut:]) > 16: 
+                cut = -16
+            if sum(frequencies[cut+1:])/sum(frequencies) > self.coverage_rate:
+                if len(frequencies[cut+1:]) == 1: return categories[cut:]
+                else: 
+                    return '(%s)'%('|'.join(categories[cut:]))
+        '''
         # If we have only one entrance
         if len(tokens.keys()) == 1: return token_list[0]
         kmeans = KMeans(n_clusters=2, n_init='auto')
@@ -215,8 +166,7 @@ class PatternDetector:
             if len(high_frequency) == 1: return list(tokens.keys())[high_frequency_indices[0]]
             else: 
                 return '(%s)'%('|'.join([k for i, k in enumerate(tokens.keys()) if i in high_frequency_indices]))
-
-        
+        '''
         for token in token_list:
             for i, char in enumerate(token):
                 # In range
@@ -244,28 +194,15 @@ class PatternDetector:
                 continue
             else: 
                 if max(values.values()) != 1: 
-                    kmeans = KMeans(n_clusters=2, n_init='auto')
-                    char_frequencies = [[value] for value in values.values()] + [[1], [sum(values.values())]]
-                    kmeans.fit(char_frequencies)
-                    labels = kmeans.labels_
-                    # Collect the frequency
-                    high_frequency = [char_frequencies[i][0] for i in range(len(char_frequencies)-2) if labels[i] == labels[-1]]
-                    if len(high_frequency) != 0:
-                        coverage = sum(high_frequency)/sum(values.values())
-                        if coverage >= self.coverage_rate:
-                            char_keys = list(values.keys())
-                            static_char = '|'.join([char_keys[i] for i in range(len(char_keys)) if labels[i] == labels[-1]])
-                            # Dump last?
-                            if last_type != None:
-                                if count == 1: token_pattern += '%s'%(last_type)
-                                elif count > 1: token_pattern += '%s{%d}'%(last_type, count)
-                            else: pass
-                            if '|' in static_char: token_pattern += '(%s)'%static_char
-                            else: token_pattern += '%s'%static_char
-                            last_type, count = None, 0
-                            if not has_length_constraint and slot == length_constraint:
-                                token_pattern += '*'
-                            continue
+                    # Sort the values
+                    sorted_chars = dict(sorted(values.items(), key=lambda item: item[1]))
+                    if max(values.values())/sum(values.values()) > self.coverage_rate:
+                        token_pattern += '%s'%list(sorted_chars.keys())[-1]
+                        last_type, count = None, 0
+                        if not has_length_constraint and slot == length_constraint:
+                            token_pattern += '*'
+                        continue
+                    
                 # Static type detection
                 # Map values to types
                 type_maps = {'.':0}
@@ -277,7 +214,7 @@ class PatternDetector:
                         type_maps[self.type_mapping[key]] = chars[slot][key]
                     else:
                         type_maps[self.type_mapping[key]] += chars[slot][key]
-                # Get 89% of the types
+                # Get the types
                 sorted_type_maps = {item[0]: item[1] for item in sorted(type_maps.items(), key=lambda x: x[1], reverse=True)}
                 types, matches  = [], 0
                 for k, v in sorted_type_maps.items():
@@ -348,15 +285,13 @@ class PatternDetector:
                         except ValueError:
                             string_column.append(record)
                             type_count[1] += 1
-                    e = Utils.entropy([type_count[0]/len(values['records'][i]), type_count[1]/len(values['records'][i])])
-                    # The highest entropy can be reached by the types is 1
-                    if e >= 0.5:
+                    type_count = [type_count[0]/len(values['records'][i]), type_count[1]/len(values['records'][i])]
+                    if max(type_count) < self.coverage_rate:
                         wrangled_tokens = values['records'][i]
                     elif type_count[0] > type_count[1]:
                         wrangled_tokens = numerical_column
                     else:
                         wrangled_tokens = string_column
-                    
                     # Get and test pattern constraints
                     length_constraint, has_length_constraint = self.token_length_constraint_detection(wrangled_tokens)
                     pattern_constraint = self.detect_patterns(wrangled_tokens, length_constraint, has_length_constraint)
