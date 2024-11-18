@@ -1,0 +1,565 @@
+{
+    "index": {
+        "type_constraint": "Numerical",
+        "categorical_constraint": null,
+        "numerical_constraint": [
+            -249.5,
+            1250.5
+        ],
+        "pattern_constraint": [
+            "[0-9]+"
+        ]
+    },
+    "provider_number": {
+        "type_constraint": "Numerical",
+        "categorical_constraint": [
+            "10087",
+            "10055",
+            "10164",
+            "20017",
+            "10108",
+            "10050",
+            "10015",
+            "10029",
+            "10032",
+            "10035",
+            "10045",
+            "10019",
+            "10005",
+            "10006",
+            "10011",
+            "10016",
+            "10086",
+            "10024",
+            "10027",
+            "10034",
+            "10036",
+            "10044",
+            "10047",
+            "10049",
+            "10018",
+            "10001",
+            "10007",
+            "10008",
+            "10009",
+            "10010",
+            "10012",
+            "10021",
+            "10022",
+            "10023",
+            "10025",
+            "10033",
+            "10039",
+            "10040",
+            "10043",
+            "10038",
+            "10046"
+        ],
+        "numerical_constraint": null,
+        "pattern_constraint": [
+            "100[0-9]{2}"
+        ]
+    },
+    "name": {
+        "type_constraint": "String",
+        "categorical_constraint": [
+            "st vincents hospital",
+            "univ of south alabama medical center",
+            "flowers hospital",
+            "alaska regional hospital",
+            "coosa valley medical center",
+            "st vincents blount",
+            "prattville baptist hospital",
+            "community hospital inc",
+            "andalusia regional hospital",
+            "medical center enterprise",
+            "southeast alabama medical center",
+            "crenshaw community hospital",
+            "marshall medical center north",
+            "dekalb regional medical center",
+            "baptist medical center south",
+            "jackson hospital & clinic inc",
+            "wedowee hospital",
+            "cullman regional medical center",
+            "georgiana hospital",
+            "callahan eye foundation hospital",
+            "helen keller memorial hospital",
+            "marshall medical center south",
+            "eliza coffee memorial hospital",
+            "mizell memorial hospital",
+            "hartselle medical center",
+            "st vincents east",
+            "southwest alabama medical center",
+            "shelby baptist medical center",
+            "northwest medical center",
+            "dale medical center",
+            "cherokee medical center",
+            "g h lanier memorial hospital",
+            "elba general hospital",
+            "east alabama medical center and snf",
+            "university of alabama hospital",
+            "gadsden regional medical center",
+            "chilton medical center",
+            "marion regional medical center",
+            "fayette medical center",
+            "riverview regional medical center",
+            "huntsville hospital",
+            "stringfellow memorial hospital"
+        ],
+        "numerical_constraint": null,
+        "pattern_constraint": [
+            "jackson\\ hospital\\ \\&\\ clinic\\ inc",
+            "[a-z]+\\ [a-z]+\\ [a-z]{5}r*\\ [a-z]e[a-z]+\\ hospital",
+            "[a-z]{4}\\ [a-z]{2,}\\ [a-z]{5,}\\ (alabama|center)\\ (medical|and)\\ (center|snf)",
+            "[a-z]{7,}\\ hospital",
+            "(coosa|dekalb|cullman|callahan|helen|southeast|eliza|southwest|shelby|baptist|university|gadsden|marion|riverview|marshall)\\ (valley|eye|keller|coffee|baptist|of|alabama|medical|regional)\\ (foundation|alabama|memorial|center|medical)\\ (north|south|hospital|center)",
+            "(alaska|prattville|community|andalusia|medical|mizell|crenshaw|hartselle|northwest|dale|cherokee|elba|chilton|fayette|stringfellow|st)\\ (baptist|community|hospital|center|general|regional|vincents|memorial|medical)\\ (blount|enterprise|east|inc|center|hospital)"
+        ]
+    },
+    "address_1": {
+        "type_constraint": "String",
+        "categorical_constraint": [
+            "2451 fillingim street",
+            "4370 west main street",
+            "315 w hickory st",
+            "124 s memorial dr",
+            "2801 debarr road",
+            "150 gilbreath drive",
+            "515 miranda st",
+            "702 n main st",
+            "33700 highway 43",
+            "126 hospital ave",
+            "1720 university blvd",
+            "2505 u s highway 431 north",
+            "201 pine street northwest",
+            "8000 alabama highway 69",
+            "1000 first street north",
+            "1530 u s highway 43",
+            "209 north main street",
+            "1912 alabama highway 157",
+            "1010 lay dam road",
+            "1256 military street south",
+            "400 n edwards street",
+            "1300 south montgomery avenue",
+            "1108 ross clark circle",
+            "205 marengo street",
+            "101 hospital circle",
+            "50 medical park east drive",
+            "200 med center drive",
+            "400 northwood dr",
+            "2105 east south boulevard",
+            "1725 pine street",
+            "4800 48th st",
+            "987 drayton street",
+            "2000 pepperell parkway",
+            "619 south 19th street",
+            "805 friendship road",
+            "849 south three notch street",
+            "1007 goodyear avenue",
+            "1653 temple avenue north",
+            "301 east 18th st",
+            "600 south third street",
+            "101 sivley rd"
+        ],
+        "numerical_constraint": null,
+        "pattern_constraint": [
+            "[0-9a-z]{3}[a-z0-9][a-z]{3}[a-z0-9]{3,}",
+            "2505\\ u\\ s\\ highway\\ 431\\ north",
+            "(1530|50|849)\\ (u|medical|south)\\ (s|park|three)\\ (highway|east|notch)\\ (43|drive|street)",
+            "(2451|2801|150|126|1720|205|33700|400|1725|4800|987|2000|805|1007|515|101)\\ (fillingim|debarr|gilbreath|miranda|university|marengo|northwood|pine|48th|drayton|pepperell|friendship|goodyear|highway|sivley|hospital)\\ (drive|ave|blvd|circle|dr|parkway|avenue|43|rd|road|st|street)",
+            "[0-9]{3,}\\ (st|west|w|s|first|north|ross|pine|med|lay|military|temple|n|alabama|east|south)\\ (hickory|memorial|edwards|montgomery|clark|center|south|19th|dam|avenue|18th|third|highway|main|street)\\ (dr|northwest|157|south|avenue|circle|69|boulevard|road|drive|north|st|street)"
+        ]
+    },
+    "address_2": {
+        "type_constraint": "String",
+        "categorical_constraint": [
+            "empty"
+        ],
+        "numerical_constraint": null,
+        "pattern_constraint": [
+            "empty"
+        ]
+    },
+    "address_3": {
+        "type_constraint": "String",
+        "categorical_constraint": [
+            "empty"
+        ],
+        "numerical_constraint": null,
+        "pattern_constraint": [
+            "empty"
+        ]
+    },
+    "city": {
+        "type_constraint": "String",
+        "categorical_constraint": [
+            "mobile",
+            "anchorage",
+            "sylacauga",
+            "oneonta",
+            "prattville",
+            "florence",
+            "ozark",
+            "valley",
+            "enterprise",
+            "sheffield",
+            "boaz",
+            "guntersville",
+            "fort payne",
+            "winfield",
+            "elba",
+            "wedowee",
+            "tallassee",
+            "cullman",
+            "andalusia",
+            "hamilton",
+            "fayette",
+            "georgiana",
+            "opp",
+            "luverne",
+            "hartselle",
+            "thomasville",
+            "alabaster",
+            "centre",
+            "opelika",
+            "clanton",
+            "anniston",
+            "huntsville",
+            "dothan",
+            "montgomery",
+            "gadsden",
+            "birmingham"
+        ],
+        "numerical_constraint": null,
+        "pattern_constraint": [
+            "[a-z]{3,}"
+        ]
+    },
+    "state": {
+        "type_constraint": "String",
+        "categorical_constraint": [
+            "al"
+        ],
+        "numerical_constraint": null,
+        "pattern_constraint": [
+            "al"
+        ]
+    },
+    "zip": {
+        "type_constraint": "Numerical",
+        "categorical_constraint": [
+            "36617",
+            "36305",
+            "35150",
+            "99508",
+            "36067",
+            "35121",
+            "35957",
+            "35631",
+            "36049",
+            "35640",
+            "35007",
+            "35594",
+            "35235",
+            "35968",
+            "36784",
+            "36360",
+            "35960",
+            "36106",
+            "36078",
+            "36420",
+            "35903",
+            "35660",
+            "36302",
+            "36467",
+            "35976",
+            "36116",
+            "36854",
+            "36323",
+            "36801",
+            "36278",
+            "35058",
+            "35045",
+            "35570",
+            "35555",
+            "36033",
+            "36330",
+            "36201",
+            "35901",
+            "35801",
+            "35233"
+        ],
+        "numerical_constraint": [
+            34935.0,
+            37017.0
+        ],
+        "pattern_constraint": [
+            "3[0-9]{4}"
+        ]
+    },
+    "county": {
+        "type_constraint": "String",
+        "categorical_constraint": [
+            "mobile",
+            "talladega",
+            "anchorage",
+            "autauga",
+            "blount",
+            "de kalb",
+            "lauderdale",
+            "cherokee",
+            "chambers",
+            "elmore",
+            "cullman",
+            "crenshaw",
+            "clarke",
+            "lee",
+            "fayette",
+            "butler",
+            "shelby",
+            "dale",
+            "randolph",
+            "chilton",
+            "morgan",
+            "calhoun",
+            "madison",
+            "houston",
+            "montgomery",
+            "coffee",
+            "marshall",
+            "covington",
+            "marion",
+            "etowah",
+            "jefferson"
+        ],
+        "numerical_constraint": null,
+        "pattern_constraint": [
+            "[a-z]{3,}"
+        ]
+    },
+    "phone": {
+        "type_constraint": "Numerical",
+        "categorical_constraint": [
+            "2059397000",
+            "2514717110",
+            "3347935000",
+            "2562495000",
+            "9072761131",
+            "3343614267",
+            "2052743000",
+            "2565938310",
+            "3342938000",
+            "3347938701",
+            "3346366221",
+            "3342836541",
+            "3342228466",
+            "2059216200",
+            "2059325966",
+            "3344933541",
+            "2058383122",
+            "2568453150",
+            "3347742601",
+            "3342882100",
+            "3347561400",
+            "3348972257",
+            "2059344011",
+            "2564944000",
+            "2053258100",
+            "2563864556",
+            "2567688400",
+            "3343353374",
+            "2567736511",
+            "2565718000",
+            "2056208100",
+            "2054877736",
+            "2569275531",
+            "3347493411",
+            "2563572111",
+            "2567372000",
+            "2057552500",
+            "3343762205",
+            "3343470584",
+            "2562358900",
+            "2565435200",
+            "2562651000"
+        ],
+        "numerical_constraint": [
+            1033247500.0,
+            4102129300.0
+        ],
+        "pattern_constraint": [
+            "[0-9]{10}"
+        ]
+    },
+    "type": {
+        "type_constraint": "String",
+        "categorical_constraint": [
+            "acute care hospitals"
+        ],
+        "numerical_constraint": null,
+        "pattern_constraint": [
+            "acute\\ care\\ hospitals"
+        ]
+    },
+    "owner": {
+        "type_constraint": "String",
+        "categorical_constraint": [
+            "government - local",
+            "government - state",
+            "government - federal",
+            "voluntary non-profit - church",
+            "voluntary non-profit - other",
+            "government - hospital district or authority",
+            "proprietary",
+            "voluntary non-profit - private"
+        ],
+        "numerical_constraint": null,
+        "pattern_constraint": [
+            "government\\ \\-\\ (local|state|federal)",
+            "government\\ \\-\\ hospital\\ district\\ or\\ authority",
+            "proprietary",
+            "voluntary\\ non\\-profit\\ \\-\\ (church|other|private)"
+        ]
+    },
+    "emergency_service": {
+        "type_constraint": "String",
+        "categorical_constraint": [
+            "no",
+            "yes"
+        ],
+        "numerical_constraint": null,
+        "pattern_constraint": [
+            "(no|yes)"
+        ]
+    },
+    "condition": {
+        "type_constraint": "String",
+        "categorical_constraint": [
+            "heart failure",
+            "pneumonia",
+            "heart attack",
+            "surgical infection prevention"
+        ],
+        "numerical_constraint": null,
+        "pattern_constraint": [
+            "pneumonia",
+            "surgical\\ infection\\ prevention",
+            "heart\\ (failure|attack)"
+        ]
+    },
+    "measure_code": {
+        "type_constraint": "String",
+        "categorical_constraint": [
+            "scip-inf-4",
+            "scip-vte-1",
+            "hf-1",
+            "scip-inf-3",
+            "scip-inf-6",
+            "scip-inf-1",
+            "scip-inf-2",
+            "ami-1",
+            "ami-4",
+            "pn-4",
+            "pn-5c",
+            "scip-vte-2",
+            "ami-2",
+            "ami-3",
+            "ami-5",
+            "ami-7a",
+            "ami-8a",
+            "hf-2",
+            "pn-6",
+            "scip-card-2",
+            "hf-4",
+            "pn-2",
+            "pn-3b",
+            "pn-7",
+            "hf-3"
+        ],
+        "numerical_constraint": null,
+        "pattern_constraint": [
+            "scip\\-(card|vte|inf)\\-(4|6|3|1|2)",
+            "(hf|pn|ami)\\-(5|7a|8a|5c|6|3b|7|1|3|4|2)"
+        ]
+    },
+    "measure_name": {
+        "type_constraint": "String",
+        "categorical_constraint": [
+            "all heart surgery patients whose blood sugar (blood glucose) is kept under good control in the days right after surgery",
+            "surgery patients needing hair removed from the surgical area before surgery who had hair removed using a safer method (electric clippers or hair removal cream c not a razor)",
+            "heart attack patients given aspirin at arrival",
+            "pneumonia patients assessed and given influenza vaccination",
+            "surgery patients whose doctors ordered treatments to prevent blood clots after certain types of surgeries",
+            "surgery patients who were taking heart drugs called beta blockers before coming to the hospital who were kept on the beta blockers during the period just before and after their surgery",
+            "surgery patients whose preventive antibiotics were stopped at the right time (within 24 hours after surgery)",
+            "heart attack patients given pci within 90 minutes of arrival",
+            "heart failure patients given smoking cessation advice/counseling",
+            "pneumonia patients given initial antibiotic(s) within 6 hours after arrival",
+            "surgery patients who were given an antibiotic at the right time (within one hour before surgery) to help prevent infection",
+            "surgery patients who were given the  right kind  of antibiotic to help prevent infection",
+            "patients who got treatment  at the right time (within 24 hours before or after their surgery) to help prevent blood clots after certain types of surgery",
+            "heart attack patients given aspirin at discharge",
+            "heart attack patients given ace inhibitor or arb for left ventricular systolic dysfunction (lvsd)",
+            "heart attack patients given beta blocker at discharge",
+            "heart attack patients given fibrinolytic medication within 30 minutes of arrival",
+            "heart failure patients given discharge instructions",
+            "heart failure patients given ace inhibitor or arb for left ventricular systolic dysfunction (lvsd)",
+            "pneumonia patients whose initial emergency room blood culture was performed prior to the administration of the first hospital dose of antibiotics",
+            "pneumonia patients given the most appropriate initial antibiotic(s)",
+            "heart attack patients given smoking cessation advice/counseling",
+            "heart failure patients given an evaluation of left ventricular systolic (lvs) function",
+            "pneumonia patients given smoking cessation advice/counseling",
+            "pneumonia patients assessed and given pneumococcal vaccination"
+        ],
+        "numerical_constraint": null,
+        "pattern_constraint": [
+            "surgery\\ patients\\ needing\\ hair\\ removed\\ from\\ the\\ surgical\\ area\\ before\\ surgery\\ who\\ had\\ hair\\ removed\\ using\\ a\\ safer\\ method\\ \\(electric\\ clippers\\ or\\ hair\\ removal\\ cream\\ c\\ not\\ a\\ razor\\)",
+            "all\\ heart\\ surgery\\ patients\\ whose\\ blood\\ sugar\\ \\(blood\\ glucose\\)\\ is\\ kept\\ under\\ good\\ control\\ in\\ the\\ days\\ right\\ after\\ surgery",
+            "heart\\ attack\\ patients\\ given\\ pci\\ within\\ 90\\ minutes\\ of\\ arrival",
+            "surgery\\ patients\\ whose\\ doctors\\ ordered\\ treatments\\ to\\ prevent\\ blood\\ clots\\ after\\ certain\\ types\\ of\\ surgeries",
+            "surgery\\ patients\\ whose\\ preventive\\ antibiotics\\ were\\ stopped\\ at\\ the\\ right\\ time\\ \\(within\\ 24\\ hours\\ after\\ surgery\\)",
+            "heart\\ attack\\ patients\\ given\\ fibrinolytic\\ medication\\ within\\ 30\\ minutes\\ of\\ arrival",
+            "surgery\\ patients\\ who\\ were\\ given\\ an\\ antibiotic\\ at\\ the\\ right\\ time\\ \\(within\\ one\\ hour\\ before\\ surgery\\)\\ to\\ help\\ prevent\\ infection",
+            "surgery\\ patients\\ who\\ were\\ given\\ the\\ \\ right\\ kind\\ \\ of\\ antibiotic\\ to\\ help\\ prevent\\ infection",
+            "patients\\ who\\ got\\ treatment\\ \\ at\\ the\\ right\\ time\\ \\(within\\ 24\\ hours\\ before\\ or\\ after\\ their\\ surgery\\)\\ to\\ help\\ prevent\\ blood\\ clots\\ after\\ certain\\ types\\ of\\ surgery",
+            "heart\\ failure\\ patients\\ given\\ discharge\\ instructions",
+            "pneumonia\\ patients\\ given\\ smoking\\ cessation\\ advice/counseling",
+            "heart\\ attack\\ patients\\ given\\ beta\\ blocker\\ at\\ discharge",
+            "surgery\\ patients\\ who\\ were\\ taking\\ heart\\ drugs\\ called\\ beta\\ blockers\\ before\\ coming\\ to\\ the\\ hospital\\ who\\ were\\ kept\\ on\\ the\\ beta\\ blockers\\ during\\ the\\ period\\ just\\ before\\ and\\ after\\ their\\ surgery",
+            "pneumonia\\ patients\\ given\\ the\\ most\\ appropriate\\ initial\\ antibiotic\\(s\\)",
+            "pneumonia\\ patients\\ given\\ initial\\ antibiotic\\(s\\)\\ within\\ 6\\ hours\\ after\\ arrival",
+            "pneumonia\\ patients\\ whose\\ initial\\ emergency\\ room\\ blood\\ culture\\ was\\ performed\\ prior\\ to\\ the\\ administration\\ of\\ the\\ first\\ hospital\\ dose\\ of\\ antibiotics",
+            "heart\\ failure\\ patients\\ given\\ an\\ evaluation\\ of\\ left\\ ventricular\\ systolic\\ \\(lvs\\)\\ function",
+            "heart\\ (failure|attack)\\ patients\\ given\\ smoking\\ cessation\\ advice/counseling",
+            "heart\\ (attack|failure)\\ patients\\ given\\ ace\\ inhibitor\\ or\\ arb\\ for\\ left\\ ventricular\\ systolic\\ dysfunction\\ \\(lvsd\\)",
+            "(heart|pneumonia)\\ (attack|patients)\\ (patients|assessed)\\ (and|given)\\ (aspirin|given)\\ (influenza|pneumococcal|at)\\ [a-z]{7,}"
+        ]
+    },
+    "score": {
+        "type_constraint": "String",
+        "categorical_constraint": null,
+        "numerical_constraint": null,
+        "pattern_constraint": [
+            "empty",
+            "[0-9]+%"
+        ]
+    },
+    "sample": {
+        "type_constraint": "String",
+        "categorical_constraint": null,
+        "numerical_constraint": null,
+        "pattern_constraint": [
+            "empty",
+            "[0-9]+\\ patients"
+        ]
+    },
+    "state_average": {
+        "type_constraint": "String",
+        "categorical_constraint": null,
+        "numerical_constraint": null,
+        "pattern_constraint": [
+            "al_scip\\-(card|vte|inf)\\-(4|6|3|1|2)",
+            "al_(hf|pn|ami)\\-(7a|8a|6|3b|5c|7|5|1|3|4|2)"
+        ]
+    }
+}
