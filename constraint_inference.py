@@ -4,15 +4,16 @@ from detectors.utils import Utils
 import pandas as pd
 import numpy as np
 import json
+import time
 
 def get_dataframe(path):
     dataframe = pd.read_csv(path, sep=",", header="infer", encoding="utf-8",
-                                        keep_default_na=False, low_memory=False, index_col=None)
+                            keep_default_na=False, low_memory=False, index_col=None)
     return dataframe
     
 # Get all the datasets
-datasets = ['beers', 'flights', 'hospital', 'HOSP-10k', 'HOSP-100k', 'movies_1']
-coverage_rate = 0
+datasets = ['beers', 'flights', 'hospital', 'HOSP-10K', 'HOSP-100K', 'movies_1']
+coverage_rate = 0.95
 multiplier = 3
 # Predefine null types
 null_types = ['', 'NULL', 'None', 'N/A', 'NaN']
@@ -22,12 +23,10 @@ for dataset in datasets:
     ground_truth = './results/GroundTruth/%s_groundtruth.csv'%dataset
     df_dirty = get_dataframe(dirty_file)
     df_gt = get_dataframe(ground_truth)
-    print(df_gt.shape[0], df_gt.shape[1])
-    print(np.sum(df_gt.values)/(df_gt.shape[0]*df_gt.shape[1]))
     constraints = {}
     anomalies = {}
+    t1 = time.time()
     for column in df_dirty.columns:
-        coverage_rate = 0.95
         constraints[column] = {}
         anomalies[column] = {}
 
@@ -46,7 +45,8 @@ for dataset in datasets:
         pattern_detector = PatternDetector(wrangled_column, coverage_rate)
         constraints[column]['pattern_constraint'] = pattern_detector.pattern_constraints
         
-        # print(constraints[column])
+    t2 = time.time()
+    print(f"Constraint inference time for {dataset}: {t2-t1:.3f}s")
     # Store the constraints
     with open('./results/LUCARIO/constraints/%s_LUCARIO.json'%dataset, "w") as json_file:
         json.dump(constraints, json_file, indent=4)

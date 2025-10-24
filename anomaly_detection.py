@@ -6,13 +6,12 @@ import json
 
 def get_dataframe(path):
     dataframe = pd.read_csv(path, sep=",", header="infer", encoding="utf-8",
-                                        keep_default_na=False, low_memory=False, index_col=None)
+                            keep_default_na=False, low_memory=False, index_col=None)
     return dataframe
     
 # Get all the datasets
-datasets = ['beers', 'flights', 'hospital', 'HOSP-10k', 'HOSP-100k', 'movies_1']
+datasets = ['beers', 'flights', 'hospital', 'HOSP-10K', 'HOSP-100K', 'movies_1']
 coverage_rate = 0.95
-multiplier = 3
 # Predefine null types
 null_types = ['', 'NULL', 'None', 'N/A', 'NaN']
 
@@ -51,7 +50,6 @@ for dataset in datasets:
             else: numerical_violations.append(False)
 
             # Pattern
-            frequencies = np.zeros(len(constraints[column]['pattern_constraint']))
             if constraints[column]['pattern_constraint'] != []:
                 pattern_matched = False
                 for pattern in constraints[column]['pattern_constraint']:
@@ -71,7 +69,7 @@ for dataset in datasets:
                 json.dump(constraints, json_file, indent=4)
             
         anomalies[column] = [a or b or c or d for a, b, c, d in zip(type_violations, categorical_violations, numerical_violations, pattern_violations)]
-    
+        
     # Store the result
     pd.DataFrame(anomalies).to_csv('./results/LUCARIO/anomalies/%s_LUCARIO_detection.csv'%dataset, index=None)
     pred_df = pd.DataFrame(anomalies)
