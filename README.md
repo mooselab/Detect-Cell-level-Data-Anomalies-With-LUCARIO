@@ -43,3 +43,19 @@ Run ``constraint_inference.py`` to infer the constraints in each dataset. The co
 
 ### Anomaly Detection
 After obtaining the constraints, one can easily detect data anomalies using the generated rules. Run ``anomaly_detection.py`` to detect the anomalies. The detection CSV results will be stored under the ``results/LUCARIO/anomalies`` folder.
+
+## Experiment Replication
+The rules inferred by the baseline tools (except dBoost, since its anomaly detection is not based on rule inference) on our benchmark datasets are stored under the ``results`` folder. To replicate the results of statistic-based tools (i.e., [dBoost](https://github.com/cpitclaudel/dBoost), [Deequ](https://github.com/awslabs/deequ), [TFDV](https://github.com/tensorflow/data-validation), and [FlashProfile](https://github.com/SaswatPadhi/FlashProfileDemo/tree/master)) and [Auto-Test](https://github.com/qixuchen/AutoTest/tree/main), please follow the instructions in their official repositories. 
+
+To replicate the results of GPT-5 and Llama3, please install OpenAI and ollama and run ``get_constraints.py`` under their folders. The prompt template used for constraint inference is as follows:
+
+```
+'I will provide you a data column (potentially with anomalies) with its title. '
+'If applicable, infer the type constraints, regex pattern constraints, and range constraints for only the normal data in each column. '
+'Return ONLY a JSON file between ```...```. An example for "state" column is: \n'
+'```"state":\{"type_constraint":"String","categorical_constraint":["DC","AL","NV"],"numerical_constraint":null,"pattern_constraint":["[A-Z]\{2\}"]\}\n```'
+'Another example for "age" column is: \n'
+'```"age":\{"type_constraint":"Numerical","categorical_constraint":null,"numerical_constraint":[0,120],"pattern_constraint":["\d\{1,3\}"]\}\n```'
+'The column is as follows:\n'
+f'{col}: {dist_val}'
+```
