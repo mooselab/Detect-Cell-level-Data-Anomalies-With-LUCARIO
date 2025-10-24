@@ -1,0 +1,202 @@
+{
+    "constraint_suggestions": [
+        {
+            "constraint_name": "CompletenessConstraint(Completeness(brewery_name,None,None))",
+            "column_name": "brewery_name",
+            "current_value": "Completeness: 1.0",
+            "description": "'brewery_name' is not null",
+            "suggesting_rule": "CompleteIfCompleteRule()",
+            "rule_description": "If a column is complete in the sample, we suggest a NOT NULL constraint",
+            "code_for_constraint": ".isComplete(\"brewery_name\")"
+        },
+        {
+            "constraint_name": "CompletenessConstraint(Completeness(city,None,None))",
+            "column_name": "city",
+            "current_value": "Completeness: 1.0",
+            "description": "'city' is not null",
+            "suggesting_rule": "CompleteIfCompleteRule()",
+            "rule_description": "If a column is complete in the sample, we suggest a NOT NULL constraint",
+            "code_for_constraint": ".isComplete(\"city\")"
+        },
+        {
+            "constraint_name": "CompletenessConstraint(Completeness(ounces,None,None))",
+            "column_name": "ounces",
+            "current_value": "Completeness: 1.0",
+            "description": "'ounces' is not null",
+            "suggesting_rule": "CompleteIfCompleteRule()",
+            "rule_description": "If a column is complete in the sample, we suggest a NOT NULL constraint",
+            "code_for_constraint": ".isComplete(\"ounces\")"
+        },
+        {
+            "constraint_name": "ComplianceConstraint(Compliance('ounces' has value range '12.0 oz.', '12.0 oz', '12.0 ounce', '16.0 oz.', '16.0 oz', '16.0 ounce', '12.0 OZ.' for at least 89.0% of values,`ounces` IN ('12.0 oz.', '12.0 oz', '12.0 ounce', '16.0 oz.', '16.0 oz', '16.0 ounce', '12.0 OZ.'),None,List(ounces),None))",
+            "column_name": "ounces",
+            "current_value": "Compliance: 0.904564315352697",
+            "description": "'ounces' has value range '12.0 oz.', '12.0 oz', '12.0 ounce', '16.0 oz.', '16.0 oz', '16.0 ounce', '12.0 OZ.' for at least 89.0% of values",
+            "suggesting_rule": "FractionalCategoricalRangeRule(0.9,com.amazon.deequ.suggestions.rules.FractionalCategoricalRangeRule$$$Lambda$2891/1980988850@7b83e883)",
+            "rule_description": "If we see a categorical range for most values in a column, we suggest an IS IN (...) constraint that should hold for most values",
+            "code_for_constraint": ".isContainedIn(\"ounces\", [\"12.0 oz.\", \"12.0 oz\", \"12.0 ounce\", \"16.0 oz.\", \"16.0 oz\", \"16.0 ounce\", \"12.0 OZ.\"], lambda x: x >= 0.89, \"It should be above 0.89!\")"
+        },
+        {
+            "constraint_name": "ComplianceConstraint(Compliance('state' has value range 'CO', 'CA', 'MI', 'IN', 'TX', 'OR', 'PA', 'IL', 'WI', 'MA', 'NY', 'WA', 'NC', 'FL', 'MN', 'OH', 'AZ', 'MO', 'MT', 'VA', 'IA', 'ID', 'RI', 'HI', 'CT', 'UT', 'VT', 'NE', 'AK', 'ME', 'KS', 'KY', 'MD', 'LA', 'OK', 'WY', 'GA', 'SC', 'NM', 'MS', 'AL', 'NV', 'DC', 'NH', 'NJ', 'SD', 'TN', 'AR', 'ND', 'DE', 'WV',`state` IN ('CO', 'CA', 'MI', 'IN', 'TX', 'OR', 'PA', 'IL', 'WI', 'MA', 'NY', 'WA', 'NC', 'FL', 'MN', 'OH', 'AZ', 'MO', 'MT', 'VA', 'IA', 'ID', 'RI', 'HI', 'CT', 'UT', 'VT', 'NE', 'AK', 'ME', 'KS', 'KY', 'MD', 'LA', 'OK', 'WY', 'GA', 'SC', 'NM', 'MS', 'AL', 'NV', 'DC', 'NH', 'NJ', 'SD', 'TN', 'AR', 'ND', 'DE', 'WV'),None,List(state),None))",
+            "column_name": "state",
+            "current_value": "Compliance: 1",
+            "description": "'state' has value range 'CO', 'CA', 'MI', 'IN', 'TX', 'OR', 'PA', 'IL', 'WI', 'MA', 'NY', 'WA', 'NC', 'FL', 'MN', 'OH', 'AZ', 'MO', 'MT', 'VA', 'IA', 'ID', 'RI', 'HI', 'CT', 'UT', 'VT', 'NE', 'AK', 'ME', 'KS', 'KY', 'MD', 'LA', 'OK', 'WY', 'GA', 'SC', 'NM', 'MS', 'AL', 'NV', 'DC', 'NH', 'NJ', 'SD', 'TN', 'AR', 'ND', 'DE', 'WV'",
+            "suggesting_rule": "CategoricalRangeRule(com.amazon.deequ.suggestions.rules.CategoricalRangeRule$$$Lambda$2890/1757507227@51a5ebb5)",
+            "rule_description": "If we see a categorical range for a column, we suggest an IS IN (...) constraint",
+            "code_for_constraint": ".isContainedIn(\"state\", [\"CO\", \"CA\", \"MI\", \"IN\", \"TX\", \"OR\", \"PA\", \"IL\", \"WI\", \"MA\", \"NY\", \"WA\", \"NC\", \"FL\", \"MN\", \"OH\", \"AZ\", \"MO\", \"MT\", \"VA\", \"IA\", \"ID\", \"RI\", \"HI\", \"CT\", \"UT\", \"VT\", \"NE\", \"AK\", \"ME\", \"KS\", \"KY\", \"MD\", \"LA\", \"OK\", \"WY\", \"GA\", \"SC\", \"NM\", \"MS\", \"AL\", \"NV\", \"DC\", \"NH\", \"NJ\", \"SD\", \"TN\", \"AR\", \"ND\", \"DE\", \"WV\"])"
+        },
+        {
+            "constraint_name": "ComplianceConstraint(Compliance('state' has value range 'CO', 'CA', 'MI', 'IN', 'TX', 'OR', 'PA', 'IL', 'WI', 'MA', 'NY', 'WA', 'NC', 'FL', 'MN', 'OH', 'AZ', 'MO', 'MT', 'VA', 'IA', 'ID', 'RI', 'HI', 'CT', 'UT', 'VT', 'NE', 'AK', 'ME' for at least 89.0% of values,`state` IN ('CO', 'CA', 'MI', 'IN', 'TX', 'OR', 'PA', 'IL', 'WI', 'MA', 'NY', 'WA', 'NC', 'FL', 'MN', 'OH', 'AZ', 'MO', 'MT', 'VA', 'IA', 'ID', 'RI', 'HI', 'CT', 'UT', 'VT', 'NE', 'AK', 'ME'),None,List(state),None))",
+            "column_name": "state",
+            "current_value": "Compliance: 0.9037344398340247",
+            "description": "'state' has value range 'CO', 'CA', 'MI', 'IN', 'TX', 'OR', 'PA', 'IL', 'WI', 'MA', 'NY', 'WA', 'NC', 'FL', 'MN', 'OH', 'AZ', 'MO', 'MT', 'VA', 'IA', 'ID', 'RI', 'HI', 'CT', 'UT', 'VT', 'NE', 'AK', 'ME' for at least 89.0% of values",
+            "suggesting_rule": "FractionalCategoricalRangeRule(0.9,com.amazon.deequ.suggestions.rules.FractionalCategoricalRangeRule$$$Lambda$2891/1980988850@7b83e883)",
+            "rule_description": "If we see a categorical range for most values in a column, we suggest an IS IN (...) constraint that should hold for most values",
+            "code_for_constraint": ".isContainedIn(\"state\", [\"CO\", \"CA\", \"MI\", \"IN\", \"TX\", \"OR\", \"PA\", \"IL\", \"WI\", \"MA\", \"NY\", \"WA\", \"NC\", \"FL\", \"MN\", \"OH\", \"AZ\", \"MO\", \"MT\", \"VA\", \"IA\", \"ID\", \"RI\", \"HI\", \"CT\", \"UT\", \"VT\", \"NE\", \"AK\", \"ME\"], lambda x: x >= 0.89, \"It should be above 0.89!\")"
+        },
+        {
+            "constraint_name": "CompletenessConstraint(Completeness(state,None,None))",
+            "column_name": "state",
+            "current_value": "Completeness: 0.9473029045643153",
+            "description": "'state' has less than 6% missing values",
+            "suggesting_rule": "RetainCompletenessRule()",
+            "rule_description": "If a column is incomplete in the sample, we model its completeness as a binomial variable, estimate a confidence interval and use this to define a lower bound for the completeness",
+            "code_for_constraint": ".hasCompleteness(\"state\", lambda x: x >= 0.93, \"It should be above 0.93!\")"
+        },
+        {
+            "constraint_name": "ComplianceConstraint(Compliance('style' has value range 'American IPA', 'American Pale Ale (APA)', 'American Amber / Red Ale', 'American Blonde Ale', 'American Double / Imperial IPA', 'American Pale Wheat Ale', 'American Brown Ale', 'American Porter', 'Saison / Farmhouse Ale', 'Witbier', 'Fruit / Vegetable Beer', 'K\u00f6lsch', 'Hefeweizen', 'American Stout', 'American Pale Lager', 'Cider', 'German Pilsener', 'American Black Ale', 'M\u00e4rzen / Oktoberfest', 'Cream Ale', 'American Amber / Red Lager', 'Czech Pilsener', 'American Pilsner', 'Belgian Pale Ale', 'Pumpkin Ale', 'Munich Helles Lager', 'Vienna Lager', 'Extra Special / Strong Bitter (ESB)', 'Scottish Ale', 'Rye Beer', 'English Brown Ale', 'Belgian IPA', 'Oatmeal Stout', 'American Adjunct Lager', 'Scotch Ale / Wee Heavy', 'Winter Warmer', 'American Strong Ale', 'English India Pale Ale (IPA)', 'Altbier', 'Irish Red Ale', 'Light Lager', 'English Pale Ale', 'Tripel', 'Russian Imperial Stout', 'Berliner Weissbier', 'Belgian Dark Ale', 'American White IPA', 'Milk / Sweet Stout', 'Gose', 'American Double / Imperial Stout', 'Herbed / Spiced Beer', 'Schwarzbier', 'Doppelbock', 'Bi\u00e8re de Garde', 'Belgian Strong Pale Ale', 'Bock', 'American Dark Wheat Ale', 'Belgian Strong Dark Ale', 'Foreign / Export Stout', 'California Common / Steam Beer', 'Baltic Porter', 'English Dark Mild Ale', 'Dortmunder / Export Lager', 'American Wild Ale', 'Dubbel', 'Irish Dry Stout', 'Maibock / Helles Bock', 'Euro Dark Lager', 'Mead', 'Quadrupel (Quad)', 'Dunkelweizen', 'English Strong Ale', 'Munich Dunkel Lager', 'Shandy', 'American Barleywine', 'English Barleywine', 'English Pale Mild Ale', 'English Bitter', 'Chile Beer', 'Keller Bier / Zwickel Bier', 'American India Pale Lager', 'Radler', 'Old Ale', 'English Stout', 'Euro Pale Lager', 'American Double / Imperial Pilsner', 'Roggenbier', 'Rauchbier', 'Abbey Single Ale', 'Smoked Beer', 'Flanders Red Ale', 'Wheat Ale', 'Braggot', 'Low Alcohol Beer', 'Grisette', 'American Malt Liquor', 'Flanders Oud Bruin', 'Kristalweizen', 'Other',`style` IN ('American IPA', 'American Pale Ale (APA)', 'American Amber / Red Ale', 'American Blonde Ale', 'American Double / Imperial IPA', 'American Pale Wheat Ale', 'American Brown Ale', 'American Porter', 'Saison / Farmhouse Ale', 'Witbier', 'Fruit / Vegetable Beer', 'K\u00f6lsch', 'Hefeweizen', 'American Stout', 'American Pale Lager', 'Cider', 'German Pilsener', 'American Black Ale', 'M\u00e4rzen / Oktoberfest', 'Cream Ale', 'American Amber / Red Lager', 'Czech Pilsener', 'American Pilsner', 'Belgian Pale Ale', 'Pumpkin Ale', 'Munich Helles Lager', 'Vienna Lager', 'Extra Special / Strong Bitter (ESB)', 'Scottish Ale', 'Rye Beer', 'English Brown Ale', 'Belgian IPA', 'Oatmeal Stout', 'American Adjunct Lager', 'Scotch Ale / Wee Heavy', 'Winter Warmer', 'American Strong Ale', 'English India Pale Ale (IPA)', 'Altbier', 'Irish Red Ale', 'Light Lager', 'English Pale Ale', 'Tripel', 'Russian Imperial Stout', 'Berliner Weissbier', 'Belgian Dark Ale', 'American White IPA', 'Milk / Sweet Stout', 'Gose', 'American Double / Imperial Stout', 'Herbed / Spiced Beer', 'Schwarzbier', 'Doppelbock', 'Bi\u00e8re de Garde', 'Belgian Strong Pale Ale', 'Bock', 'American Dark Wheat Ale', 'Belgian Strong Dark Ale', 'Foreign / Export Stout', 'California Common / Steam Beer', 'Baltic Porter', 'English Dark Mild Ale', 'Dortmunder / Export Lager', 'American Wild Ale', 'Dubbel', 'Irish Dry Stout', 'Maibock / Helles Bock', 'Euro Dark Lager', 'Mead', 'Quadrupel (Quad)', 'Dunkelweizen', 'English Strong Ale', 'Munich Dunkel Lager', 'Shandy', 'American Barleywine', 'English Barleywine', 'English Pale Mild Ale', 'English Bitter', 'Chile Beer', 'Keller Bier / Zwickel Bier', 'American India Pale Lager', 'Radler', 'Old Ale', 'English Stout', 'Euro Pale Lager', 'American Double / Imperial Pilsner', 'Roggenbier', 'Rauchbier', 'Abbey Single Ale', 'Smoked Beer', 'Flanders Red Ale', 'Wheat Ale', 'Braggot', 'Low Alcohol Beer', 'Grisette', 'American Malt Liquor', 'Flanders Oud Bruin', 'Kristalweizen', 'Other'),None,List(style),None))",
+            "column_name": "style",
+            "current_value": "Compliance: 1",
+            "description": "'style' has value range 'American IPA', 'American Pale Ale (APA)', 'American Amber / Red Ale', 'American Blonde Ale', 'American Double / Imperial IPA', 'American Pale Wheat Ale', 'American Brown Ale', 'American Porter', 'Saison / Farmhouse Ale', 'Witbier', 'Fruit / Vegetable Beer', 'K\u00f6lsch', 'Hefeweizen', 'American Stout', 'American Pale Lager', 'Cider', 'German Pilsener', 'American Black Ale', 'M\u00e4rzen / Oktoberfest', 'Cream Ale', 'American Amber / Red Lager', 'Czech Pilsener', 'American Pilsner', 'Belgian Pale Ale', 'Pumpkin Ale', 'Munich Helles Lager', 'Vienna Lager', 'Extra Special / Strong Bitter (ESB)', 'Scottish Ale', 'Rye Beer', 'English Brown Ale', 'Belgian IPA', 'Oatmeal Stout', 'American Adjunct Lager', 'Scotch Ale / Wee Heavy', 'Winter Warmer', 'American Strong Ale', 'English India Pale Ale (IPA)', 'Altbier', 'Irish Red Ale', 'Light Lager', 'English Pale Ale', 'Tripel', 'Russian Imperial Stout', 'Berliner Weissbier', 'Belgian Dark Ale', 'American White IPA', 'Milk / Sweet Stout', 'Gose', 'American Double / Imperial Stout', 'Herbed / Spiced Beer', 'Schwarzbier', 'Doppelbock', 'Bi\u00e8re de Garde', 'Belgian Strong Pale Ale', 'Bock', 'American Dark Wheat Ale', 'Belgian Strong Dark Ale', 'Foreign / Export Stout', 'California Common / Steam Beer', 'Baltic Porter', 'English Dark Mild Ale', 'Dortmunder / Export Lager', 'American Wild Ale', 'Dubbel', 'Irish Dry Stout', 'Maibock / Helles Bock', 'Euro Dark Lager', 'Mead', 'Quadrupel (Quad)', 'Dunkelweizen', 'English Strong Ale', 'Munich Dunkel Lager', 'Shandy', 'American Barleywine', 'English Barleywine', 'English Pale Mild Ale', 'English Bitter', 'Chile Beer', 'Keller Bier / Zwickel Bier', 'American India Pale Lager', 'Radler', 'Old Ale', 'English Stout', 'Euro Pale Lager', 'American Double / Imperial Pilsner', 'Roggenbier', 'Rauchbier', 'Abbey Single Ale', 'Smoked Beer', 'Flanders Red Ale', 'Wheat Ale', 'Braggot', 'Low Alcohol Beer', 'Grisette', 'American Malt Liquor', 'Flanders Oud Bruin', 'Kristalweizen', 'Other'",
+            "suggesting_rule": "CategoricalRangeRule(com.amazon.deequ.suggestions.rules.CategoricalRangeRule$$$Lambda$2890/1757507227@51a5ebb5)",
+            "rule_description": "If we see a categorical range for a column, we suggest an IS IN (...) constraint",
+            "code_for_constraint": ".isContainedIn(\"style\", [\"American IPA\", \"American Pale Ale (APA]\", \"American Amber / Red Ale\", \"American Blonde Ale\", \"American Double / Imperial IPA\", \"American Pale Wheat Ale\", \"American Brown Ale\", \"American Porter\", \"Saison / Farmhouse Ale\", \"Witbier\", \"Fruit / Vegetable Beer\", \"K\\u00F6lsch\", \"Hefeweizen\", \"American Stout\", \"American Pale Lager\", \"Cider\", \"German Pilsener\", \"American Black Ale\", \"M\\u00E4rzen / Oktoberfest\", \"Cream Ale\", \"American Amber / Red Lager\", \"Czech Pilsener\", \"American Pilsner\", \"Belgian Pale Ale\", \"Pumpkin Ale\", \"Munich Helles Lager\", \"Vienna Lager\", \"Extra Special / Strong Bitter (ESB)\", \"Scottish Ale\", \"Rye Beer\", \"English Brown Ale\", \"Belgian IPA\", \"Oatmeal Stout\", \"American Adjunct Lager\", \"Scotch Ale / Wee Heavy\", \"Winter Warmer\", \"American Strong Ale\", \"English India Pale Ale (IPA)\", \"Altbier\", \"Irish Red Ale\", \"Light Lager\", \"English Pale Ale\", \"Tripel\", \"Russian Imperial Stout\", \"Berliner Weissbier\", \"Belgian Dark Ale\", \"American White IPA\", \"Milk / Sweet Stout\", \"Gose\", \"American Double / Imperial Stout\", \"Herbed / Spiced Beer\", \"Schwarzbier\", \"Doppelbock\", \"Bi\\u00E8re de Garde\", \"Belgian Strong Pale Ale\", \"Bock\", \"American Dark Wheat Ale\", \"Belgian Strong Dark Ale\", \"Foreign / Export Stout\", \"California Common / Steam Beer\", \"Baltic Porter\", \"English Dark Mild Ale\", \"Dortmunder / Export Lager\", \"American Wild Ale\", \"Dubbel\", \"Irish Dry Stout\", \"Maibock / Helles Bock\", \"Euro Dark Lager\", \"Mead\", \"Quadrupel (Quad)\", \"Dunkelweizen\", \"English Strong Ale\", \"Munich Dunkel Lager\", \"Shandy\", \"American Barleywine\", \"English Barleywine\", \"English Pale Mild Ale\", \"English Bitter\", \"Chile Beer\", \"Keller Bier / Zwickel Bier\", \"American India Pale Lager\", \"Radler\", \"Old Ale\", \"English Stout\", \"Euro Pale Lager\", \"American Double / Imperial Pilsner\", \"Roggenbier\", \"Rauchbier\", \"Abbey Single Ale\", \"Smoked Beer\", \"Flanders Red Ale\", \"Wheat Ale\", \"Braggot\", \"Low Alcohol Beer\", \"Grisette\", \"American Malt Liquor\", \"Flanders Oud Bruin\", \"Kristalweizen\", \"Other\"))"
+        },
+        {
+            "constraint_name": "ComplianceConstraint(Compliance('style' has value range 'American IPA', 'American Pale Ale (APA)', 'American Amber / Red Ale', 'American Blonde Ale', 'American Double / Imperial IPA', 'American Pale Wheat Ale', 'American Brown Ale', 'American Porter', 'Saison / Farmhouse Ale', 'Witbier', 'Fruit / Vegetable Beer', 'K\u00f6lsch', 'Hefeweizen', 'American Stout', 'American Pale Lager', 'Cider', 'German Pilsener', 'American Black Ale', 'M\u00e4rzen / Oktoberfest', 'Cream Ale', 'American Amber / Red Lager', 'Czech Pilsener', 'American Pilsner', 'Belgian Pale Ale', 'Pumpkin Ale', 'Munich Helles Lager', 'Vienna Lager', 'Extra Special / Strong Bitter (ESB)', 'Scottish Ale', 'Rye Beer', 'English Brown Ale', 'Belgian IPA', 'Oatmeal Stout', 'American Adjunct Lager', 'Scotch Ale / Wee Heavy', 'Winter Warmer', 'American Strong Ale', 'English India Pale Ale (IPA)', 'Altbier', 'Irish Red Ale', 'Light Lager', 'English Pale Ale', 'Tripel', 'Russian Imperial Stout', 'Berliner Weissbier', 'Belgian Dark Ale' for at least 89.0% of values,`style` IN ('American IPA', 'American Pale Ale (APA)', 'American Amber / Red Ale', 'American Blonde Ale', 'American Double / Imperial IPA', 'American Pale Wheat Ale', 'American Brown Ale', 'American Porter', 'Saison / Farmhouse Ale', 'Witbier', 'Fruit / Vegetable Beer', 'K\u00f6lsch', 'Hefeweizen', 'American Stout', 'American Pale Lager', 'Cider', 'German Pilsener', 'American Black Ale', 'M\u00e4rzen / Oktoberfest', 'Cream Ale', 'American Amber / Red Lager', 'Czech Pilsener', 'American Pilsner', 'Belgian Pale Ale', 'Pumpkin Ale', 'Munich Helles Lager', 'Vienna Lager', 'Extra Special / Strong Bitter (ESB)', 'Scottish Ale', 'Rye Beer', 'English Brown Ale', 'Belgian IPA', 'Oatmeal Stout', 'American Adjunct Lager', 'Scotch Ale / Wee Heavy', 'Winter Warmer', 'American Strong Ale', 'English India Pale Ale (IPA)', 'Altbier', 'Irish Red Ale', 'Light Lager', 'English Pale Ale', 'Tripel', 'Russian Imperial Stout', 'Berliner Weissbier', 'Belgian Dark Ale'),None,List(style),None))",
+            "column_name": "style",
+            "current_value": "Compliance: 0.9037344398340247",
+            "description": "'style' has value range 'American IPA', 'American Pale Ale (APA)', 'American Amber / Red Ale', 'American Blonde Ale', 'American Double / Imperial IPA', 'American Pale Wheat Ale', 'American Brown Ale', 'American Porter', 'Saison / Farmhouse Ale', 'Witbier', 'Fruit / Vegetable Beer', 'K\u00f6lsch', 'Hefeweizen', 'American Stout', 'American Pale Lager', 'Cider', 'German Pilsener', 'American Black Ale', 'M\u00e4rzen / Oktoberfest', 'Cream Ale', 'American Amber / Red Lager', 'Czech Pilsener', 'American Pilsner', 'Belgian Pale Ale', 'Pumpkin Ale', 'Munich Helles Lager', 'Vienna Lager', 'Extra Special / Strong Bitter (ESB)', 'Scottish Ale', 'Rye Beer', 'English Brown Ale', 'Belgian IPA', 'Oatmeal Stout', 'American Adjunct Lager', 'Scotch Ale / Wee Heavy', 'Winter Warmer', 'American Strong Ale', 'English India Pale Ale (IPA)', 'Altbier', 'Irish Red Ale', 'Light Lager', 'English Pale Ale', 'Tripel', 'Russian Imperial Stout', 'Berliner Weissbier', 'Belgian Dark Ale' for at least 89.0% of values",
+            "suggesting_rule": "FractionalCategoricalRangeRule(0.9,com.amazon.deequ.suggestions.rules.FractionalCategoricalRangeRule$$$Lambda$2891/1980988850@7b83e883)",
+            "rule_description": "If we see a categorical range for most values in a column, we suggest an IS IN (...) constraint that should hold for most values",
+            "code_for_constraint": ".isContainedIn(\"style\", [\"American IPA\", \"American Pale Ale (APA]\", \"American Amber / Red Ale\", \"American Blonde Ale\", \"American Double / Imperial IPA\", \"American Pale Wheat Ale\", \"American Brown Ale\", \"American Porter\", \"Saison / Farmhouse Ale\", \"Witbier\", \"Fruit / Vegetable Beer\", \"K\\u00F6lsch\", \"Hefeweizen\", \"American Stout\", \"American Pale Lager\", \"Cider\", \"German Pilsener\", \"American Black Ale\", \"M\\u00E4rzen / Oktoberfest\", \"Cream Ale\", \"American Amber / Red Lager\", \"Czech Pilsener\", \"American Pilsner\", \"Belgian Pale Ale\", \"Pumpkin Ale\", \"Munich Helles Lager\", \"Vienna Lager\", \"Extra Special / Strong Bitter (ESB)\", \"Scottish Ale\", \"Rye Beer\", \"English Brown Ale\", \"Belgian IPA\", \"Oatmeal Stout\", \"American Adjunct Lager\", \"Scotch Ale / Wee Heavy\", \"Winter Warmer\", \"American Strong Ale\", \"English India Pale Ale (IPA)\", \"Altbier\", \"Irish Red Ale\", \"Light Lager\", \"English Pale Ale\", \"Tripel\", \"Russian Imperial Stout\", \"Berliner Weissbier\", \"Belgian Dark Ale\"), lambda x: x >= 0.89, \"It should be above 0.89!\")"
+        },
+        {
+            "constraint_name": "CompletenessConstraint(Completeness(style,None,None))",
+            "column_name": "style",
+            "current_value": "Completeness: 0.9979253112033195",
+            "description": "'style' has less than 1% missing values",
+            "suggesting_rule": "RetainCompletenessRule()",
+            "rule_description": "If a column is incomplete in the sample, we model its completeness as a binomial variable, estimate a confidence interval and use this to define a lower bound for the completeness",
+            "code_for_constraint": ".hasCompleteness(\"style\", lambda x: x >= 0.99, \"It should be above 0.99!\")"
+        },
+        {
+            "constraint_name": "CompletenessConstraint(Completeness(brewery_id,None,None))",
+            "column_name": "brewery_id",
+            "current_value": "Completeness: 1.0",
+            "description": "'brewery_id' is not null",
+            "suggesting_rule": "CompleteIfCompleteRule()",
+            "rule_description": "If a column is complete in the sample, we suggest a NOT NULL constraint",
+            "code_for_constraint": ".isComplete(\"brewery_id\")"
+        },
+        {
+            "constraint_name": "ComplianceConstraint(Compliance('brewery_id' has no negative values,brewery_id >= 0,None,List(brewery_id),None))",
+            "column_name": "brewery_id",
+            "current_value": "Minimum: 0.0",
+            "description": "'brewery_id' has no negative values",
+            "suggesting_rule": "NonNegativeNumbersRule()",
+            "rule_description": "If we see only non-negative numbers in a column, we suggest a corresponding constraint",
+            "code_for_constraint": ".isNonNegative(\"brewery_id\")"
+        },
+        {
+            "constraint_name": "CompletenessConstraint(Completeness(abv,None,None))",
+            "column_name": "abv",
+            "current_value": "Completeness: 0.9742738589211618",
+            "description": "'abv' has less than 4% missing values",
+            "suggesting_rule": "RetainCompletenessRule()",
+            "rule_description": "If a column is incomplete in the sample, we model its completeness as a binomial variable, estimate a confidence interval and use this to define a lower bound for the completeness",
+            "code_for_constraint": ".hasCompleteness(\"abv\", lambda x: x >= 0.96, \"It should be above 0.96!\")"
+        },
+        {
+            "constraint_name": "CompletenessConstraint(Completeness(id,None,None))",
+            "column_name": "id",
+            "current_value": "Completeness: 1.0",
+            "description": "'id' is not null",
+            "suggesting_rule": "CompleteIfCompleteRule()",
+            "rule_description": "If a column is complete in the sample, we suggest a NOT NULL constraint",
+            "code_for_constraint": ".isComplete(\"id\")"
+        },
+        {
+            "constraint_name": "ComplianceConstraint(Compliance('id' has no negative values,id >= 0,None,List(id),None))",
+            "column_name": "id",
+            "current_value": "Minimum: 1.0",
+            "description": "'id' has no negative values",
+            "suggesting_rule": "NonNegativeNumbersRule()",
+            "rule_description": "If we see only non-negative numbers in a column, we suggest a corresponding constraint",
+            "code_for_constraint": ".isNonNegative(\"id\")"
+        },
+        {
+            "constraint_name": "UniquenessConstraint(Uniqueness(List(id),None,None))",
+            "column_name": "id",
+            "current_value": "ApproxDistinctness: 1.008298755186722",
+            "description": "'id' is unique",
+            "suggesting_rule": "UniqueIfApproximatelyUniqueRule()",
+            "rule_description": "If the ratio of approximate num distinct values in a column is close to the number of records (within the error of the HLL sketch), we suggest a UNIQUE constraint",
+            "code_for_constraint": ".isUnique(\"id\")"
+        },
+        {
+            "constraint_name": "CompletenessConstraint(Completeness(ibu,None,None))",
+            "column_name": "ibu",
+            "current_value": "Completeness: 1.0",
+            "description": "'ibu' is not null",
+            "suggesting_rule": "CompleteIfCompleteRule()",
+            "rule_description": "If a column is complete in the sample, we suggest a NOT NULL constraint",
+            "code_for_constraint": ".isComplete(\"ibu\")"
+        },
+        {
+            "constraint_name": "ComplianceConstraint(Compliance('ibu' has value range 'N/A', '20', '35', '65', '30', '70', '18', '25', '60', '40', '15', '45', '22', '75', '55', '85', '23', '28', '42', '17', '16', '24', '50', '100', '21', '80', '27', '10', '12', '36', '32', '26', '11', '69', '33', '9', '13', '37', '44', '90', '34', '29', '19', '68', '52' for at least 89.0% of values,`ibu` IN ('N/A', '20', '35', '65', '30', '70', '18', '25', '60', '40', '15', '45', '22', '75', '55', '85', '23', '28', '42', '17', '16', '24', '50', '100', '21', '80', '27', '10', '12', '36', '32', '26', '11', '69', '33', '9', '13', '37', '44', '90', '34', '29', '19', '68', '52'),None,List(ibu),None))",
+            "column_name": "ibu",
+            "current_value": "Compliance: 0.9024896265560162",
+            "description": "'ibu' has value range 'N/A', '20', '35', '65', '30', '70', '18', '25', '60', '40', '15', '45', '22', '75', '55', '85', '23', '28', '42', '17', '16', '24', '50', '100', '21', '80', '27', '10', '12', '36', '32', '26', '11', '69', '33', '9', '13', '37', '44', '90', '34', '29', '19', '68', '52' for at least 89.0% of values",
+            "suggesting_rule": "FractionalCategoricalRangeRule(0.9,com.amazon.deequ.suggestions.rules.FractionalCategoricalRangeRule$$$Lambda$2891/1980988850@7b83e883)",
+            "rule_description": "If we see a categorical range for most values in a column, we suggest an IS IN (...) constraint that should hold for most values",
+            "code_for_constraint": ".isContainedIn(\"ibu\", [\"N/A\", \"20\", \"35\", \"65\", \"30\", \"70\", \"18\", \"25\", \"60\", \"40\", \"15\", \"45\", \"22\", \"75\", \"55\", \"85\", \"23\", \"28\", \"42\", \"17\", \"16\", \"24\", \"50\", \"100\", \"21\", \"80\", \"27\", \"10\", \"12\", \"36\", \"32\", \"26\", \"11\", \"69\", \"33\", \"9\", \"13\", \"37\", \"44\", \"90\", \"34\", \"29\", \"19\", \"68\", \"52\"], lambda x: x >= 0.89, \"It should be above 0.89!\")"
+        },
+        {
+            "constraint_name": "CompletenessConstraint(Completeness(beer_name,None,None))",
+            "column_name": "beer_name",
+            "current_value": "Completeness: 1.0",
+            "description": "'beer_name' is not null",
+            "suggesting_rule": "CompleteIfCompleteRule()",
+            "rule_description": "If a column is complete in the sample, we suggest a NOT NULL constraint",
+            "code_for_constraint": ".isComplete(\"beer_name\")"
+        },
+        {
+            "constraint_name": "CompletenessConstraint(Completeness(index,None,None))",
+            "column_name": "index",
+            "current_value": "Completeness: 1.0",
+            "description": "'index' is not null",
+            "suggesting_rule": "CompleteIfCompleteRule()",
+            "rule_description": "If a column is complete in the sample, we suggest a NOT NULL constraint",
+            "code_for_constraint": ".isComplete(\"index\")"
+        },
+        {
+            "constraint_name": "ComplianceConstraint(Compliance('index' has no negative values,index >= 0,None,List(index),None))",
+            "column_name": "index",
+            "current_value": "Minimum: 1.0",
+            "description": "'index' has no negative values",
+            "suggesting_rule": "NonNegativeNumbersRule()",
+            "rule_description": "If we see only non-negative numbers in a column, we suggest a corresponding constraint",
+            "code_for_constraint": ".isNonNegative(\"index\")"
+        },
+        {
+            "constraint_name": "UniquenessConstraint(Uniqueness(List(index),None,None))",
+            "column_name": "index",
+            "current_value": "ApproxDistinctness: 1.0199170124481327",
+            "description": "'index' is unique",
+            "suggesting_rule": "UniqueIfApproximatelyUniqueRule()",
+            "rule_description": "If the ratio of approximate num distinct values in a column is close to the number of records (within the error of the HLL sketch), we suggest a UNIQUE constraint",
+            "code_for_constraint": ".isUnique(\"index\")"
+        }
+    ]
+}

@@ -1,0 +1,130 @@
+{
+    "constraint_suggestions": [
+        {
+            "constraint_name": "CompletenessConstraint(Completeness(zip,None))",
+            "column_name": "zip",
+            "current_value": "Completeness: 1.0",
+            "description": "'zip' is not null",
+            "suggesting_rule": "CompleteIfCompleteRule()",
+            "rule_description": "If a column is complete in the sample, we suggest a NOT NULL constraint",
+            "code_for_constraint": ".isComplete(\"zip\")"
+        },
+        {
+            "constraint_name": "ComplianceConstraint(Compliance('zip' has no negative values,zip >= 0,None))",
+            "column_name": "zip",
+            "current_value": "Minimum: 35007.0",
+            "description": "'zip' has no negative values",
+            "suggesting_rule": "NonNegativeNumbersRule()",
+            "rule_description": "If we see only non-negative numbers in a column, we suggest a corresponding constraint",
+            "code_for_constraint": ".isNonNegative(\"zip\")"
+        },
+        {
+            "constraint_name": "ComplianceConstraint(Compliance('state' has value range 'CA', 'AZ', 'AR', 'AL', 'L', 'LA', 'AK', 'RA', 'R', 'oAL', 'pAL', 'AhL', 'ApL', 'hAL', 'AgL', 'AtL', 'rAL', 'uAL', 'AiL', 'AfL', 'fAL', 'ArL', 'gAL', 'AvL', 'AkL', 'kAL', 'AcL', 'nAL', 'dAL', 'wAL', 'AqL', 'tAL', 'AxL', 'AoL', 'AuL', 'qAL', 'jAL', 'xAL', 'AzL', 'AbL', 'sAL', 'zAL', 'cAL', 'AnL', 'lAL', 'AmL', 'AsL', 'yAL', 'ApR', 'vAL', 'AlL', 'mAL', 'aAL', 'AwL', 'iAL', 'eAL', 'AjL', 'wAR', 'bAL', 'AeL', 'AvR', 'dAR', 'AyL', 'AuR', 'AmR', 'AgR', 'AwR', 'oAR', 'xAR', 'AaL', 'AjR', 'gAR', 'uAR', 'AdL', 'hAR', 'fAR', 'AlR', 'cAR', 'kAR', 'vAR', 'AoR', 'AsR', 'AcR', 'bAR', 'AnR', 'AeR', 'AhR', 'AxR', 'sAR', 'lAR', 'tAR', 'rAR', 'ArR', 'AdR', 'jAR', 'aAR', 'AzR', 'AtR', 'mAR', 'qAR', 'AbR', 'zAR', 'nAR', 'AfR', 'AaR', 'yAR', 'AyR', 'AkR', 'AiR',`state` IN ('CA', 'AZ', 'AR', 'AL', 'L', 'LA', 'AK', 'RA', 'R', 'oAL', 'pAL', 'AhL', 'ApL', 'hAL', 'AgL', 'AtL', 'rAL', 'uAL', 'AiL', 'AfL', 'fAL', 'ArL', 'gAL', 'AvL', 'AkL', 'kAL', 'AcL', 'nAL', 'dAL', 'wAL', 'AqL', 'tAL', 'AxL', 'AoL', 'AuL', 'qAL', 'jAL', 'xAL', 'AzL', 'AbL', 'sAL', 'zAL', 'cAL', 'AnL', 'lAL', 'AmL', 'AsL', 'yAL', 'ApR', 'vAL', 'AlL', 'mAL', 'aAL', 'AwL', 'iAL', 'eAL', 'AjL', 'wAR', 'bAL', 'AeL', 'AvR', 'dAR', 'AyL', 'AuR', 'AmR', 'AgR', 'AwR', 'oAR', 'xAR', 'AaL', 'AjR', 'gAR', 'uAR', 'AdL', 'hAR', 'fAR', 'AlR', 'cAR', 'kAR', 'vAR', 'AoR', 'AsR', 'AcR', 'bAR', 'AnR', 'AeR', 'AhR', 'AxR', 'sAR', 'lAR', 'tAR', 'rAR', 'ArR', 'AdR', 'jAR', 'aAR', 'AzR', 'AtR', 'mAR', 'qAR', 'AbR', 'zAR', 'nAR', 'AfR', 'AaR', 'yAR', 'AyR', 'AkR', 'AiR'),None))",
+            "column_name": "state",
+            "current_value": "Compliance: 1",
+            "description": "'state' has value range 'CA', 'AZ', 'AR', 'AL', 'L', 'LA', 'AK', 'RA', 'R', 'oAL', 'pAL', 'AhL', 'ApL', 'hAL', 'AgL', 'AtL', 'rAL', 'uAL', 'AiL', 'AfL', 'fAL', 'ArL', 'gAL', 'AvL', 'AkL', 'kAL', 'AcL', 'nAL', 'dAL', 'wAL', 'AqL', 'tAL', 'AxL', 'AoL', 'AuL', 'qAL', 'jAL', 'xAL', 'AzL', 'AbL', 'sAL', 'zAL', 'cAL', 'AnL', 'lAL', 'AmL', 'AsL', 'yAL', 'ApR', 'vAL', 'AlL', 'mAL', 'aAL', 'AwL', 'iAL', 'eAL', 'AjL', 'wAR', 'bAL', 'AeL', 'AvR', 'dAR', 'AyL', 'AuR', 'AmR', 'AgR', 'AwR', 'oAR', 'xAR', 'AaL', 'AjR', 'gAR', 'uAR', 'AdL', 'hAR', 'fAR', 'AlR', 'cAR', 'kAR', 'vAR', 'AoR', 'AsR', 'AcR', 'bAR', 'AnR', 'AeR', 'AhR', 'AxR', 'sAR', 'lAR', 'tAR', 'rAR', 'ArR', 'AdR', 'jAR', 'aAR', 'AzR', 'AtR', 'mAR', 'qAR', 'AbR', 'zAR', 'nAR', 'AfR', 'AaR', 'yAR', 'AyR', 'AkR', 'AiR'",
+            "suggesting_rule": "CategoricalRangeRule(com.amazon.deequ.suggestions.rules.CategoricalRangeRule$$$Lambda$2802/1740372062@7b9f72e)",
+            "rule_description": "If we see a categorical range for a column, we suggest an IS IN (...) constraint",
+            "code_for_constraint": ".isContainedIn(\"state\", [\"CA\", \"AZ\", \"AR\", \"AL\", \"L\", \"LA\", \"AK\", \"RA\", \"R\", \"oAL\", \"pAL\", \"AhL\", \"ApL\", \"hAL\", \"AgL\", \"AtL\", \"rAL\", \"uAL\", \"AiL\", \"AfL\", \"fAL\", \"ArL\", \"gAL\", \"AvL\", \"AkL\", \"kAL\", \"AcL\", \"nAL\", \"dAL\", \"wAL\", \"AqL\", \"tAL\", \"AxL\", \"AoL\", \"AuL\", \"qAL\", \"jAL\", \"xAL\", \"AzL\", \"AbL\", \"sAL\", \"zAL\", \"cAL\", \"AnL\", \"lAL\", \"AmL\", \"AsL\", \"yAL\", \"ApR\", \"vAL\", \"AlL\", \"mAL\", \"aAL\", \"AwL\", \"iAL\", \"eAL\", \"AjL\", \"wAR\", \"bAL\", \"AeL\", \"AvR\", \"dAR\", \"AyL\", \"AuR\", \"AmR\", \"AgR\", \"AwR\", \"oAR\", \"xAR\", \"AaL\", \"AjR\", \"gAR\", \"uAR\", \"AdL\", \"hAR\", \"fAR\", \"AlR\", \"cAR\", \"kAR\", \"vAR\", \"AoR\", \"AsR\", \"AcR\", \"bAR\", \"AnR\", \"AeR\", \"AhR\", \"AxR\", \"sAR\", \"lAR\", \"tAR\", \"rAR\", \"ArR\", \"AdR\", \"jAR\", \"aAR\", \"AzR\", \"AtR\", \"mAR\", \"qAR\", \"AbR\", \"zAR\", \"nAR\", \"AfR\", \"AaR\", \"yAR\", \"AyR\", \"AkR\", \"AiR\"])"
+        },
+        {
+            "constraint_name": "CompletenessConstraint(Completeness(state,None))",
+            "column_name": "state",
+            "current_value": "Completeness: 1.0",
+            "description": "'state' is not null",
+            "suggesting_rule": "CompleteIfCompleteRule()",
+            "rule_description": "If a column is complete in the sample, we suggest a NOT NULL constraint",
+            "code_for_constraint": ".isComplete(\"state\")"
+        },
+        {
+            "constraint_name": "ComplianceConstraint(Compliance('state' has value range 'CA', 'AZ', 'AR', 'AL', 'L', 'LA', 'AK' for at least 90.0% of values,`state` IN ('CA', 'AZ', 'AR', 'AL', 'L', 'LA', 'AK'),None))",
+            "column_name": "state",
+            "current_value": "Compliance: 0.9077",
+            "description": "'state' has value range 'CA', 'AZ', 'AR', 'AL', 'L', 'LA', 'AK' for at least 90.0% of values",
+            "suggesting_rule": "FractionalCategoricalRangeRule(0.9,com.amazon.deequ.suggestions.rules.FractionalCategoricalRangeRule$$$Lambda$2803/2054200292@29a6af78)",
+            "rule_description": "If we see a categorical range for most values in a column, we suggest an IS IN (...) constraint that should hold for most values",
+            "code_for_constraint": ".isContainedIn(\"state\", [\"CA\", \"AZ\", \"AR\", \"AL\", \"L\", \"LA\", \"AK\"], lambda x: x >= 0.9, \"It should be above 0.9!\")"
+        },
+        {
+            "constraint_name": "ComplianceConstraint(Compliance('score' has value range '100%', 'NULL', '98%', '99%', '97%', '96%', '95%', '94%', '93%', '92%', '91%', '90%', '88%', '89%', '86%', '0%', '87%', '83%', '85%', '80%', '50%', '75%', '67%', '82%', '84%', '81%', '79%', '78%', '77%', '76%', '73%', '71%', '74%', '33%', '72%', '60%', '70%', '68%', '69%', '64%', '62%', '65%', '66%', '25%', '57%', '56%', '43%', '38%', '40%', '63%', '59%', '58%', '53%', '61%', '36%', '22%', '54%', '30%', '7%', '41%', '45%', '46%', '27%', '29%', '47%', '44%', '32%', '52%', '20%', '51%', '8%', '31%', '17%', '49%', '55%', '37%', '24%', '35%', '39%', '48%', '14%', '19%', '9%', '42%', '12%', '18%', '4%', '6%', '26%', '28%', '16%',`score` IN ('100%', 'NULL', '98%', '99%', '97%', '96%', '95%', '94%', '93%', '92%', '91%', '90%', '88%', '89%', '86%', '0%', '87%', '83%', '85%', '80%', '50%', '75%', '67%', '82%', '84%', '81%', '79%', '78%', '77%', '76%', '73%', '71%', '74%', '33%', '72%', '60%', '70%', '68%', '69%', '64%', '62%', '65%', '66%', '25%', '57%', '56%', '43%', '38%', '40%', '63%', '59%', '58%', '53%', '61%', '36%', '22%', '54%', '30%', '7%', '41%', '45%', '46%', '27%', '29%', '47%', '44%', '32%', '52%', '20%', '51%', '8%', '31%', '17%', '49%', '55%', '37%', '24%', '35%', '39%', '48%', '14%', '19%', '9%', '42%', '12%', '18%', '4%', '6%', '26%', '28%', '16%'),None))",
+            "column_name": "score",
+            "current_value": "Compliance: 1",
+            "description": "'score' has value range '100%', 'NULL', '98%', '99%', '97%', '96%', '95%', '94%', '93%', '92%', '91%', '90%', '88%', '89%', '86%', '0%', '87%', '83%', '85%', '80%', '50%', '75%', '67%', '82%', '84%', '81%', '79%', '78%', '77%', '76%', '73%', '71%', '74%', '33%', '72%', '60%', '70%', '68%', '69%', '64%', '62%', '65%', '66%', '25%', '57%', '56%', '43%', '38%', '40%', '63%', '59%', '58%', '53%', '61%', '36%', '22%', '54%', '30%', '7%', '41%', '45%', '46%', '27%', '29%', '47%', '44%', '32%', '52%', '20%', '51%', '8%', '31%', '17%', '49%', '55%', '37%', '24%', '35%', '39%', '48%', '14%', '19%', '9%', '42%', '12%', '18%', '4%', '6%', '26%', '28%', '16%'",
+            "suggesting_rule": "CategoricalRangeRule(com.amazon.deequ.suggestions.rules.CategoricalRangeRule$$$Lambda$2802/1740372062@7b9f72e)",
+            "rule_description": "If we see a categorical range for a column, we suggest an IS IN (...) constraint",
+            "code_for_constraint": ".isContainedIn(\"score\", [\"100%\", \"NULL\", \"98%\", \"99%\", \"97%\", \"96%\", \"95%\", \"94%\", \"93%\", \"92%\", \"91%\", \"90%\", \"88%\", \"89%\", \"86%\", \"0%\", \"87%\", \"83%\", \"85%\", \"80%\", \"50%\", \"75%\", \"67%\", \"82%\", \"84%\", \"81%\", \"79%\", \"78%\", \"77%\", \"76%\", \"73%\", \"71%\", \"74%\", \"33%\", \"72%\", \"60%\", \"70%\", \"68%\", \"69%\", \"64%\", \"62%\", \"65%\", \"66%\", \"25%\", \"57%\", \"56%\", \"43%\", \"38%\", \"40%\", \"63%\", \"59%\", \"58%\", \"53%\", \"61%\", \"36%\", \"22%\", \"54%\", \"30%\", \"7%\", \"41%\", \"45%\", \"46%\", \"27%\", \"29%\", \"47%\", \"44%\", \"32%\", \"52%\", \"20%\", \"51%\", \"8%\", \"31%\", \"17%\", \"49%\", \"55%\", \"37%\", \"24%\", \"35%\", \"39%\", \"48%\", \"14%\", \"19%\", \"9%\", \"42%\", \"12%\", \"18%\", \"4%\", \"6%\", \"26%\", \"28%\", \"16%\"])"
+        },
+        {
+            "constraint_name": "CompletenessConstraint(Completeness(score,None))",
+            "column_name": "score",
+            "current_value": "Completeness: 1.0",
+            "description": "'score' is not null",
+            "suggesting_rule": "CompleteIfCompleteRule()",
+            "rule_description": "If a column is complete in the sample, we suggest a NOT NULL constraint",
+            "code_for_constraint": ".isComplete(\"score\")"
+        },
+        {
+            "constraint_name": "ComplianceConstraint(Compliance('score' has value range '100%', 'NULL', '98%', '99%', '97%', '96%', '95%', '94%', '93%', '92%', '91%', '90%', '88%', '89%', '86%', '0%', '87%', '83%', '85%', '80%', '50%', '75%', '67%', '82%' for at least 89.0% of values,`score` IN ('100%', 'NULL', '98%', '99%', '97%', '96%', '95%', '94%', '93%', '92%', '91%', '90%', '88%', '89%', '86%', '0%', '87%', '83%', '85%', '80%', '50%', '75%', '67%', '82%'),None))",
+            "column_name": "score",
+            "current_value": "Compliance: 0.9057",
+            "description": "'score' has value range '100%', 'NULL', '98%', '99%', '97%', '96%', '95%', '94%', '93%', '92%', '91%', '90%', '88%', '89%', '86%', '0%', '87%', '83%', '85%', '80%', '50%', '75%', '67%', '82%' for at least 89.0% of values",
+            "suggesting_rule": "FractionalCategoricalRangeRule(0.9,com.amazon.deequ.suggestions.rules.FractionalCategoricalRangeRule$$$Lambda$2803/2054200292@29a6af78)",
+            "rule_description": "If we see a categorical range for most values in a column, we suggest an IS IN (...) constraint that should hold for most values",
+            "code_for_constraint": ".isContainedIn(\"score\", [\"100%\", \"NULL\", \"98%\", \"99%\", \"97%\", \"96%\", \"95%\", \"94%\", \"93%\", \"92%\", \"91%\", \"90%\", \"88%\", \"89%\", \"86%\", \"0%\", \"87%\", \"83%\", \"85%\", \"80%\", \"50%\", \"75%\", \"67%\", \"82%\"], lambda x: x >= 0.89, \"It should be above 0.89!\")"
+        },
+        {
+            "constraint_name": "CompletenessConstraint(Completeness(stateavg,None))",
+            "column_name": "stateavg",
+            "current_value": "Completeness: 1.0",
+            "description": "'stateavg' is not null",
+            "suggesting_rule": "CompleteIfCompleteRule()",
+            "rule_description": "If a column is complete in the sample, we suggest a NOT NULL constraint",
+            "code_for_constraint": ".isComplete(\"stateavg\")"
+        },
+        {
+            "constraint_name": "CompletenessConstraint(Completeness(sample,None))",
+            "column_name": "sample",
+            "current_value": "Completeness: 1.0",
+            "description": "'sample' is not null",
+            "suggesting_rule": "CompleteIfCompleteRule()",
+            "rule_description": "If a column is complete in the sample, we suggest a NOT NULL constraint",
+            "code_for_constraint": ".isComplete(\"sample\")"
+        },
+        {
+            "constraint_name": "ComplianceConstraint(Compliance('mc' has value range 'AMI-1', 'AMI-2', 'AMI-3', 'AMI-4', 'AMI-7A', 'AMI-5', 'HF-1', 'AMI-8A', 'HF-2', 'HF-4', 'HF-3', 'PN-2', 'PN-3B', 'PN-4', 'SCIP-INF-1', 'PN-5C', 'SCIP-CARD-2', 'PN-6', 'SCIP-VTE-1', 'SCIP-VTE-2', 'SCIP-INF-3', 'PN-7', 'SCIP-INF-2', 'SCIP-INF-4', 'SCIP-INF-6', 'CAC-1', 'CAC-3', 'CAC-2',`mc` IN ('AMI-1', 'AMI-2', 'AMI-3', 'AMI-4', 'AMI-7A', 'AMI-5', 'HF-1', 'AMI-8A', 'HF-2', 'HF-4', 'HF-3', 'PN-2', 'PN-3B', 'PN-4', 'SCIP-INF-1', 'PN-5C', 'SCIP-CARD-2', 'PN-6', 'SCIP-VTE-1', 'SCIP-VTE-2', 'SCIP-INF-3', 'PN-7', 'SCIP-INF-2', 'SCIP-INF-4', 'SCIP-INF-6', 'CAC-1', 'CAC-3', 'CAC-2'),None))",
+            "column_name": "mc",
+            "current_value": "Compliance: 1",
+            "description": "'mc' has value range 'AMI-1', 'AMI-2', 'AMI-3', 'AMI-4', 'AMI-7A', 'AMI-5', 'HF-1', 'AMI-8A', 'HF-2', 'HF-4', 'HF-3', 'PN-2', 'PN-3B', 'PN-4', 'SCIP-INF-1', 'PN-5C', 'SCIP-CARD-2', 'PN-6', 'SCIP-VTE-1', 'SCIP-VTE-2', 'SCIP-INF-3', 'PN-7', 'SCIP-INF-2', 'SCIP-INF-4', 'SCIP-INF-6', 'CAC-1', 'CAC-3', 'CAC-2'",
+            "suggesting_rule": "CategoricalRangeRule(com.amazon.deequ.suggestions.rules.CategoricalRangeRule$$$Lambda$2802/1740372062@7b9f72e)",
+            "rule_description": "If we see a categorical range for a column, we suggest an IS IN (...) constraint",
+            "code_for_constraint": ".isContainedIn(\"mc\", [\"AMI-1\", \"AMI-2\", \"AMI-3\", \"AMI-4\", \"AMI-7A\", \"AMI-5\", \"HF-1\", \"AMI-8A\", \"HF-2\", \"HF-4\", \"HF-3\", \"PN-2\", \"PN-3B\", \"PN-4\", \"SCIP-INF-1\", \"PN-5C\", \"SCIP-CARD-2\", \"PN-6\", \"SCIP-VTE-1\", \"SCIP-VTE-2\", \"SCIP-INF-3\", \"PN-7\", \"SCIP-INF-2\", \"SCIP-INF-4\", \"SCIP-INF-6\", \"CAC-1\", \"CAC-3\", \"CAC-2\"])"
+        },
+        {
+            "constraint_name": "CompletenessConstraint(Completeness(mc,None))",
+            "column_name": "mc",
+            "current_value": "Completeness: 1.0",
+            "description": "'mc' is not null",
+            "suggesting_rule": "CompleteIfCompleteRule()",
+            "rule_description": "If a column is complete in the sample, we suggest a NOT NULL constraint",
+            "code_for_constraint": ".isComplete(\"mc\")"
+        },
+        {
+            "constraint_name": "ComplianceConstraint(Compliance('mc' has value range 'AMI-1', 'AMI-2', 'AMI-3', 'AMI-4', 'AMI-7A', 'AMI-5', 'HF-1', 'AMI-8A', 'HF-2', 'HF-4', 'HF-3', 'PN-2', 'PN-3B', 'PN-4', 'SCIP-INF-1', 'PN-5C', 'SCIP-CARD-2', 'PN-6', 'SCIP-VTE-1', 'SCIP-VTE-2', 'SCIP-INF-3', 'PN-7' for at least 89.0% of values,`mc` IN ('AMI-1', 'AMI-2', 'AMI-3', 'AMI-4', 'AMI-7A', 'AMI-5', 'HF-1', 'AMI-8A', 'HF-2', 'HF-4', 'HF-3', 'PN-2', 'PN-3B', 'PN-4', 'SCIP-INF-1', 'PN-5C', 'SCIP-CARD-2', 'PN-6', 'SCIP-VTE-1', 'SCIP-VTE-2', 'SCIP-INF-3', 'PN-7'),None))",
+            "column_name": "mc",
+            "current_value": "Compliance: 0.9026999999999998",
+            "description": "'mc' has value range 'AMI-1', 'AMI-2', 'AMI-3', 'AMI-4', 'AMI-7A', 'AMI-5', 'HF-1', 'AMI-8A', 'HF-2', 'HF-4', 'HF-3', 'PN-2', 'PN-3B', 'PN-4', 'SCIP-INF-1', 'PN-5C', 'SCIP-CARD-2', 'PN-6', 'SCIP-VTE-1', 'SCIP-VTE-2', 'SCIP-INF-3', 'PN-7' for at least 89.0% of values",
+            "suggesting_rule": "FractionalCategoricalRangeRule(0.9,com.amazon.deequ.suggestions.rules.FractionalCategoricalRangeRule$$$Lambda$2803/2054200292@29a6af78)",
+            "rule_description": "If we see a categorical range for most values in a column, we suggest an IS IN (...) constraint that should hold for most values",
+            "code_for_constraint": ".isContainedIn(\"mc\", [\"AMI-1\", \"AMI-2\", \"AMI-3\", \"AMI-4\", \"AMI-7A\", \"AMI-5\", \"HF-1\", \"AMI-8A\", \"HF-2\", \"HF-4\", \"HF-3\", \"PN-2\", \"PN-3B\", \"PN-4\", \"SCIP-INF-1\", \"PN-5C\", \"SCIP-CARD-2\", \"PN-6\", \"SCIP-VTE-1\", \"SCIP-VTE-2\", \"SCIP-INF-3\", \"PN-7\"], lambda x: x >= 0.89, \"It should be above 0.89!\")"
+        },
+        {
+            "constraint_name": "CompletenessConstraint(Completeness(phone,None))",
+            "column_name": "phone",
+            "current_value": "Completeness: 1.0",
+            "description": "'phone' is not null",
+            "suggesting_rule": "CompleteIfCompleteRule()",
+            "rule_description": "If a column is complete in the sample, we suggest a NOT NULL constraint",
+            "code_for_constraint": ".isComplete(\"phone\")"
+        }
+    ]
+}

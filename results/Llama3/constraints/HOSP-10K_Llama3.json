@@ -1,0 +1,135 @@
+{
+  "prno": {
+    "type_constraint":"String", 
+    "categorical_constraint":["50091","03012F","50137","50101","50078","50055","40067","50262","30078","10146","40041","50179","50136","50040","40114","10044","40027","50133","10040","10021","20012","50257","31300","20026","10010","10138","50016","50226","10051","50235","30062","10169","40036","30014","10149","50056","50095","31303","50239","50046","40022","50060","30013","10036","10016","30102","10112","31313","50013","30023","50079","40004","41307","50036","10027","10164","41327","10025","30043","10033","40039","50096","10099","41311","30092","30101","50072","50018","10079","40081","50073","50225","50159","43300","50248","10019","50115","10059","50138","40072","04010F","10125","10018","50122","10066","50082","10089","50108","10150","50014","30114","21313","40020","50118","30083","50024","40074","50167","05025F","10078","30001","10007","10054","10058","50191","31309","10034","50038","40042","10130","41328","50152","10001","30087","20006","10069","30038","50173","10086","50009","50168","10092","10126","30064","50425","10085","50254","40018","30011","30012","10095","10061","30002","10120","10139","40091","30100","30089","50047","10168","30074","50042","10114","31304","20024","20027","50158","30126","50007","30115","10087","41312","10008","30122","31302","50125","31315","50025","30084","10073","30105","50124","50107","41317","41316","10108","10145","50232","31314","10029","04009F","10050","10103","40026","10100","50110","40142","30010","50045","50264","50193","30065","10091","10046","21305","20017","50478","40011","10167","30061","41314","40055","10015","10128","10148","40152","50100","10144","10049","40069","30071","11303","50116","41326","30033","10032","40084","10023","41324","40051","10055","10083","10045","41318","11300","10102","10056","50194","30123","30107","21303","50205","01014F","10101","10065","50099","10109","41313","41330","30093","50150","50103","50089","40029","50102","50238","30120","50084","30103","41300","50090","40050","50104","50197","10047","10097","30085","40147","50058","50219","40071","31301","30117","50039","40085","10022","50113","30068","10118","10158","30112","30108","50230","40078","50076","50192","30024","10024","50139","50111","30022","50054","11302","41329","10006","50140","30007","03033F","50204","01019F","10104","50126","40132","41305","50135","30121","50026","50075","10137","40002","50128","40019","30069","50077","31305","50211","50169","50131","41303","41319","40014","31311","50121","41309","50180","10005","41321","10113","50129","50234","50688","10131","50132","30110","50030","50063","30094","10062","10012","50127","50224","50243","40119","30073","20008","50002","50071","50022","20018","40062","30119","50057","50043","50231","30055","50261","10011","10110","30077","50008","40001","40088","50069","50153","50228","30118","50174","30037","21311","50017","30030","50149","10157","40017","40010","40118","10038","20001","50028","10043","40007","50242","30111","33302","40076","10009","41310","50195","30088","50006","10035","10129","40016","41323","50516","30036","50070","13301","31312","01021F","40080","40134","10152","40047","41308","40137","50112","50189","50222","50093","30067","10090","50245","50196","40015","50067","10052","30006","30016","50426","10039","03013F","50145"], 
+    "numerical_constraint":null,
+    "pattern_constraint":["[A-Z]{1,5}[0-9]{1,6}"]
+  },
+  "address": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": ["[A-Za-z\\s]+(\\d{1,5})?(\\s[A-Z][a-z]*)?"]
+  },
+  "state": {
+    "type_constraint": "String",
+    "categorical_constraint": ["DC", "AL", "NV"],
+    "numerical_constraint": null,
+    "pattern_constraint": ["[A-Z]{2}"]
+  },
+  "zip": {
+    "type_constraint": "Numerical",
+    "categorical_constraint": null,
+    "numerical_constraint": [0,99999],
+    "pattern_constraint": ["\\d{5}(?:-\\d{4})?"]
+  },
+  "county": {
+    "type_constraint": "String", 
+    "categorical_constraint": ["HOUSTON", "NAVAJO", "JUNEAU", "PULASKI", "FRANKLIN", "CARROLL", "ASHLEY", "DREW", "SAN DIEGO", "FRESNO", "RIVERSIDE", "TALLAPOOSA", "BUTLER", "YUBA", "AUTAUGA", "CROSS", "COVINGTON", "MOBILE", "MADISON", "BOONE", "SEVIER", "CLARKE", "LEE", "CRENSHAW", "SANTA BARBARA", "ELMORE", "PIKE", "VAN BUREN", "POLK", "TUSCALOOSA", "FAULKNER", "SONOMA", "BIBB", "LAUDERDALE", "POPE", "MISSISSIPPI", "HALE", "TULARE", "COCONINO", "CHEROKEE", "HOWARD", "BRADLEY", "APACHE", "TALLADEGA", "HEMPSTEAD", "DALE", "ANCHORAGE", "WINSTON", "KENAI PENINSULA", "SANTA CRUZ", "PHILLIPS", "SANTA CLARA", "NEVADA", "PINAL", "SEBASTIAN", "SAN BERNARDINO", "CRITTENDEN", "MARENGO", "CHAMBERS", "COLBERT", "MONTEREY", "BAXTER", "MARSHALL", "YELL", "LA PAZ", "MARICOPA", "BUTTE", "NAPA", "YAVAPAI", "SALINE", "SCOTT", "SAN JOAQUIN", "LAWRENCE", "INDEPENDENCE", "BETHEL", "MOHAVE", "CRAIGHEAD", "BLOUNT", "COCHISE", "OUACHITA", "CULLMAN", "STONE", "SUMTER", "MARION", "GENEVA", "COFFEE", "DALLAS", "LIMESTONE", "DESHA", "SAN LUIS OBISPO", "FAYETTE", "SAN FRANCISCO", "COLUMBIA", "HOT SPRING", "CONECUH", "EL DORADO", "JEFFERSON", "LOS ANGELES", "MORGAN", "TEHAMA", "GARLAND", "KETCHIKAN GATEWAY", "LOGAN", "MONTGOMERY", "YUMA", "MARIN", "BENTON", "UNION", "ARKANSAS", "SAN MATEO", "GILA", "CALHOUN", "ALAMEDA", "PIMA", "WHITE", "GRAHAM", "VENTURA", "CHILTON", "SACRAMENTO", "CONWAY", "KERN", "JOHNSON", "SOLANO", "SITKA", "CONTRA COSTA", "CHICOT", "IMPERIAL", "AMADOR", "SAINT FRANCIS", "STANISLAUS", "BARBOUR", "SHELBY", "JACKSON", "ORANGE", "ESCAMBIA", "MATANUSKA SUSITNA", "WRANGELL PETERSBURG", "KINGS", "MONROE", "GREENE", "SAINT CLAIR", "PICKENS", "BALDWIN", "BULLOCK", "FAIRBANKS NORTH STAR", "RUSSELL", "ETOWAH", "CLARK", "WALKER", "WASHINGTON", "HUMBOLDT", "YOLO", "WILCOX", "DE KALB", "CRAWFORD", "RANDOLPH", "CLAY", "CLEBURNE"],
+    "numerical_constraint": null, 
+    "pattern_constraint": ["[A-Z]{1,} [A-Z]{2,}"]
+  },
+  "hospitaltype": {
+    "type_constraint": "String",
+    "categorical_constraint": ["Childrens", "Critical Access Hospitals", "Acute Care - VA Medical Center", "Acute Care Hospitals"],
+    "numerical_constraint": null,
+    "pattern_constraint": [".*"]
+  },
+  "hospitalowner": {
+    "type_constraint": "String",
+    "categorical_constraint": [
+      "Government - State",
+      "Government - Hospital District or Authority",
+      "Proprietary",
+      "Government - Local",
+      "Voluntary non-profit - Church",
+      "Voluntary non-profit - Private",
+      "Government Federal",
+      "Voluntary non-profit - Other"
+    ],
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "[A-Z]{1,}[\\s-][A-Z]{0,}[\\s-][A-Z]{0,}"
+    ]
+  },
+  "emergencyservice": {
+    "type_constraint": "String",
+    "categorical_constraint": ["No", "Yes"],
+    "numerical_constraint": null,
+    "pattern_constraint": null
+  },
+  "condition": {
+    "type_constraint": "String",
+    "categorical_constraint": [
+      "Heart Attack",
+      "Children&#8217;s Asthma Care",
+      "Heart Failure",
+      "Surgical Infection Prevention",
+      "Pneumonia"
+    ],
+    "numerical_constraint": null,
+    "pattern_constraint": ["[A-Za-z\\s]+"]
+  },
+  "mc": {
+    "type_constraint": "String",
+    "categorical_constraint": [
+      "AMI-5", 
+      "HF-4", 
+      "SCIP-INF-6", 
+      "SCIP-INF-4", 
+      "AMI-7A", 
+      "PN-5C", 
+      "CAC-1", 
+      "HF-3", 
+      "PN-7", 
+      "SCIP-CARD-2", 
+      "CAC-2", 
+      "HF-2", 
+      "SCIP-INF-1", 
+      "AMI-1", 
+      "AMI-4", 
+      "PN-3B", 
+      "HF-1", 
+      "AMI-8A", 
+      "SCIP-VTE-2", 
+      "SCIP-INF-3", 
+      "AMI-2", 
+      "PN-4", 
+      "PN-2", 
+      "CAC-3", 
+      "AMI-3", 
+      "PN-6", 
+      "SCIP-INF-2"
+    ],
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "[A-Z]{1,5}-[0-9]{1,4}"
+    ]
+  },
+  "measurename": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "[A-Z][a-z ]{1,}"
+    ]
+  },
+  "score": {
+    "type_constraint": "Numerical",
+    "categorical_constraint": null,
+    "numerical_constraint": [0, 100],
+    "pattern_constraint": ["\\d{1,3}%"]
+  },
+  "patients": {
+    "type_constraint":"Numerical", 
+    "categorical_constraint":null,
+    "numerical_constraint":[0,2000],
+    "pattern_constraint":["\\d{1,3}"]
+  },
+  "stateavg":{
+    "type_constraint":"String", 
+    "categorical_constraint":["AL","AK","AR","AZ","CA"], 
+    "numerical_constraint":null,
+    "pattern_constraint":["[A-Z]{2}"]
+  }
+}

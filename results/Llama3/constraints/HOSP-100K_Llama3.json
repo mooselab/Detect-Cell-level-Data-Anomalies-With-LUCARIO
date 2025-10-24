@@ -1,0 +1,97 @@
+{
+  "state": {
+    "type_constraint":"String", 
+    "categorical_constraint":["AL","AR","AZ","CA","CO","CT","DC","DE","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA","MA","MD","ME","MH","MI","MN","MO","MP","MS","MT","NC","ND","NE","NH","NJ","NM","NV","NY","OH","OK","OR","PA","PR","RI","SC","SD","TN","TX","UT","VA","VI","VT","WA","WI","WV","WY"],
+    "numerical_constraint":null,
+    "pattern_constraint":["[A-Z]{2}"]
+  },
+  "hospitaltype": {
+    "type_constraint": "String",
+    "categorical_constraint": ["Childrens", "Critical Access Hospitals", "Acute Care - VA Medical Center", "Acute Care Hospitals"],
+    "numerical_constraint": null,
+    "pattern_constraint": [".*"]
+  },
+  "hospitalowner": {
+    "type_constraint": "String",
+    "categorical_constraint": [
+      "Government - State",
+      "Government - Hospital District or Authority",
+      "Proprietary",
+      "Government - Local",
+      "Voluntary non-profit - Church",
+      "Voluntary non-profit - Private",
+      "Government Federal",
+      "Voluntary non-profit - Other"
+    ],
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "[A-Z]{1,}[\\s-][A-Z]{0,}[\\s-][A-Z]{0,}"
+    ]
+  },
+  "emergencyservice": {
+    "type_constraint": "String",
+    "categorical_constraint": ["No", "Yes"],
+    "numerical_constraint": null,
+    "pattern_constraint": null
+  },
+  "condition": {
+    "type_constraint": "String",
+    "categorical_constraint": [
+      "Heart Attack",
+      "Children&#8217;s Asthma Care",
+      "Heart Failure",
+      "Surgical Infection Prevention",
+      "Pneumonia"
+    ],
+    "numerical_constraint": null,
+    "pattern_constraint": ["[A-Za-z\\s]+"]
+  },
+  "mc": {
+    "type_constraint": "String",
+    "categorical_constraint": [
+      "AMI-5", 
+      "HF-4", 
+      "SCIP-INF-6", 
+      "SCIP-INF-4", 
+      "AMI-7A", 
+      "PN-5C", 
+      "CAC-1", 
+      "HF-3", 
+      "PN-7", 
+      "SCIP-CARD-2", 
+      "CAC-2", 
+      "HF-2", 
+      "SCIP-INF-1", 
+      "AMI-1", 
+      "AMI-4", 
+      "PN-3B", 
+      "HF-1", 
+      "AMI-8A", 
+      "SCIP-VTE-2", 
+      "SCIP-INF-3", 
+      "AMI-2", 
+      "PN-4", 
+      "PN-2", 
+      "CAC-3", 
+      "AMI-3", 
+      "PN-6", 
+      "SCIP-INF-2"
+    ],
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "[A-Z]{1,5}-[0-9]{1,4}"
+    ]
+  },
+  "measurename": {
+    "type_constraint":"String", 
+    "categorical_constraint":["Pneumonia Patients Whose Initial Emergency Room Blood Culture Was Performed Prior To The Administration Of The First Hospital Dose Of Antibiotics", "Heart Attack Patients Given Smoking Cessation Advice/Counseling", "Children and their Caregivers Who Received a Home Management Plan of Care Document While Hospitalized for Asthma", "Pneumonia Patients Assessed and Given Pneumococcal Vaccination", "Pneumonia Patients Assessed and Given Influenza Vaccination", "Pneumonia Patients Given Smoking Cessation Advice/Counseling", "Heart Failure Patients Given Smoking Cessation Advice/Counseling", "surgery patients needing hair removed from the surgical area before surgery&#54; who had hair removed using a safer method (electric clippers or hair removal cream sC not a razor)", "Children Who Received Systemic Corticosteroid Medication (oral and IV Medication That Reduces Inflammation and Controls Symptoms) While Hospitalized for Asthma", "Heart Attack Patients Given Aspirin at Discharge", "surgery patients whose preventive antibiotics were stopped at the right time (within 24 hours after surgery)", "surgery patients whose doctors ordered treatments to prevent blood clots after certain types of surgeries", "Children Who Received Reliever Medication While Hospitalized for Asthma", "surgery patients who were taking heart drugs called beta blockers before coming to the hospital&#54; who were kept on the beta blockers during the period just before and after their surgery", "surgery patients who were given an antibiotic at the right time (within one hour before surgery) to help prevent infection", "Heart Attack Patients Given Beta Blocker at Discharge", "patients who got treatment  at the right time (within 24 hours before or after their surgery) to help prevent blood clots after certain types of surgery", "Heart Failure Patients Given Discharge Instructions", "Pneumonia Patients Given Initial Antibiotic(s) within 6 Hours After Arrival", "surgery patients who were given the  right kind  of antibiotic to help prevent infection", "Pneumonia Patients Given the Most Appropriate Initial Antibiotic(s)", "all heart surgery patients whose blood sugar (blood glucose) is kept under good control in the days right after surgery", "Heart Failure Patients Given an Evaluation of Left Ventricular Systolic (LVS) Function"], 
+    "numerical_constraint":null,
+    "pattern_constraint":["[A-Za-z\\s\\,\\(\\)\\&\\-\\+\\*\\{\\}\\[\\]\\`\\~\\^\\.]+"]
+  },
+  "score": {
+    "type_constraint": "Numerical",
+    "categorical_constraint": null,
+    "numerical_constraint": [0, 100],
+    "pattern_constraint": ["\\d{1,3}%"]
+  }
+}

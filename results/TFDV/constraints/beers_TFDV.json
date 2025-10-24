@@ -1,0 +1,366 @@
+{
+  "feature": [
+    {
+      "name": "index",
+      "type": "INT",
+      "presence": {
+        "minFraction": 1.0,
+        "minCount": "1"
+      },
+      "shape": {
+        "dim": [
+          {
+            "size": "1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "id",
+      "type": "INT",
+      "presence": {
+        "minFraction": 1.0,
+        "minCount": "1"
+      },
+      "shape": {
+        "dim": [
+          {
+            "size": "1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "beer_name",
+      "type": "BYTES",
+      "presence": {
+        "minFraction": 1.0,
+        "minCount": "1"
+      },
+      "shape": {
+        "dim": [
+          {
+            "size": "1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "style",
+      "type": "BYTES",
+      "domain": "style",
+      "presence": {
+        "minFraction": 1.0,
+        "minCount": "1"
+      },
+      "shape": {
+        "dim": [
+          {
+            "size": "1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ounces",
+      "type": "BYTES",
+      "domain": "ounces",
+      "presence": {
+        "minFraction": 1.0,
+        "minCount": "1"
+      },
+      "shape": {
+        "dim": [
+          {
+            "size": "1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "abv",
+      "type": "BYTES",
+      "presence": {
+        "minFraction": 1.0,
+        "minCount": "1"
+      },
+      "shape": {
+        "dim": [
+          {
+            "size": "1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ibu",
+      "type": "BYTES",
+      "presence": {
+        "minFraction": 1.0,
+        "minCount": "1"
+      },
+      "shape": {
+        "dim": [
+          {
+            "size": "1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "brewery_id",
+      "type": "INT",
+      "presence": {
+        "minFraction": 1.0,
+        "minCount": "1"
+      },
+      "shape": {
+        "dim": [
+          {
+            "size": "1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "brewery_name",
+      "type": "BYTES",
+      "presence": {
+        "minFraction": 1.0,
+        "minCount": "1"
+      },
+      "shape": {
+        "dim": [
+          {
+            "size": "1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "city",
+      "type": "BYTES",
+      "presence": {
+        "minFraction": 1.0,
+        "minCount": "1"
+      },
+      "shape": {
+        "dim": [
+          {
+            "size": "1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "state",
+      "type": "BYTES",
+      "domain": "state",
+      "presence": {
+        "minFraction": 1.0,
+        "minCount": "1"
+      },
+      "shape": {
+        "dim": [
+          {
+            "size": "1"
+          }
+        ]
+      }
+    }
+  ],
+  "stringDomain": [
+    {
+      "name": "style",
+      "value": [
+        "",
+        "Abbey Single Ale",
+        "Altbier",
+        "American Adjunct Lager",
+        "American Amber / Red Ale",
+        "American Amber / Red Lager",
+        "American Barleywine",
+        "American Black Ale",
+        "American Blonde Ale",
+        "American Brown Ale",
+        "American Dark Wheat Ale",
+        "American Double / Imperial IPA",
+        "American Double / Imperial Pilsner",
+        "American Double / Imperial Stout",
+        "American IPA",
+        "American India Pale Lager",
+        "American Malt Liquor",
+        "American Pale Ale (APA)",
+        "American Pale Lager",
+        "American Pale Wheat Ale",
+        "American Pilsner",
+        "American Porter",
+        "American Stout",
+        "American Strong Ale",
+        "American White IPA",
+        "American Wild Ale",
+        "Baltic Porter",
+        "Belgian Dark Ale",
+        "Belgian IPA",
+        "Belgian Pale Ale",
+        "Belgian Strong Dark Ale",
+        "Belgian Strong Pale Ale",
+        "Berliner Weissbier",
+        "Bi\u00e8re de Garde",
+        "Bock",
+        "Braggot",
+        "California Common / Steam Beer",
+        "Chile Beer",
+        "Cider",
+        "Cream Ale",
+        "Czech Pilsener",
+        "Doppelbock",
+        "Dortmunder / Export Lager",
+        "Dubbel",
+        "Dunkelweizen",
+        "English Barleywine",
+        "English Bitter",
+        "English Brown Ale",
+        "English Dark Mild Ale",
+        "English India Pale Ale (IPA)",
+        "English Pale Ale",
+        "English Pale Mild Ale",
+        "English Stout",
+        "English Strong Ale",
+        "Euro Dark Lager",
+        "Euro Pale Lager",
+        "Extra Special / Strong Bitter (ESB)",
+        "Flanders Oud Bruin",
+        "Flanders Red Ale",
+        "Foreign / Export Stout",
+        "Fruit / Vegetable Beer",
+        "German Pilsener",
+        "Gose",
+        "Grisette",
+        "Hefeweizen",
+        "Herbed / Spiced Beer",
+        "Irish Dry Stout",
+        "Irish Red Ale",
+        "Keller Bier / Zwickel Bier",
+        "Kristalweizen",
+        "K\u00f6lsch",
+        "Light Lager",
+        "Low Alcohol Beer",
+        "Maibock / Helles Bock",
+        "Mead",
+        "Milk / Sweet Stout",
+        "Munich Dunkel Lager",
+        "Munich Helles Lager",
+        "M\u00e4rzen / Oktoberfest",
+        "Oatmeal Stout",
+        "Old Ale",
+        "Other",
+        "Pumpkin Ale",
+        "Quadrupel (Quad)",
+        "Radler",
+        "Rauchbier",
+        "Roggenbier",
+        "Russian Imperial Stout",
+        "Rye Beer",
+        "Saison / Farmhouse Ale",
+        "Schwarzbier",
+        "Scotch Ale / Wee Heavy",
+        "Scottish Ale",
+        "Shandy",
+        "Smoked Beer",
+        "Tripel",
+        "Vienna Lager",
+        "Wheat Ale",
+        "Winter Warmer",
+        "Witbier"
+      ]
+    },
+    {
+      "name": "ounces",
+      "value": [
+        "12.0 OZ.",
+        "12.0 ounce",
+        "12.0 oz",
+        "12.0 oz.",
+        "12.0 oz. Alumi-Tek",
+        "12.0 oz. Silo Can",
+        "16.0 OZ.",
+        "16.0 ounce",
+        "16.0 oz",
+        "16.0 oz.",
+        "16.0 oz. Alumi-Tek",
+        "16.0 oz. Silo Can",
+        "16.9 OZ.",
+        "19.2 OZ.",
+        "19.2 oz",
+        "19.2 oz.",
+        "19.2 oz. Alumi-Tek",
+        "24.0 ounce",
+        "24.0 oz",
+        "24.0 oz.",
+        "24.0 oz. Alumi-Tek",
+        "32.0 OZ.",
+        "32.0 oz.",
+        "32.0 oz. Alumi-Tek",
+        "8.4 ounce"
+      ]
+    },
+    {
+      "name": "state",
+      "value": [
+        "",
+        "AK",
+        "AL",
+        "AR",
+        "AZ",
+        "CA",
+        "CO",
+        "CT",
+        "DC",
+        "DE",
+        "FL",
+        "GA",
+        "HI",
+        "IA",
+        "ID",
+        "IL",
+        "IN",
+        "KS",
+        "KY",
+        "LA",
+        "MA",
+        "MD",
+        "ME",
+        "MI",
+        "MN",
+        "MO",
+        "MS",
+        "MT",
+        "NC",
+        "ND",
+        "NE",
+        "NH",
+        "NJ",
+        "NM",
+        "NV",
+        "NY",
+        "OH",
+        "OK",
+        "OR",
+        "PA",
+        "RI",
+        "SC",
+        "SD",
+        "TN",
+        "TX",
+        "UT",
+        "VA",
+        "VT",
+        "WA",
+        "WI",
+        "WV",
+        "WY"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "src": {
+    "type_constraint": "String",
+    "categorical_constraint": [
+      "allegiantair", 
+      "dfw", 
+      "flightaware", 
+      "foxbusiness", 
+      "wunderground", 
+      "sfo", 
+      "gofox", 
+      "ord", 
+      "flights", 
+      "flightarrival", 
+      "flylouisville", 
+      "flightwise", 
+      "ua", 
+      "iad", 
+      "quicktrip", 
+      "flightstats", 
+      "mytripandmore", 
+      "mco", 
+      "flytecomm", 
+      "businesstravellogue", 
+      "travelocity", 
+      "usatoday", 
+      "CO", 
+      "ifly", 
+      "aa", 
+      "boston", 
+      "den", 
+      "panynj", 
+      "world-flight-tracker", 
+      "mia", 
+      "myrateplan", 
+      "orbitz", 
+      "airtravelcenter", 
+      "flightview", 
+      "flightexplorer", 
+      "phl", 
+      "helloflight", 
+      "weather"
+    ],
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "[a-zA-Z0-9]+[a-zA-Z0-9-]*"
+    ]
+  },
+  "flight": {
+    "type_constraint": "String",
+    "categorical_constraint": ["AA", "CO", "UA"],
+    "numerical_constraint": null,
+    "pattern_constraint": ["^[A-Z]{2}-\\d{4}-[A-Z]{3}-[A-Z]{3}$"]
+  },
+  "sched_dep_time": {
+    "type_constraint": "String",
+    "categorical_constraint": ["Thu", "Not Available"],
+    "numerical_constraint": null,
+    "pattern_constraint": [
+          "\\d{1,2}:\\d{2} [a-zA-Z]{1,3}\\.",
+          "[A-Za-z]{3} \\d{1,2}:\\d{2}",
+          "\\d{1,2}/\\d{1,2} \\d{1,2}:\\d{2}"
+      ]
+  },
+  "act_dep_time": {
+    "type_constraint": "String", 
+    "categorical_constraint": ["Delayed", "On Time"], 
+    "numerical_constraint": null, 
+    "pattern_constraint": ["\\d{1,2}:\\d{2} [a|p]\\.m.", "\\w+ \\d{1,2}:\\d{2} [a|p]\\..", "(Estimated runway)", "(Estimated)"]
+  },
+  "sched_arr_time": {
+    "type_constraint": "String",
+    "categorical_constraint": ["Thu", "Fri", "Dec"],
+    "numerical_constraint": null,
+    "pattern_constraint": [
+        "\\d{1,2}:\\d{2} [ap\\.m.]?",
+        "[A-Z]{3} \\d{1,2} \\d{2}:\\d{2}",
+        "\\d{1,2}/\\d{1,2}/\\d{4} \\d{1,2}:\\d{2} [ap\\.m.]*",
+        "\\d{1,2}:\\d{2} [ap\\.m.]? (Dec|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov) \\d{1,2}"
+    ]
+  },
+  "act_arr_time": {
+    "type_constraint": "String", 
+    "categorical_constraint": ["Thu", "Fri", "Dec"], 
+    "numerical_constraint": null, 
+    "pattern_constraint": ["\\d{1,2}/\\d{1,2}/\\d{2} \\d{1,2}:\\d{2} [a-zA-Z]{1,9}", "\\w+ \\d{1,2}:\\d{2} [a-zA-Z]{1,9}", "\\d{1,2}:\\d{2} [a-zA-Z]{1,9}", "Thu  \\d{1,2}:\\d{2}", "Fri Dec \\d{1,2} \\d{1,2}:\\d{2} a.m.", "[A-Za-z]{3} \\d{1,2}:\\d{2} [a-zA-Z]{1,9}"]
+  }
+}
