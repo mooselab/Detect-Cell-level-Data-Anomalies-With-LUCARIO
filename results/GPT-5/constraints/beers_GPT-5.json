@@ -1,0 +1,179 @@
+{
+  "index": {
+    "type_constraint": "Numerical",
+    "categorical_constraint": null,
+    "numerical_constraint": [1, 2410],
+    "pattern_constraint": ["^\\d{1,4}$"]
+  },
+  "id": {
+    "type_constraint": "Numerical",
+    "categorical_constraint": null,
+    "numerical_constraint": [1, 2692],
+    "pattern_constraint": ["^[1-9]\\d{0,3}$"]
+  },
+  "beer_name": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^[\\p{L}\\p{N}\\s.,'’\"/#&()\\-:°™!]+$"
+    ]
+  },
+  "style": {
+    "type_constraint": "String",
+    "categorical_constraint": [
+      "Schwarzbier",
+      "American Stout",
+      "Roggenbier",
+      "Belgian Pale Ale",
+      "American Brown Ale",
+      "Irish Dry Stout",
+      "American India Pale Lager",
+      "Belgian IPA",
+      "American Double / Imperial Pilsner",
+      "Grisette",
+      "California Common / Steam Beer",
+      "Munich Helles Lager",
+      "Bock",
+      "Witbier",
+      "American Dark Wheat Ale",
+      "English India Pale Ale (IPA)",
+      "Radler",
+      "Belgian Dark Ale",
+      "American Amber / Red Lager",
+      "Light Lager",
+      "Winter Warmer",
+      "Quadrupel (Quad)",
+      "American Amber / Red Ale",
+      "English Barleywine",
+      "Märzen / Oktoberfest",
+      "Rye Beer",
+      "Bière de Garde",
+      "English Bitter",
+      "Oatmeal Stout",
+      "American Barleywine",
+      "Fruit / Vegetable Beer",
+      "English Brown Ale",
+      "Cider",
+      "American Pale Lager",
+      "American IPA",
+      "Braggot",
+      "Belgian Strong Pale Ale",
+      "American Wild Ale",
+      "Mead",
+      "Wheat Ale",
+      "Smoked Beer",
+      "Munich Dunkel Lager",
+      "Doppelbock",
+      "English Strong Ale",
+      "American Adjunct Lager",
+      "Other",
+      "Irish Red Ale",
+      "English Pale Mild Ale",
+      "Vienna Lager",
+      "Old Ale",
+      "American Pale Wheat Ale",
+      "Rauchbier",
+      "German Pilsener",
+      "Altbier",
+      "Shandy",
+      "Foreign / Export Stout",
+      "Scotch Ale / Wee Heavy",
+      "English Dark Mild Ale",
+      "Extra Special / Strong Bitter (ESB)",
+      "American Pale Ale (APA)",
+      "Baltic Porter",
+      "Dortmunder / Export Lager",
+      "Kristalweizen",
+      "Keller Bier / Zwickel Bier",
+      "American Porter",
+      "Kölsch",
+      "Gose",
+      "Pumpkin Ale",
+      "Milk / Sweet Stout",
+      "American Malt Liquor",
+      "Maibock / Helles Bock",
+      "English Stout",
+      "American White IPA",
+      "Berliner Weissbier",
+      "Euro Dark Lager",
+      "English Pale Ale",
+      "Abbey Single Ale",
+      "Russian Imperial Stout",
+      "Flanders Red Ale",
+      "American Double / Imperial Stout",
+      "Dunkelweizen",
+      "Flanders Oud Bruin",
+      "Tripel",
+      "American Strong Ale",
+      "American Blonde Ale",
+      "Cream Ale",
+      "Saison / Farmhouse Ale",
+      "Low Alcohol Beer",
+      "Scottish Ale",
+      "Dubbel",
+      "Hefeweizen",
+      "Chile Beer",
+      "American Double / Imperial IPA",
+      "American Black Ale",
+      "Euro Pale Lager",
+      "American Pilsner",
+      "Herbed / Spiced Beer",
+      "Czech Pilsener",
+      "Belgian Strong Dark Ale"
+    ],
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^[A-Za-zÀ-ÖØ-öø-ÿ() /]+$"
+    ]
+  },
+  "ounces": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": [8.4, 32.0],
+    "pattern_constraint": [
+      "^\\s*(\\d{1,2}\\.\\d)\\s*(?:[Oo][Zz]|[Oo][Uu][Nn][Cc][Ee])\\.?\\s*(?:[A-Za-z][A-Za-z\\-]*(?:\\s+[A-Za-z][A-Za-z\\-]*)*)?\\s*$"
+    ]
+  },
+  "abv": {
+    "type_constraint": "Numerical",
+    "categorical_constraint": null,
+    "numerical_constraint": [0.028, 0.12],
+    "pattern_constraint": ["^0\\.\\d{1,3}$"]
+  },
+  "ibu": {
+    "type_constraint": "Numerical",
+    "categorical_constraint": null,
+    "numerical_constraint": [4, 120],
+    "pattern_constraint": ["^\\d{1,3}$"]
+  },
+  "brewery_id": {
+    "type_constraint": "Numerical",
+    "categorical_constraint": null,
+    "numerical_constraint": [0, 557],
+    "pattern_constraint": ["^\\d{1,3}$"]
+  },
+  "brewery_name": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^(?!.*\\.{3,})[\\p{L}\\d][\\p{L}\\d &.,'’()\\-\\/]*[\\p{L}\\d).]$"
+    ]
+  },
+  "city": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^[A-Za-z][A-Za-z .'-]*[A-Za-z]$",
+      "^[A-Za-z][A-Za-z .'-]*[A-Za-z] [A-Z]{2}$"
+    ]
+  },
+  "state": {
+    "type_constraint": "String",
+    "categorical_constraint": ["OK", "DE", "HI", "WA", "MA", "RI", "IL", "KY", "MN", "FL", "NV", "MD", "TN", "MO", "CA", "NH", "ME", "VT", "OH", "TX", "WI", "NM", "SC", "OR", "ND", "GA", "AR", "IN", "CO", "VA", "NE", "CT", "LA", "NC", "MT", "AK", "NY", "SD", "DC", "MS", "MI", "AZ", "ID", "IA", "PA", "UT", "NJ", "KS", "WV", "WY", "AL"],
+    "numerical_constraint": null,
+    "pattern_constraint": ["^[A-Z]{2}$"]
+  }
+}

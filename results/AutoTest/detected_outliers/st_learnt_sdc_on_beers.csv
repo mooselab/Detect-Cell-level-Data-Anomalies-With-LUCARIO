@@ -1,0 +1,2 @@
+header,outlier,conf,SDC,dist_val
+state,[''],0.9700068143347778,"(('cta', 'state', 0.8, 0.5), ('cta', 0), 1.6820242898625812, 0.029993185665222296, (2, 237, 153173, 84267))","['', 'NC', 'IA', 'NM', 'WY', 'MD', 'OR', 'CO', 'MN', 'ID', 'NH', 'AL', 'VA', 'NJ', 'WV', 'DE', 'CA', 'OK', 'MI', 'NY', 'FL', 'RI', 'WA', 'DC', 'OH', 'AR', 'MS', 'KY', 'KS', 'LA', 'NE', 'SD', 'GA', 'ND', 'AK', 'NV', 'CT', 'PA', 'ME', 'MO', 'WI', 'MA', 'TN', 'MT', 'VT', 'UT', 'AZ', 'IN', 'TX', 'IL', 'SC', 'HI']"

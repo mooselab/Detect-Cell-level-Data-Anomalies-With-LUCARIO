@@ -1,0 +1,1464 @@
+Processing dataset: beers with GPT-5
+Column name: index
+```
+{
+  "index": {
+    "type_constraint": "Numerical",
+    "categorical_constraint": null,
+    "numerical_constraint": [1, 2410],
+    "pattern_constraint": ["^\\d{1,4}$"]
+  }
+}
+```
+Inference time: 11.698s
+Column name: id
+```
+{
+  "id": {
+    "type_constraint": "Numerical",
+    "categorical_constraint": null,
+    "numerical_constraint": [1, 2692],
+    "pattern_constraint": ["^[1-9]\\d{0,3}$"]
+  }
+}
+```
+Inference time: 16.727s
+Column name: beer_name
+```json
+{
+  "beer_name": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^[\\p{L}\\p{N}\\s.,'’\"/#&()\\-:°™!]+$"
+    ]
+  }
+}
+```
+Inference time: 33.442s
+Column name: style
+```json
+{
+  "style": {
+    "type_constraint": "String",
+    "categorical_constraint": [
+      "Schwarzbier",
+      "American Stout",
+      "Roggenbier",
+      "Belgian Pale Ale",
+      "American Brown Ale",
+      "Irish Dry Stout",
+      "American India Pale Lager",
+      "Belgian IPA",
+      "American Double / Imperial Pilsner",
+      "Grisette",
+      "California Common / Steam Beer",
+      "Munich Helles Lager",
+      "Bock",
+      "Witbier",
+      "American Dark Wheat Ale",
+      "English India Pale Ale (IPA)",
+      "Radler",
+      "Belgian Dark Ale",
+      "American Amber / Red Lager",
+      "Light Lager",
+      "Winter Warmer",
+      "Quadrupel (Quad)",
+      "American Amber / Red Ale",
+      "English Barleywine",
+      "Märzen / Oktoberfest",
+      "Rye Beer",
+      "Bière de Garde",
+      "English Bitter",
+      "Oatmeal Stout",
+      "American Barleywine",
+      "Fruit / Vegetable Beer",
+      "English Brown Ale",
+      "Cider",
+      "American Pale Lager",
+      "American IPA",
+      "Braggot",
+      "Belgian Strong Pale Ale",
+      "American Wild Ale",
+      "Mead",
+      "Wheat Ale",
+      "Smoked Beer",
+      "Munich Dunkel Lager",
+      "Doppelbock",
+      "English Strong Ale",
+      "American Adjunct Lager",
+      "Other",
+      "Irish Red Ale",
+      "English Pale Mild Ale",
+      "Vienna Lager",
+      "Old Ale",
+      "American Pale Wheat Ale",
+      "Rauchbier",
+      "German Pilsener",
+      "Altbier",
+      "Shandy",
+      "Foreign / Export Stout",
+      "Scotch Ale / Wee Heavy",
+      "English Dark Mild Ale",
+      "Extra Special / Strong Bitter (ESB)",
+      "American Pale Ale (APA)",
+      "Baltic Porter",
+      "Dortmunder / Export Lager",
+      "Kristalweizen",
+      "Keller Bier / Zwickel Bier",
+      "American Porter",
+      "Kölsch",
+      "Gose",
+      "Pumpkin Ale",
+      "Milk / Sweet Stout",
+      "American Malt Liquor",
+      "Maibock / Helles Bock",
+      "English Stout",
+      "American White IPA",
+      "Berliner Weissbier",
+      "Euro Dark Lager",
+      "English Pale Ale",
+      "Abbey Single Ale",
+      "Russian Imperial Stout",
+      "Flanders Red Ale",
+      "American Double / Imperial Stout",
+      "Dunkelweizen",
+      "Flanders Oud Bruin",
+      "Tripel",
+      "American Strong Ale",
+      "American Blonde Ale",
+      "Cream Ale",
+      "Saison / Farmhouse Ale",
+      "Low Alcohol Beer",
+      "Scottish Ale",
+      "Dubbel",
+      "Hefeweizen",
+      "Chile Beer",
+      "American Double / Imperial IPA",
+      "American Black Ale",
+      "Euro Pale Lager",
+      "American Pilsner",
+      "Herbed / Spiced Beer",
+      "Czech Pilsener",
+      "Belgian Strong Dark Ale"
+    ],
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^[A-Za-zÀ-ÖØ-öø-ÿ() /]+$"
+    ]
+  }
+}
+```
+Inference time: 31.186s
+Column name: ounces
+```
+{
+  "ounces": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": [8.4, 32.0],
+    "pattern_constraint": [
+      "^\\s*(\\d{1,2}\\.\\d)\\s*(?:[Oo][Zz]|[Oo][Uu][Nn][Cc][Ee])\\.?\\s*(?:[A-Za-z][A-Za-z\\-]*(?:\\s+[A-Za-z][A-Za-z\\-]*)*)?\\s*$"
+    ]
+  }
+}
+```
+Inference time: 23.294s
+Column name: abv
+```
+{
+  "abv": {
+    "type_constraint": "Numerical",
+    "categorical_constraint": null,
+    "numerical_constraint": [0.028, 0.12],
+    "pattern_constraint": ["^0\\.\\d{1,3}$"]
+  }
+}
+```
+Inference time: 27.217s
+Column name: ibu
+```
+{
+  "ibu": {
+    "type_constraint": "Numerical",
+    "categorical_constraint": null,
+    "numerical_constraint": [4, 120],
+    "pattern_constraint": ["^\\d{1,3}$"]
+  }
+}
+```
+Inference time: 19.081s
+Column name: brewery_id
+```
+{
+  "brewery_id": {
+    "type_constraint": "Numerical",
+    "categorical_constraint": null,
+    "numerical_constraint": [0, 557],
+    "pattern_constraint": ["^\\d{1,3}$"]
+  }
+}
+```
+Inference time: 10.677s
+Column name: brewery_name
+```json
+{
+  "brewery_name": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^(?!.*\\.{3,})[\\p{L}\\d][\\p{L}\\d &.,'’()\\-\\/]*[\\p{L}\\d).]$"
+    ]
+  }
+}
+```
+Inference time: 55.700s
+Column name: city
+```json
+{
+  "city": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^[A-Za-z][A-Za-z .'-]*[A-Za-z]$",
+      "^[A-Za-z][A-Za-z .'-]*[A-Za-z] [A-Z]{2}$"
+    ]
+  }
+}
+```
+Inference time: 66.948s
+Column name: state
+```
+{
+  "state": {
+    "type_constraint": "String",
+    "categorical_constraint": ["OK", "DE", "HI", "WA", "MA", "RI", "IL", "KY", "MN", "FL", "NV", "MD", "TN", "MO", "CA", "NH", "ME", "VT", "OH", "TX", "WI", "NM", "SC", "OR", "ND", "GA", "AR", "IN", "CO", "VA", "NE", "CT", "LA", "NC", "MT", "AK", "NY", "SD", "DC", "MS", "MI", "AZ", "ID", "IA", "PA", "UT", "NJ", "KS", "WV", "WY", "AL"],
+    "numerical_constraint": null,
+    "pattern_constraint": ["^[A-Z]{2}$"]
+  }
+}
+```
+Inference time: 14.245s
+Processing dataset: flights with GPT-5
+Column name: tuple_id
+```
+{
+  "tuple_id": {
+    "type_constraint": "Numerical",
+      "categorical_constraint": null,
+      "numerical_constraint": [1, 2376],
+      "pattern_constraint": ["[1-9]\\d{0,3}"]
+  }
+}
+```
+Inference time: 22.665s
+Column name: src
+```json
+{
+  "src": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": ["^[a-z][a-z-]{0,28}[a-z]$"]
+  }
+}
+```
+Inference time: 26.598s
+Column name: flight
+```json
+{
+  "flight": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^[A-Z]{2}-\\d{1,4}-[A-Z]{3}-[A-Z]{3}$"
+    ]
+  }
+}
+```
+Inference time: 11.922s
+Column name: sched_dep_time
+```json
+{
+  "sched_dep_time": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^(?:0?[1-9]|1[0-2]):[0-5][0-9]\\s(?:a|p)\\.m\\.$",
+      "^(?:0?[1-9]|1[0-2])\\/(?:0?[1-9]|[12][0-9]|3[01])\\s(?:0?[1-9]|1[0-2]):[0-5][0-9]\\s(?:a|p)\\.m\\.$",
+      "^(?:0?[1-9]|1[0-2]):[0-5][0-9]aDec\\s\\d{1,2}$",
+      "^12:00\\s?noon$"
+    ]
+  }
+}
+```
+Inference time: 42.525s
+Column name: act_dep_time
+```json
+{
+  "act_dep_time": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^(?:[1-9]|1[0-2]):[0-5][0-9] (?:a|p)\\.m\\.$"
+    ]
+  }
+}
+```
+Inference time: 36.752s
+Column name: sched_arr_time
+```
+{
+  "sched_arr_time": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^(0?[1-9]|1[0-2]):[0-5]\\d\\s?(?:a\\.m\\.|p\\.m\\.)$",
+      "^(0?[1-9]|1[0-2])/(0?[1-9]|[12]\\d|3[01])/(?:\\d{2}|\\d{4})\\s+(0?[1-9]|1[0-2]):[0-5]\\d\\s?(?:a\\.m\\.|p\\.m\\.)$",
+      "^(0?[1-9]|1[0-2])/(0?[1-9]|[12]\\d|3[01])\\s+(0?[1-9]|1[0-2]):[0-5]\\d\\s?(?:a\\.m\\.|p\\.m\\.)$",
+      "^Dec\\s0?[12]\\s+(0?[1-9]|1[0-2]):[0-5]\\d\\s?(?:a\\.m\\.|p\\.m\\.)$",
+      "^(0?[1-9]|1[0-2]):[0-5]\\d\\s?(?:a\\.m\\.|p\\.m\\.)\\s*Dec\\s0?[12]$",
+      "^(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)\\s+Dec\\s0?[12]\\s+(0?[1-9]|1[0-2]):[0-5]\\d\\s?(?:a\\.m\\.|p\\.m\\.)$",
+      "^(0?[1-9]|1[0-2]):[0-5]\\d\\s?(?:a\\.m\\.|p\\.m\\.)\\s+(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)\\s+\\d{2}-[A-Za-z]{3}-\\d{4}$",
+      "^(0?[1-9]|1[0-2]):[0-5]\\d[ap]Dec\\s0?[12]$",
+      "^(0?[1-9]|1[0-2]):[0-5]\\d[AP]\\s+\\d{2}-\\d{2}-\\d{2}$",
+      "^(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)\\s+(?:[01]?\\d|2[0-3]):[0-5]\\d$"
+    ]
+  }
+}
+```
+Inference time: 69.063s
+Column name: act_arr_time
+```
+{
+  "act_arr_time": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^(?:0?[1-9]|1[0-2]):[0-5][0-9] [ap]\\.m\\.$",
+      "^(?:0?[1-9]|1[0-2]):[0-5][0-9][AP]$"
+    ]
+  }
+}
+```
+Inference time: 47.840s
+Processing dataset: hospital with GPT-5
+Column name: index
+```
+{
+  "index": {
+    "type_constraint": "Numerical",
+    "categorical_constraint": null,
+    "numerical_constraint": [1, 1000],
+    "pattern_constraint": ["\\d{1,4}"]
+  }
+}
+```
+Inference time: 20.996s
+Column name: provider_number
+```
+{
+  "provider_number": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": ["^\\d{5}$"]
+  }
+}
+```
+Inference time: 26.908s
+Column name: name
+```
+{
+  "name": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": ["^[a-z& ]+$"]
+  }
+}
+```
+Inference time: 34.218s
+Column name: address_1
+```
+{
+  "address_1": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^\\d+\\s+[a-z0-9 .-]+\\s+(?:street|st|avenue|ave|road|rd|drive|dr|boulevard|blvd|circle|cir|parkway|pkwy|lane|ln|court|ct|place|pl|way|wy|highway|hwy)(?:\\s+\\d+)?(?:\\s+(?:north|south|east|west|n|s|e|w|ne|nw|se|sw|northeast|northwest|southeast|southwest))?$",
+      "^po box\\s+\\d+$"
+    ]
+  }
+}
+```
+Inference time: 55.405s
+Column name: address_2
+```
+{
+  "address_2": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": null
+  }
+}
+```
+Inference time: 11.974s
+Column name: address_3
+```
+{
+  "address_3": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": null
+  }
+}
+```
+Inference time: 7.260s
+Column name: city
+```
+{
+  "city": {
+    "type_constraint": "String",
+    "categorical_constraint": [
+      "sylacauga",
+      "fort payne",
+      "mobile",
+      "anchorage",
+      "montgomery",
+      "birmingham",
+      "opp",
+      "huntsville",
+      "enterprise",
+      "oneonta",
+      "alabaster",
+      "georgiana",
+      "anniston",
+      "dothan",
+      "bethel",
+      "elba",
+      "opelika",
+      "wedowee",
+      "guntersville",
+      "boaz",
+      "winfield",
+      "valley",
+      "clanton",
+      "prattville",
+      "fayette",
+      "tallassee",
+      "centre",
+      "sheffield",
+      "thomasville",
+      "russellville",
+      "decatur",
+      "gadsden",
+      "luverne",
+      "hamilton",
+      "florence",
+      "cullman",
+      "ozark",
+      "hartselle",
+      "andalusia"
+    ],
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^[a-z]+(?: [a-z]+)*$"
+    ]
+  }
+}
+```
+Inference time: 34.726s
+Column name: state
+```
+{
+  "state": {
+    "type_constraint": "String",
+    "categorical_constraint": ["al", "ak"],
+    "numerical_constraint": null,
+    "pattern_constraint": ["[a-z]{2}"]
+  }
+}
+```
+Inference time: 13.644s
+Column name: zip
+```
+{
+  "zip": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": ["^\\d{5}$"]
+  }
+}
+```
+Inference time: 9.125s
+Column name: county
+```
+{
+  "county": {
+    "type_constraint": "String",
+    "categorical_constraint": [
+      "anchorage",
+      "autauga",
+      "bethel",
+      "blount",
+      "butler",
+      "calhoun",
+      "chambers",
+      "cherokee",
+      "chilton",
+      "clarke",
+      "coffee",
+      "covington",
+      "crenshaw",
+      "cullman",
+      "dale",
+      "de kalb",
+      "elmore",
+      "etowah",
+      "fayette",
+      "franklin",
+      "houston",
+      "jefferson",
+      "lauderdale",
+      "lee",
+      "madison",
+      "marion",
+      "marshall",
+      "mobile",
+      "montgomery",
+      "morgan",
+      "randolph",
+      "shelby",
+      "talladega"
+    ],
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^[a-z]+(?: [a-z]+)*$"
+    ]
+  }
+}
+```
+Inference time: 27.866s
+Column name: phone
+```
+{
+  "phone": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": ["^\\d{10}$"]
+  }
+}
+```
+Inference time: 14.522s
+Column name: type
+```json
+{
+  "type": {
+    "type_constraint": "String",
+    "categorical_constraint": ["acute care hospitals"],
+    "numerical_constraint": null,
+    "pattern_constraint": ["^acute care hospitals$"]
+  }
+}
+```
+Inference time: 6.518s
+Column name: owner
+```
+{
+  "owner": {
+    "type_constraint": "String",
+    "categorical_constraint": [
+      "government - hospital district or authority",
+      "government - federal",
+      "government - state",
+      "government - local",
+      "voluntary non-profit - church",
+      "voluntary non-profit - private",
+      "voluntary non-profit - other",
+      "proprietary"
+    ],
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^(government - (hospital district or authority|federal|state|local)|voluntary non-profit - (church|private|other)|proprietary)$"
+    ]
+  }
+}
+```
+Inference time: 13.710s
+Column name: emergency_service
+```
+{
+  "emergency_service": {
+    "type_constraint": "String",
+    "categorical_constraint": ["yes", "no"],
+    "numerical_constraint": null,
+    "pattern_constraint": ["^(yes|no)$"]
+  }
+}
+```
+Inference time: 6.744s
+Column name: condition
+```json
+{
+  "condition": {
+    "type_constraint": "String",
+    "categorical_constraint": [
+      "children s asthma care",
+      "heart attack",
+      "heart failure",
+      "pneumonia",
+      "surgical infection prevention"
+    ],
+    "numerical_constraint": null,
+    "pattern_constraint": ["^[a-z]+( [a-z]+)*$"]
+  }
+}
+```
+Inference time: 14.912s
+Column name: measure_code
+```
+{
+  "measure_code": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^(?:ami|hf|pn|cac)-[1-9][a-z]?$",
+      "^scip-(?:inf|card|vte)-[1-9][a-z]?$"
+    ]
+  }
+}
+```
+Inference time: 29.318s
+Column name: measure_name
+```json
+{
+  "measure_name": {
+    "type_constraint": "String",
+    "categorical_constraint": [
+      "all heart surgery patients whose blood sugar (blood glucose) is kept under good control in the days right after surgery",
+      "heart attack patients given smoking cessation advice/counseling",
+      "children and their caregivers who received a home management plan of care document while hospitalized for asthma",
+      "pneumonia patients given initial antibiotic(s) within 6 hours after arrival",
+      "heart attack patients given aspirin at arrival",
+      "heart failure patients given ace inhibitor or arb for left ventricular systolic dysfunction (lvsd)",
+      "heart failure patients given an evaluation of left ventricular systolic (lvs) function",
+      "heart attack patients given beta blocker at discharge",
+      "pneumonia patients given smoking cessation advice/counseling",
+      "heart attack patients given fibrinolytic medication within 30 minutes of arrival",
+      "surgery patients whose preventive antibiotics were stopped at the right time (within 24 hours after surgery)",
+      "surgery patients whose doctors ordered treatments to prevent blood clots after certain types of surgeries",
+      "heart attack patients given ace inhibitor or arb for left ventricular systolic dysfunction (lvsd)",
+      "heart attack patients given pci within 90 minutes of arrival",
+      "surgery patients who were taking heart drugs called beta blockers before coming to the hospital who were kept on the beta blockers during the period just before and after their surgery",
+      "surgery patients who were given the  right kind  of antibiotic to help prevent infection",
+      "pneumonia patients assessed and given influenza vaccination",
+      "heart failure patients given discharge instructions",
+      "pneumonia patients whose initial emergency room blood culture was performed prior to the administration of the first hospital dose of antibiotics",
+      "heart attack patients given aspirin at discharge",
+      "children who received systemic corticosteroid medication (oral and iv medication that reduces inflammation and controls symptoms) while hospitalized for asthma",
+      "children who received reliever medication while hospitalized for asthma",
+      "pneumonia patients assessed and given pneumococcal vaccination",
+      "pneumonia patients given the most appropriate initial antibiotic(s)",
+      "heart failure patients given smoking cessation advice/counseling",
+      "surgery patients who were given an antibiotic at the right time (within one hour before surgery) to help prevent infection",
+      "patients who got treatment  at the right time (within 24 hours before or after their surgery) to help prevent blood clots after certain types of surgery"
+    ],
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^[A-Za-z][A-Za-z0-9 (),/-]*$"
+    ]
+  }
+}
+```
+Inference time: 140.215s
+Column name: score
+```json
+{
+  "score": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": [0, 100],
+    "pattern_constraint": ["^(100|[1-9]?\\d)%$"]
+  }
+}
+```
+Inference time: 9.764s
+Column name: sample
+```json
+{
+  "sample": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": [0, 1421],
+    "pattern_constraint": ["^\\d{1,4}\\spatients$"]
+  }
+}
+```
+Inference time: 28.866s
+Column name: state_average
+```
+{
+  "state_average": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^(?:ak|al)_(?:ami|hf|pn|cac|scip-(?:inf|vte|card))-(?:[1-8]|[1-8][a-c])$"
+    ]
+  }
+}
+```
+Inference time: 23.089s
+Processing dataset: HOSP-10K with GPT-5
+Column name: prno
+```
+{
+  "prno": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": ["^\\d{5}$"]
+  }
+}
+```
+Inference time: 32.207s
+Column name: hospitalname
+```
+{
+  "hospitalname": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": ["^[A-Z0-9][A-Z0-9 .&'()/;-]*$"]
+  }
+}
+```
+Inference time: 31.933s
+Column name: address
+```
+{
+  "address": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^\\d+\\s+[A-Z0-9][A-Z0-9\\s&'./\\-]+$",
+      "^(?:PO BOX|P O BOX|BOX)\\s+\\d+(?:\\s+[A-Z0-9\\s\\-]+)?$",
+      "^#\\d+\\s+[A-Z0-9][A-Z0-9\\s&'./\\-]+$",
+      "^(?:ONE|TWO|THREE|FOUR|FIVE|SIX|SEVEN|EIGHT|NINE|TEN)\\s+[A-Z0-9][A-Z0-9\\s&'./\\-]+$"
+    ]
+  }
+}
+```
+Inference time: 57.137s
+Column name: city
+```json
+{
+  "city": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": ["^[A-Z]+(?:[ -][A-Z]+)*$"]
+  }
+}
+```
+Inference time: 55.400s
+Column name: state
+```json
+{
+  "state": {
+    "type_constraint": "String",
+    "categorical_constraint": ["AK", "AL", "AR", "AZ", "CA", "LA"],
+    "numerical_constraint": null,
+    "pattern_constraint": ["[A-Z]{2}"]
+  }
+}
+```
+Inference time: 12.157s
+Column name: zip
+```
+{
+  "zip": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": ["^\\d{5}$"]
+  }
+}
+```
+Inference time: 28.877s
+Column name: county
+```json
+{
+  "county": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": ["^[A-Z]+(?: [A-Z]+)*$"]
+  }
+}
+```
+Inference time: 26.257s
+Column name: phone
+```json
+{
+  "phone": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": ["^\\d{10}$"]
+  }
+}
+```
+Inference time: 13.707s
+Column name: hospitaltype
+```
+{
+  "hospitaltype": {
+    "type_constraint": "String",
+    "categorical_constraint": [
+      "Acute Care - VA Medical Center",
+      "Childrens",
+      "Acute Care Hospitals",
+      "Critical Access Hospitals"
+    ],
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^[A-Za-z]+(?: [A-Za-z]+)*(?: - [A-Za-z]+(?: [A-Za-z]+)*)?$"
+    ]
+  }
+}
+```
+Inference time: 12.004s
+Column name: hospitalowner
+```
+{
+  "hospitalowner": {
+    "type_constraint": "String",
+    "categorical_constraint": [
+      "Voluntary non-profit - Private",
+      "Government - Federal",
+      "Government - Hospital District or Authority",
+      "Government - State",
+      "Proprietary",
+      "Voluntary non-profit - Other",
+      "Government - Local",
+      "Voluntary non-profit - Church"
+    ],
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^(?:Proprietary|Voluntary non-profit - (?:Private|Other|Church)|Government - (?:Federal|State|Local|Hospital District or Authority))$"
+    ]
+  }
+}
+```
+Inference time: 12.203s
+Column name: emergencyservice
+```
+{
+  "emergencyservice": {
+    "type_constraint": "String",
+    "categorical_constraint": ["Yes", "No"],
+    "numerical_constraint": null,
+    "pattern_constraint": ["(Yes|No)"]
+  }
+}
+```
+Inference time: 7.700s
+Column name: condition
+```
+{
+  "condition": {
+    "type_constraint": "String",
+    "categorical_constraint": [
+      "Heart Failure",
+      "Surgical Infection Prevention",
+      "Pneumonia",
+      "Heart Attack",
+      "Children’s Asthma Care"
+    ],
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^(?:[A-Za-z]+(?:[’'][A-Za-z]+)?)(?: [A-Za-z]+(?:[’'][A-Za-z]+)?)*$"
+    ]
+  }
+}
+```
+Inference time: 13.694s
+Column name: mc
+```
+{
+  "mc": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^[A-Z]+(?:-[A-Z]+)*-\\d+[A-Z]?$"
+    ]
+  }
+}
+```
+Inference time: 22.344s
+Column name: measurename
+```
+{
+  "measurename": {
+    "type_constraint": "String",
+    "categorical_constraint": [
+      "Pneumonia Patients Given Smoking Cessation Advice/Counseling",
+      "Pneumonia Patients Given Initial Antibiotic(s) within 6 Hours After Arrival",
+      "Pneumonia Patients Assessed and Given Influenza Vaccination",
+      "Heart Attack Patients Given PCI Within 90 Minutes Of Arrival",
+      "Heart Failure Patients Given ACE Inhibitor or ARB for Left Ventricular Systolic Dysfunction (LVSD)",
+      "Heart Attack Patients Given Beta Blocker at Discharge",
+      "Pneumonia Patients Assessed and Given Pneumococcal Vaccination",
+      "Heart Attack Patients Given Smoking Cessation Advice/Counseling",
+      "Heart Attack Patients Given Fibrinolytic Medication Within 30 Minutes Of Arrival",
+      "Children Who Received Systemic Corticosteroid Medication (oral and IV Medication That Reduces Inflammation and Controls Symptoms) While Hospitalized for Asthma",
+      "Children Who Received Reliever Medication While Hospitalized for Asthma",
+      "Pneumonia Patients Given the Most Appropriate Initial Antibiotic(s)",
+      "Children and their Caregivers Who Received a Home Management Plan of Care Document While Hospitalized for Asthma",
+      "Heart Failure Patients Given Smoking Cessation Advice/Counseling",
+      "Pneumonia Patients Whose Initial Emergency Room Blood Culture Was Performed Prior To The Administration Of The First Hospital Dose Of Antibiotics",
+      "Heart Attack Patients Given Aspirin at Discharge",
+      "Heart Attack Patients Given Aspirin at Arrival",
+      "Heart Attack Patients Given ACE Inhibitor or ARB for Left Ventricular Systolic Dysfunction (LVSD)",
+      "Heart Failure Patients Given Discharge Instructions",
+      "Heart Failure Patients Given an Evaluation of Left Ventricular Systolic (LVS) Function"
+    ],
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^[A-Z][A-Za-z0-9 ,()\\-/]+$"
+    ]
+  }
+}
+```
+Inference time: 37.553s
+Column name: score
+```
+{
+  "score": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": [0, 100],
+    "pattern_constraint": ["^(?:100|[1-9]?\\d)%$"]
+  }
+}
+```
+Inference time: 11.284s
+Column name: sample
+```
+{
+  "sample": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": [0, 2400],
+    "pattern_constraint": ["^\\d{1,4} patients$"]
+  }
+}
+```
+Inference time: 32.940s
+Column name: stateavg
+```
+{
+  "stateavg": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^[A-Z]{2}_(?:AMI|HF|PN|CAC|SCIP-(?:INF|VTE|CARD))-\\d{1,2}[A-C]?$"
+    ]
+  }
+}
+```
+Inference time: 29.414s
+Processing dataset: HOSP-100K with GPT-5
+Column name: prno
+```
+{
+  "prno": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": ["^[0-9]{5,6}$"]
+  }
+}
+```
+Inference time: 39.975s
+Column name: hospitalname
+```
+{
+  "hospitalname": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^[A-Z0-9][A-Z0-9 /&.,;()'#+\\-]*$"
+    ]
+  }
+}
+```
+Inference time: 37.146s
+Column name: address
+```
+{
+  "address": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^(?:\\d{1,6})(?:[\\-\\/ ]\\d{1,6})?\\s+[NESW]{0,2}\\s*[A-Z0-9#.'\\- ]+\\s(?:ST|STREET|AVE|AVENUE|RD|ROAD|BLVD|BOULEVARD|HWY|HIGHWAY|DR|DRIVE|WAY|LANE|LN|CT|COURT|CIR|CIRCLE|PKWY|PARKWAY|PL|PLACE|TER|TERRACE|PLAZA|EXPRESSWAY|EXPY|PIKE|TRAIL|TRL|BYPASS|BYP|LOOP|SQ|SQUARE|CAUSEWAY|CSWY|CENTER)\\b.*",
+      "^(?:P\\.?\\s*O\\.?\\s*BOX|PO BOX|BOX)\\s+\\d+\\b.*",
+      "^(?:HWY|HIGHWAY|US\\s+HIGHWAY|US\\s+HWY|STATE\\s+ROUTE|ROUTE|RTE|SR)\\s+[0-9A-Z .\\-]+\\b.*",
+      "^(?:ONE|TWO|THREE|FOUR|FIVE|SIX|SEVEN|EIGHT|NINE|TEN|FIRST|SECOND|THIRD|FOURTH|FIFTH|SIXTH|SEVENTH|EIGHTH|NINTH|TENTH)\\s+[A-Z0-9#.'\\- ]+\\b.*",
+      "^(?:CARR\\.?|CARRETERA|CALLE|AVE|AVENIDA|BO\\.?|BARRIO|URB)\\s+[A-Z0-9 #.'\\-]+\\b.*",
+      "^[A-Z0-9 .'-]+\\s(?:&|AND|AT)\\s[A-Z0-9 .'-]+\\s(?:ST|STREET|AVE|AVENUE|RD|ROAD|BLVD|BOULEVARD|HWY|HIGHWAY|DR|DRIVE|LANE|LN|CT|COURT|CIR|CIRCLE|PKWY|PARKWAY|PL|PLACE|TER|TERRACE|PLAZA|STREETS|AVENUES)\\b.*"
+    ]
+  }
+}
+```
+Inference time: 76.249s
+Column name: city
+```
+{
+  "city": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^[A-Z]+(?:[ .'-]+[A-Z]+)*$"
+    ]
+  }
+}
+```
+Inference time: 43.421s
+Column name: state
+```json
+{
+  "state": {
+    "type_constraint": "String",
+    "categorical_constraint": ["AL","AK","AZ","AR","CA","CO","CT","DC","DE","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA","MA","MD","ME","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","NY","OH","OK","OR","PA","PR","RI","SC","SD","TN","TX","UT","VA","VT"],
+    "numerical_constraint": null,
+    "pattern_constraint": ["[A-Z]{2}"]
+  }
+}
+```
+Inference time: 51.063s
+Column name: zip
+```json
+{
+  "zip": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": ["^\\d{5}$"]
+  }
+}
+```
+Inference time: 20.770s
+Column name: countryname
+```json
+{
+  "countryname": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": ["^(?!NULL$)[A-Z]+(?:[ -][A-Z]+)*$"]
+  }
+}
+```
+Inference time: 25.904s
+Column name: phone
+```{'phone':{'type_constraint':'String','categorical_constraint':null,'numerical_constraint':null,'pattern_constraint':['^\\d{10}$']}}```
+Inference time: 21.303s
+Column name: hospitaltype
+```
+{
+  "hospitaltype": {
+    "type_constraint": "String",
+    "categorical_constraint": [
+      "Acute Care - VA Medical Center",
+      "Childrens",
+      "Acute Care Hospitals",
+      "Critical Access Hospitals"
+    ],
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^[A-Za-z][A-Za-z ]+(?: - [A-Za-z ]+)?$"
+    ]
+  }
+}
+```
+Inference time: 11.750s
+Column name: hospitalowner
+```
+{
+  "hospitalowner": {
+    "type_constraint": "String",
+    "categorical_constraint": [
+      "Voluntary non-profit - Private",
+      "Government - Federal",
+      "Government - Hospital District or Authority",
+      "Government - State",
+      "Proprietary",
+      "Voluntary non-profit - Other",
+      "Government - Local",
+      "Voluntary non-profit - Church"
+    ],
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^Proprietary$",
+      "^(Voluntary non-profit|Government) - [A-Za-z][A-Za-z ]+$"
+    ]
+  }
+}
+```
+Inference time: 8.731s
+Column name: emergencyservice
+```
+{
+  "emergencyservice": {
+    "type_constraint": "String",
+    "categorical_constraint": ["Yes", "No"],
+    "numerical_constraint": null,
+    "pattern_constraint": ["^(Yes|No)$"]
+  }
+}
+```
+Inference time: 7.895s
+Column name: condition
+```
+{
+  "condition": {
+    "type_constraint": "String",
+    "categorical_constraint": [
+      "Heart Failure",
+      "Surgical Infection Prevention",
+      "Pneumonia",
+      "Heart Attack",
+      "Children's Asthma Care"
+    ],
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^[A-Z][a-z]+(?:[’'][A-Za-z]+)?(?: [A-Z][a-z]+(?:[’'][A-Za-z]+)?)*$"
+    ]
+  }
+}
+```
+Inference time: 15.881s
+Column name: mc
+```
+{
+  "mc": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": ["^[A-Z]+(?:-[A-Z]+)*-[0-9]+[A-Z]?$"]
+  }
+}
+```
+Inference time: 12.687s
+Column name: measurename
+```json
+{
+  "measurename": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^[A-Z][A-Za-z0-9,()'/-]+( [A-Za-z0-9,()'/-]+)*$"
+    ]
+  }
+}
+```
+Inference time: 27.039s
+Column name: score
+```
+{
+  "score": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": [0, 100],
+    "pattern_constraint": ["^(?:100|[1-9]?\\d)%$"]
+  }
+}
+```
+Inference time: 12.173s
+Column name: sample
+```
+{
+  "sample": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": [0, 7323],
+    "pattern_constraint": ["^\\d{1,4} patients$"]
+  }
+}
+```
+Inference time: 52.486s
+Column name: stateavg
+```json
+{
+  "stateavg": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^(?:AL|AK|AZ|AR|CA|CO|CT|DE|FL|GA|HI|ID|IL|IN|IA|KS|KY|LA|ME|MD|MA|MI|MN|MS|MO|MT|NE|NV|NH|NJ|NM|NY|NC|ND|OH|OK|OR|PA|RI|SC|SD|TN|TX|UT|VT|VA|WA|WV|WI|WY|DC|PR)_[A-Z]+(?:-[A-Z]+)*-[1-8][A-Z]?$"
+    ]
+  }
+}
+```
+Inference time: 35.207s
+Processing dataset: movies_1 with GPT-5
+Column name: id
+```json
+{
+  "id": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": ["tt\\d{7}"]
+  }
+}
+```
+Inference time: 19.233s
+Column name: name
+```json
+{
+  "name": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^.{1,150}$",
+      ".*[A-Za-z0-9].*"
+    ]
+  }
+}
+```
+Inference time: 39.463s
+Column name: year
+```
+{
+  "year": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": [1908, 2019],
+    "pattern_constraint": [
+      "^\\d{4}$",
+      "^(\\d{4})\\s(\\d{4})\\s(\\d{4})$"
+    ]
+  }
+}
+```
+Inference time: 22.925s
+Column name: release_date
+```json
+{
+  "release_date": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^\\d{1,2}\\s+(January|February|March|April|May|June|July|August|September|October|November|December)\\s+\\d{4}\\s+\\([^\\)]+\\)$",
+      "^(January|February|March|April|May|June|July|August|September|October|November|December)\\s+\\d{4}\\s+\\([^\\)]+\\)$",
+      "^(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\\s+\\d{1,2},\\s+\\d{4}\\s+(Wide|Limited)$",
+      "^\\d{4}\\s+\\([^\\)]+\\)$"
+    ]
+  }
+}
+```
+Inference time: 109.364s
+Column name: director
+```
+{
+  "director": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^[\\p{L}\\.'’-]+(?: [\\p{L}\\.'’-]+)+$",
+      "^(?:[\\p{L}\\.'’-]+(?: [\\p{L}\\.'’-]+)+)(?:,\\s*[\\p{L}\\.'’-]+(?: [\\p{L}\\.'’-]+)+)*$"
+    ]
+  }
+}
+```
+Inference time: 35.347s
+Column name: creator
+```json
+{
+  "creator": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^(?:[\\p{L}\\p{M}0-9][\\p{L}\\p{M}0-9 .\\-'&\\(\\)]*)(?:,\\s*[\\p{L}\\p{M}0-9][\\p{L}\\p{M}0-9 .\\-'&\\(\\)]*)*$"
+    ]
+  }
+}
+```
+Inference time: 47.531s
+Column name: actors
+```{'actors': {'type_constraint': 'String', 'categorical_constraint': null, 'numerical_constraint': null, 'pattern_constraint': ['^[A-Za-zÀ-ÖØ-öø-ÿ .’\'`-]+(, [A-Za-zÀ-ÖØ-öø-ÿ .’\'`-]+){0,2}$']}}```
+Inference time: 29.680s
+Column name: full_cast
+```
+{
+  "full_cast": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^[\\p{L}0-9 .,'’\\-()&]+(?:,\\s*[\\p{L}0-9 .,'’\\-()&]+)*$",
+      "^[^,]+(?:,\\s*[^,]+)*$"
+    ]
+  }
+}
+```
+Inference time: 96.506s
+Column name: language
+```
+{
+  "language": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^[A-Z][A-Za-z0-9 ()\\-]*(,\\s*[A-Z][A-Za-z0-9 ()\\-]*)*$"
+    ]
+  }
+}
+```
+Inference time: 55.237s
+Column name: country
+```json
+{
+  "country": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^([A-Za-z]+(?: [A-Za-z]+)*)(?:,[A-Za-z]+(?: [A-Za-z]+)*)*$"
+    ]
+  }
+}
+```
+Inference time: 95.806s
+Column name: duration
+```
+{
+  "duration": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": [47, 325],
+    "pattern_constraint": [
+      "^\\d{1,3}\\s*min\\.?$",
+      "^\\d{1,2}\\s*hr\\.\\s*\\d{1,2}\\s*min\\.?$",
+      "^\\d{1,2}\\s*hr\\.$"
+    ]
+  }
+}
+```
+Inference time: 36.239s
+Column name: rating_value
+```json
+{
+  "rating_value": {
+    "type_constraint": "String",
+      "categorical_constraint": null,
+      "numerical_constraint": [0, 10],
+      "pattern_constraint": [
+        "^(?:[0-9]\\.[0-9]|10(?:\\.0)?)$",
+        "^(?:[0-9](?:\\.[0-9])?|10(?:\\.0)?)/10$",
+        "^(?:[0-9](?:\\.[0-9])?|10(?:\\.0)?)/10,(?:[0-9](?:\\.[0-9])?|10(?:\\.0)?)/10$"
+      ]
+  }
+}
+```
+Inference time: 63.073s
+Column name: rating_count
+```json
+{
+  "rating_count": {
+    "type_constraint": "Numerical",
+    "categorical_constraint": null,
+    "numerical_constraint": [1, 2000000],
+    "pattern_constraint": ["^\\d{1,3}(,\\d{3})*$"]
+  }
+}
+```
+Inference time: 48.326s
+Column name: review_count
+```json
+{
+  "review_count": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": {
+      "user": [1, 4994],
+      "critic": [1, 795]
+    },
+    "pattern_constraint": [
+      "^\\d{1,3}(?:,\\d{3})* user,\\d{1,3}(?:,\\d{3})* critic$"
+    ]
+  }
+}
+```
+Inference time: 67.806s
+Column name: genre
+```
+{
+  "genre": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^(?:[A-Z][A-Za-z &\\-]+)(?:,\\s*[A-Z][A-Za-z &\\-]+)*$"
+    ]
+  }
+}
+```
+Inference time: 89.887s
+Column name: filming_locations
+```
+{
+  "filming_locations": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^(?!\\s*$).+",
+      "^[^,]+(?:,\\s*[^,]+)*$"
+    ]
+  }
+}
+```
+Inference time: 38.273s
+Column name: description
+```
+{
+  "description": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": ["^.{10,}$"]
+  }
+}
+```
+Inference time: 32.767s

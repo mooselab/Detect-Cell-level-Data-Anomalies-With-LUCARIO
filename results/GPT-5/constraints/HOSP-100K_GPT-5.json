@@ -1,0 +1,146 @@
+{
+  "prno": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": ["^[0-9]{5,6}$"]
+  },
+  "hospitalname": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^[A-Z0-9][A-Z0-9 /&.,;()'#+\\-]*$"
+    ]
+  },
+  "address": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^(?:\\d{1,6})(?:[\\-\\/ ]\\d{1,6})?\\s+[NESW]{0,2}\\s*[A-Z0-9#.'\\- ]+\\s(?:ST|STREET|AVE|AVENUE|RD|ROAD|BLVD|BOULEVARD|HWY|HIGHWAY|DR|DRIVE|WAY|LANE|LN|CT|COURT|CIR|CIRCLE|PKWY|PARKWAY|PL|PLACE|TER|TERRACE|PLAZA|EXPRESSWAY|EXPY|PIKE|TRAIL|TRL|BYPASS|BYP|LOOP|SQ|SQUARE|CAUSEWAY|CSWY|CENTER)\\b.*",
+      "^(?:P\\.?\\s*O\\.?\\s*BOX|PO BOX|BOX)\\s+\\d+\\b.*",
+      "^(?:HWY|HIGHWAY|US\\s+HIGHWAY|US\\s+HWY|STATE\\s+ROUTE|ROUTE|RTE|SR)\\s+[0-9A-Z .\\-]+\\b.*",
+      "^(?:ONE|TWO|THREE|FOUR|FIVE|SIX|SEVEN|EIGHT|NINE|TEN|FIRST|SECOND|THIRD|FOURTH|FIFTH|SIXTH|SEVENTH|EIGHTH|NINTH|TENTH)\\s+[A-Z0-9#.'\\- ]+\\b.*",
+      "^(?:CARR\\.?|CARRETERA|CALLE|AVE|AVENIDA|BO\\.?|BARRIO|URB)\\s+[A-Z0-9 #.'\\-]+\\b.*",
+      "^[A-Z0-9 .'-]+\\s(?:&|AND|AT)\\s[A-Z0-9 .'-]+\\s(?:ST|STREET|AVE|AVENUE|RD|ROAD|BLVD|BOULEVARD|HWY|HIGHWAY|DR|DRIVE|LANE|LN|CT|COURT|CIR|CIRCLE|PKWY|PARKWAY|PL|PLACE|TER|TERRACE|PLAZA|STREETS|AVENUES)\\b.*"
+    ]
+  },
+  "city": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^[A-Z]+(?:[ .'-]+[A-Z]+)*$"
+    ]
+  },
+  "state": {
+    "type_constraint": "String",
+    "categorical_constraint": ["AL","AK","AZ","AR","CA","CO","CT","DC","DE","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA","MA","MD","ME","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","NY","OH","OK","OR","PA","PR","RI","SC","SD","TN","TX","UT","VA","VT"],
+    "numerical_constraint": null,
+    "pattern_constraint": ["[A-Z]{2}"]
+  },
+  "zip": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": ["^\\d{5}$"]
+  },
+  "countryname": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": ["^(?!NULL$)[A-Z]+(?:[ -][A-Z]+)*$"]
+  },
+  "phone":{
+    "type_constraint":"String",
+    "categorical_constraint":null,
+    "numerical_constraint":null,
+    "pattern_constraint":["^\\d{10}$"]
+  },
+  "hospitaltype": {
+    "type_constraint": "String",
+    "categorical_constraint": [
+      "Acute Care - VA Medical Center",
+      "Childrens",
+      "Acute Care Hospitals",
+      "Critical Access Hospitals"
+    ],
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^[A-Za-z][A-Za-z ]+(?: - [A-Za-z ]+)?$"
+    ]
+  },
+  "hospitalowner": {
+    "type_constraint": "String",
+    "categorical_constraint": [
+      "Voluntary non-profit - Private",
+      "Government - Federal",
+      "Government - Hospital District or Authority",
+      "Government - State",
+      "Proprietary",
+      "Voluntary non-profit - Other",
+      "Government - Local",
+      "Voluntary non-profit - Church"
+    ],
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^Proprietary$",
+      "^(Voluntary non-profit|Government) - [A-Za-z][A-Za-z ]+$"
+    ]
+  },
+  "emergencyservice": {
+    "type_constraint": "String",
+    "categorical_constraint": ["Yes", "No"],
+    "numerical_constraint": null,
+    "pattern_constraint": ["^(Yes|No)$"]
+  },
+  "condition": {
+    "type_constraint": "String",
+    "categorical_constraint": [
+      "Heart Failure",
+      "Surgical Infection Prevention",
+      "Pneumonia",
+      "Heart Attack",
+      "Children's Asthma Care"
+    ],
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^[A-Z][a-z]+(?:[’'][A-Za-z]+)?(?: [A-Z][a-z]+(?:[’'][A-Za-z]+)?)*$"
+    ]
+  },
+  "mc": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": ["^[A-Z]+(?:-[A-Z]+)*-[0-9]+[A-Z]?$"]
+  },
+  "measurename": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^[A-Z][A-Za-z0-9,()'/-]+( [A-Za-z0-9,()'/-]+)*$"
+    ]
+  },
+  "score": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": [0, 100],
+    "pattern_constraint": ["^(?:100|[1-9]?\\d)%$"]
+  },
+  "sample": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": [0, 7323],
+    "pattern_constraint": ["^\\d{1,4} patients$"]
+  },
+  "stateavg": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^(?:AL|AK|AZ|AR|CA|CO|CT|DE|FL|GA|HI|ID|IL|IN|IA|KS|KY|LA|ME|MD|MA|MI|MN|MS|MO|MT|NE|NV|NH|NJ|NM|NY|NC|ND|OH|OK|OR|PA|RI|SC|SD|TN|TX|UT|VT|VA|WA|WV|WI|WY|DC|PR)_[A-Z]+(?:-[A-Z]+)*-[1-8][A-Z]?$"
+    ]
+  }
+}

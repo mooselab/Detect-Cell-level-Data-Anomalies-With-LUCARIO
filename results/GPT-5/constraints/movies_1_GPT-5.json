@@ -1,0 +1,144 @@
+{
+  "id": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": ["tt\\d{7}"]
+  },
+  "name": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^.{1,150}$",
+      ".*[A-Za-z0-9].*"
+    ]
+  },
+  "year": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": [1908, 2019],
+    "pattern_constraint": [
+      "^\\d{4}$",
+      "^(\\d{4})\\s(\\d{4})\\s(\\d{4})$"
+    ]
+  },
+  "release_date": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^\\d{1,2}\\s+(January|February|March|April|May|June|July|August|September|October|November|December)\\s+\\d{4}\\s+\\([^\\)]+\\)$",
+      "^(January|February|March|April|May|June|July|August|September|October|November|December)\\s+\\d{4}\\s+\\([^\\)]+\\)$",
+      "^(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\\s+\\d{1,2},\\s+\\d{4}\\s+(Wide|Limited)$",
+      "^\\d{4}\\s+\\([^\\)]+\\)$"
+    ]
+  },
+  "director": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^[\\p{L}\\.'’-]+(?: [\\p{L}\\.'’-]+)+$",
+      "^(?:[\\p{L}\\.'’-]+(?: [\\p{L}\\.'’-]+)+)(?:,\\s*[\\p{L}\\.'’-]+(?: [\\p{L}\\.'’-]+)+)*$"
+    ]
+  },
+  "creator": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^(?:[\\p{L}\\p{M}0-9][\\p{L}\\p{M}0-9 .\\-'&\\(\\)]*)(?:,\\s*[\\p{L}\\p{M}0-9][\\p{L}\\p{M}0-9 .\\-'&\\(\\)]*)*$"
+    ]
+  },
+  "actors": {
+    "type_constraint": "String",
+     "categorical_constraint": null, 
+     "numerical_constraint": null, 
+     "pattern_constraint": ["^[A-Za-zÀ-ÖØ-öø-ÿ .’'`-]+(, [A-Za-zÀ-ÖØ-öø-ÿ .’'`-]+){0,2}$"]},
+  "full_cast": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^[\\p{L}0-9 .,'’\\-()&]+(?:,\\s*[\\p{L}0-9 .,'’\\-()&]+)*$",
+      "^[^,]+(?:,\\s*[^,]+)*$"
+    ]
+  },
+  "language": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^[A-Z][A-Za-z0-9 ()\\-]*(,\\s*[A-Z][A-Za-z0-9 ()\\-]*)*$"
+    ]
+  },
+  "country": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^([A-Za-z]+(?: [A-Za-z]+)*)(?:,[A-Za-z]+(?: [A-Za-z]+)*)*$"
+    ]
+  },
+  "duration": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": [47, 325],
+    "pattern_constraint": [
+      "^\\d{1,3}\\s*min\\.?$",
+      "^\\d{1,2}\\s*hr\\.\\s*\\d{1,2}\\s*min\\.?$",
+      "^\\d{1,2}\\s*hr\\.$"
+    ]
+  },
+  "rating_value": {
+    "type_constraint": "String",
+      "categorical_constraint": null,
+      "numerical_constraint": [0, 10],
+      "pattern_constraint": [
+        "^(?:[0-9]\\.[0-9]|10(?:\\.0)?)$",
+        "^(?:[0-9](?:\\.[0-9])?|10(?:\\.0)?)/10$",
+        "^(?:[0-9](?:\\.[0-9])?|10(?:\\.0)?)/10,(?:[0-9](?:\\.[0-9])?|10(?:\\.0)?)/10$"
+      ]
+  },
+  "rating_count": {
+    "type_constraint": "Numerical",
+    "categorical_constraint": null,
+    "numerical_constraint": [1, 2000000],
+    "pattern_constraint": ["^\\d{1,3}(,\\d{3})*$"]
+  },
+  "review_count": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": {
+      "user": [1, 4994],
+      "critic": [1, 795]
+    },
+    "pattern_constraint": [
+      "^\\d{1,3}(?:,\\d{3})* user,\\d{1,3}(?:,\\d{3})* critic$"
+    ]
+  },
+  "genre": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^(?:[A-Z][A-Za-z &\\-]+)(?:,\\s*[A-Z][A-Za-z &\\-]+)*$"
+    ]
+  },
+  "filming_locations": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^(?!\\s*$).+",
+      "^[^,]+(?:,\\s*[^,]+)*$"
+    ]
+  },
+  "description": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": ["^.{10,}$"]
+  }
+}

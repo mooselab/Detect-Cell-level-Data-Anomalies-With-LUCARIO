@@ -1,0 +1,162 @@
+{
+  "prno": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": ["^\\d{5}$"]
+  },
+  "hospitalname": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": ["^[A-Z0-9][A-Z0-9 .&'()/;-]*$"]
+  },
+  "address": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^\\d+\\s+[A-Z0-9][A-Z0-9\\s&'./\\-]+$",
+      "^(?:PO BOX|P O BOX|BOX)\\s+\\d+(?:\\s+[A-Z0-9\\s\\-]+)?$",
+      "^#\\d+\\s+[A-Z0-9][A-Z0-9\\s&'./\\-]+$",
+      "^(?:ONE|TWO|THREE|FOUR|FIVE|SIX|SEVEN|EIGHT|NINE|TEN)\\s+[A-Z0-9][A-Z0-9\\s&'./\\-]+$"
+    ]
+  },
+  "city": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": ["^[A-Z]+(?:[ -][A-Z]+)*$"]
+  },
+  "state": {
+    "type_constraint": "String",
+    "categorical_constraint": ["AK", "AL", "AR", "AZ", "CA", "LA"],
+    "numerical_constraint": null,
+    "pattern_constraint": ["[A-Z]{2}"]
+  },
+  "zip": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": ["^\\d{5}$"]
+  },
+  "county": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": ["^[A-Z]+(?: [A-Z]+)*$"]
+  },
+  "phone": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": ["^\\d{10}$"]
+  },
+  "hospitaltype": {
+    "type_constraint": "String",
+    "categorical_constraint": [
+      "Acute Care - VA Medical Center",
+      "Childrens",
+      "Acute Care Hospitals",
+      "Critical Access Hospitals"
+    ],
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^[A-Za-z]+(?: [A-Za-z]+)*(?: - [A-Za-z]+(?: [A-Za-z]+)*)?$"
+    ]
+  },
+  "hospitalowner": {
+    "type_constraint": "String",
+    "categorical_constraint": [
+      "Voluntary non-profit - Private",
+      "Government - Federal",
+      "Government - Hospital District or Authority",
+      "Government - State",
+      "Proprietary",
+      "Voluntary non-profit - Other",
+      "Government - Local",
+      "Voluntary non-profit - Church"
+    ],
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^(?:Proprietary|Voluntary non-profit - (?:Private|Other|Church)|Government - (?:Federal|State|Local|Hospital District or Authority))$"
+    ]
+  },
+  "emergencyservice": {
+    "type_constraint": "String",
+    "categorical_constraint": ["Yes", "No"],
+    "numerical_constraint": null,
+    "pattern_constraint": ["(Yes|No)"]
+  },
+  "condition": {
+    "type_constraint": "String",
+    "categorical_constraint": [
+      "Heart Failure",
+      "Surgical Infection Prevention",
+      "Pneumonia",
+      "Heart Attack",
+      "Children’s Asthma Care"
+    ],
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^(?:[A-Za-z]+(?:[’'][A-Za-z]+)?)(?: [A-Za-z]+(?:[’'][A-Za-z]+)?)*$"
+    ]
+  },
+  "mc": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^[A-Z]+(?:-[A-Z]+)*-\\d+[A-Z]?$"
+    ]
+  },
+  "measurename": {
+    "type_constraint": "String",
+    "categorical_constraint": [
+      "Pneumonia Patients Given Smoking Cessation Advice/Counseling",
+      "Pneumonia Patients Given Initial Antibiotic(s) within 6 Hours After Arrival",
+      "Pneumonia Patients Assessed and Given Influenza Vaccination",
+      "Heart Attack Patients Given PCI Within 90 Minutes Of Arrival",
+      "Heart Failure Patients Given ACE Inhibitor or ARB for Left Ventricular Systolic Dysfunction (LVSD)",
+      "Heart Attack Patients Given Beta Blocker at Discharge",
+      "Pneumonia Patients Assessed and Given Pneumococcal Vaccination",
+      "Heart Attack Patients Given Smoking Cessation Advice/Counseling",
+      "Heart Attack Patients Given Fibrinolytic Medication Within 30 Minutes Of Arrival",
+      "Children Who Received Systemic Corticosteroid Medication (oral and IV Medication That Reduces Inflammation and Controls Symptoms) While Hospitalized for Asthma",
+      "Children Who Received Reliever Medication While Hospitalized for Asthma",
+      "Pneumonia Patients Given the Most Appropriate Initial Antibiotic(s)",
+      "Children and their Caregivers Who Received a Home Management Plan of Care Document While Hospitalized for Asthma",
+      "Heart Failure Patients Given Smoking Cessation Advice/Counseling",
+      "Pneumonia Patients Whose Initial Emergency Room Blood Culture Was Performed Prior To The Administration Of The First Hospital Dose Of Antibiotics",
+      "Heart Attack Patients Given Aspirin at Discharge",
+      "Heart Attack Patients Given Aspirin at Arrival",
+      "Heart Attack Patients Given ACE Inhibitor or ARB for Left Ventricular Systolic Dysfunction (LVSD)",
+      "Heart Failure Patients Given Discharge Instructions",
+      "Heart Failure Patients Given an Evaluation of Left Ventricular Systolic (LVS) Function"
+    ],
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^[A-Z][A-Za-z0-9 ,()\\-/]+$"
+    ]
+  },
+  "score": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": [0, 100],
+    "pattern_constraint": ["^(?:100|[1-9]?\\d)%$"]
+  },
+  "sample": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": [0, 2400],
+    "pattern_constraint": ["^\\d{1,4} patients$"]
+  },
+  "stateavg": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": [
+      "^[A-Z]{2}_(?:AMI|HF|PN|CAC|SCIP-(?:INF|VTE|CARD))-\\d{1,2}[A-C]?$"
+    ]
+  }
+}
