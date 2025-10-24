@@ -1,0 +1,58 @@
+{
+    "constraint_suggestions": [
+        {
+            "constraint_name": "CompletenessConstraint(Completeness(duration,None))",
+            "column_name": "duration",
+            "current_value": "Completeness: 0.9483085250338295",
+            "description": "'duration' has less than 6% missing values",
+            "suggesting_rule": "RetainCompletenessRule()",
+            "rule_description": "If a column is incomplete in the sample, we model its completeness as a binomial variable, estimate a confidence interval and use this to define a lower bound for the completeness",
+            "code_for_constraint": ".hasCompleteness(\"duration\", lambda x: x >= 0.94, \"It should be above 0.94!\")"
+        },
+        {
+            "constraint_name": "CompletenessConstraint(Completeness(rating_value,None))",
+            "column_name": "rating_value",
+            "current_value": "Completeness: 0.9656292286874154",
+            "description": "'rating_value' has less than 4% missing values",
+            "suggesting_rule": "RetainCompletenessRule()",
+            "rule_description": "If a column is incomplete in the sample, we model its completeness as a binomial variable, estimate a confidence interval and use this to define a lower bound for the completeness",
+            "code_for_constraint": ".hasCompleteness(\"rating_value\", lambda x: x >= 0.96, \"It should be above 0.96!\")"
+        },
+        {
+            "constraint_name": "CompletenessConstraint(Completeness(year,None))",
+            "column_name": "year",
+            "current_value": "Completeness: 1.0",
+            "description": "'year' is not null",
+            "suggesting_rule": "CompleteIfCompleteRule()",
+            "rule_description": "If a column is complete in the sample, we suggest a NOT NULL constraint",
+            "code_for_constraint": ".isComplete(\"year\")"
+        },
+        {
+            "constraint_name": "CompletenessConstraint(Completeness(id,None))",
+            "column_name": "id",
+            "current_value": "Completeness: 1.0",
+            "description": "'id' is not null",
+            "suggesting_rule": "CompleteIfCompleteRule()",
+            "rule_description": "If a column is complete in the sample, we suggest a NOT NULL constraint",
+            "code_for_constraint": ".isComplete(\"id\")"
+        },
+        {
+            "constraint_name": "UniquenessConstraint(Uniqueness(List(id),None))",
+            "column_name": "id",
+            "current_value": "ApproxDistinctness: 1.0347767253044655",
+            "description": "'id' is unique",
+            "suggesting_rule": "UniqueIfApproximatelyUniqueRule()",
+            "rule_description": "If the ratio of approximate num distinct values in a column is close to the number of records (within the error of the HLL sketch), we suggest a UNIQUE constraint",
+            "code_for_constraint": ".isUnique(\"id\")"
+        },
+        {
+            "constraint_name": "CompletenessConstraint(Completeness(release_date,None))",
+            "column_name": "release_date",
+            "current_value": "Completeness: 0.982679296346414",
+            "description": "'release_date' has less than 3% missing values",
+            "suggesting_rule": "RetainCompletenessRule()",
+            "rule_description": "If a column is incomplete in the sample, we model its completeness as a binomial variable, estimate a confidence interval and use this to define a lower bound for the completeness",
+            "code_for_constraint": ".hasCompleteness(\"release_date\", lambda x: x >= 0.97, \"It should be above 0.97!\")"
+        }
+    ]
+}

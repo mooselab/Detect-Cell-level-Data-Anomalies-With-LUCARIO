@@ -1,0 +1,123 @@
+{
+  "provider_number": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": ["[0-9]{1,5}"]
+  },
+  "name": {
+    "type_constraint": "String", 
+    "categorical_constraint": ["huntsville hospital", "marshall medical center south", "baptist medical cexter south", "univ of soxth alabama medical center", "univ of south alabama medical center", "prattville baptist hospital", "coosa valley medical center", "alaska regional hospital", "georgiaxa hospital", "medixal xenter enterprise", "yukon kuskokwim delta reg hospital", "shelby baptist medical center", "east alabama medical center and snf", "mizell memorial hospital", "helen keller memorial hospital", "wedowee hospital", "cullmxn regionxl medicxl center", "dekalb regional medical center", "univ ox south alabama medical center", "wedowee hosxital", "andaluxia regional hoxpital", "university of alabama hospital", "fayette medical center", "marshall medical cenxer norxh", "st vincents blount", "flowers hospital", "baptist medical center south", "medical center enterprise", "medxcal center enterprxse", "decatur general hospital", "cullman regional medical center", "georgiana hospital", "xlxskx regionxl hospitxl", "andalusia regional hospital", "southeast alabama medical center", "cherokee medical center", "gadsden regional medical center", "southwest alabama medical center", "floxers hospital", "riverview regional medical center", "chilton medical center", "st vincents bxount", "callahan eye foundation hospital", "eliza coffee memorial hospital", "st vincents hospital", "st vincents east", "northwest medical center", "dale medical center", "g h lanier memorial hospital"], 
+    "numerical_constraint": null, 
+    "pattern_constraint": ["[A-Za-z\\s]+"]
+  },
+  "address_1": {
+    "type_constraint": "String", 
+    "categorical_constraint": null, 
+    "numerical_constraint": null, 
+    "pattern_constraint": ["[A-Za-z0-9\\s]+"]
+  },
+  "address_2": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": ["[a-zA-Z0-9\\s\\/\\-,\\.]+"]
+  },
+  "address_3": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": "^[a-zA-Z0-9\\s]+$"
+  },
+  "city": {
+    "type_constraint":"String", 
+    "categorical_constraint":["Guntersville", "Gadsden", "Bethel", "Hamilton", "Cullman", "Tallassee", "Winfield", "Andalusia", "Sheffield", "Prattville", "Anchorage", "Onxonta", "Georgiana", "Wedowee", "Elba", "Faxette", "Annston", "Tallaxxee", "Gxdsden", "Dothan", "Russellville", "Birminxham", "Birmingham", "Clanton", "Hamilxon", "Boaz", "Ozark", "Montgomery", "Anchoraxe", "Opp", "Exba", "Decatur", "Enterprise", "Fort Payxe", "Fxorence", "Centre", "Oneonta", "Winfield", "Birmingxam", "Alabaster", "Opelika", "Florence", "Anniston", "Mobile", "Enterprxse", "Fort Payne", "Sylacauga", "Florxncx", "Hartselle", "Bxrmxngham", "Wxdowxx", "Flxrence", "Fayette", "Birmixgham", "Xzark", "Geoxgiana", "Thomasville", "Xntxrprisx", "Luverne", "Montxomery", "Huntsville", "Birminghxm", "Valley", "Boxz", "Axxistox", "Ozarx", "Cuxxman"], 
+    "numerical_constraint":null,
+    "pattern_constraint":["[a-zA-Z]+"]
+  },
+  "state": {
+    "type_constraint": "String",
+    "categorical_constraint": ["AL", "AK"],
+    "numerical_constraint": null,
+    "pattern_constraint": ["[A-Z]{2}"]
+  },
+  "zip": {
+    "type_constraint":"String", 
+    "categorical_constraint":["99508","35957","35801"], 
+    "numerical_constraint":null, 
+    "pattern_constraint":["[0-9]{5}"]
+  },
+  "county":{
+    "type_constraint":"String", 
+    "categorical_constraint":["calhoun", "de kalb", "jefferson", "crenshaw", "bethel", "lee", "randolph", "dale", "cullman", "madison", "talladega", "morgan", "anchorage", "elmore", "shelby", "covington", "etowah", "tallaxega", "calhoxn", "chxrokxx", "monxgomery", "madisxn", "autauga", "coxington", "montgomery", "coffee", "houston", "jxffxrson", "laudxrdalx", "chambers", "butler", "crxnshaw", "blount", "coffxx", "jeffersxn", "marion", "cxllman", "elmoxe", "xe kalb", "clarke", "cherokee", "elxore", "dx kalb", "xlarke", "chaxbers", "chilton", "fayette", "lauderdale", "mobile"], 
+    "numerical_constraint":null,
+    "pattern_constraint":["[A-Za-z]+"]
+  },
+  "phone": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": ["\\d{10}|\\d{3}-\\d{3}-\\d{4}"]
+  },
+  "type": {
+    "type_constraint": "String",
+    "categorical_constraint": ["acute care hospitals", "acutexcarexhospitals"],
+    "numerical_constraint": null,
+    "pattern_constraint": ["[A-Za-z\\s]+(care|hospi)?tals"]
+  },
+  "owner": {
+    "type_constraint": "String",
+    "categorical_constraint": [
+      "voluntary non-profit - other",
+      "government - hospital district or authority",
+      "proprietary",
+      "government - local",
+      "government - federal",
+      "government - state"
+    ],
+    "numerical_constraint": null,
+    "pattern_constraint": ["[A-Za-z\\s-]+"]
+  },
+  "emergency_service": {
+    "type_constraint": "String",
+    "categorical_constraint": ["yes", "no"],
+    "numerical_constraint": null,
+    "pattern_constraint": ["[y,n]"]
+  },
+  "condition": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": ["[a-zA-Z\\s]+"]
+  },
+  "measure_code": {
+    "type_constraint": "String",
+    "categorical_constraint": null,
+    "numerical_constraint": null,
+    "pattern_constraint": ["[a-zA-Z]{2,}-[a-zA-Z0-9]{1,3}(-[a-zA-Z0-9]{1,3})?"]
+  },
+  "measure_name": {
+    "type_constraint":"String", 
+    "categorical_constraint":["heart attack patients given pci within 90 minutes of arrival", "all heart surgery patients whose blood sugar (blood glucose) is kept under good control in the days right after surgery", "surgery patients who were taking heart drugs called beta blockers before coming to the hospital who were kept on the beta blockers during the period just before and after their surgery", "children who received systemic corticosteroid medication (oral and iv medication that reduces inflammation and controls symptoms) while hospitalized for asthma", "heart attack patients given ace inhibitor or arb for left ventricular systolic dysfunction (lvsd)", "surgery patients whose preventive antibiotics were stopped at the right time (within 24 hours after surgery)", "pneumonia patients given initial antibiotic(s) within 6 hours after arrival", "children and their caregivers who received a home management plan of care document while hospitalized for asthma", "heart attack patients given aspirin at arrival", "surgery patients whose doctors ordered treatments to prevent blood clots after certain types of surgeries", "pneumonia patients given the most appropriate initial antibiotic(s)", "patients who got treatment  at the right time (within 24 hours before or after their surgery) to help prevent blood clots after certain types of surgery", "surgery patients who were given an antibiotic at the right time (within one hour before surgery) to help prevent infection", "heart attack patients given smoking cessation advice/counseling", "pneumonia patients assessed and given influenza vaccination"], 
+    "numerical_constraint":null,
+    "pattern_constraint":["[A-Za-z\\s\\,\\(\\)\\-\\&\\x00-x7E]*"]
+  },
+  "score": {
+    "type_constraint": "Numerical",
+    "categorical_constraint": null,
+    "numerical_constraint": [0, 100],
+    "pattern_constraint": ["\\d{1,3}%"]
+  },
+  "sample":{
+    "type_constraint":"Numerical",
+    "categorical_constraint":["empty"], 
+    "numerical_constraint":[0,1421], 
+    "pattern_constraint":["\\d{1,3} patients"]
+  },
+  "state_average": {
+    "type_constraint": "String",
+    "categorical_constraint": ["AK", "AL", "AX", "XL"],
+    "numerical_constraint": null,
+    "pattern_constraint": ["[A-Z]{2}"]
+  }
+}

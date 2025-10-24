@@ -1,0 +1,297 @@
+{
+  "feature": [
+    {
+      "name": "state",
+      "type": "BYTES",
+      "domain": "state",
+      "presence": {
+        "minFraction": 1.0,
+        "minCount": "1"
+      },
+      "shape": {
+        "dim": [
+          {
+            "size": "1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "zip",
+      "type": "INT",
+      "presence": {
+        "minFraction": 1.0,
+        "minCount": "1"
+      },
+      "shape": {
+        "dim": [
+          {
+            "size": "1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "phone",
+      "type": "BYTES",
+      "presence": {
+        "minFraction": 1.0,
+        "minCount": "1"
+      },
+      "shape": {
+        "dim": [
+          {
+            "size": "1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "mc",
+      "type": "BYTES",
+      "domain": "mc",
+      "presence": {
+        "minFraction": 1.0,
+        "minCount": "1"
+      },
+      "shape": {
+        "dim": [
+          {
+            "size": "1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "score",
+      "valueCount": {
+        "min": "1",
+        "max": "1"
+      },
+      "type": "BYTES",
+      "domain": "score",
+      "presence": {
+        "minCount": "1"
+      }
+    },
+    {
+      "name": "sample",
+      "valueCount": {
+        "min": "1",
+        "max": "1"
+      },
+      "type": "BYTES",
+      "presence": {
+        "minCount": "1"
+      }
+    },
+    {
+      "name": "stateavg",
+      "type": "BYTES",
+      "domain": "stateavg",
+      "presence": {
+        "minFraction": 1.0,
+        "minCount": "1"
+      },
+      "shape": {
+        "dim": [
+          {
+            "size": "1"
+          }
+        ]
+      }
+    }
+  ],
+  "stringDomain": [
+    {
+      "name": "state",
+      "value": [
+        "AK",
+        "AL",
+        "AaL",
+        "AdL",
+        "AfL",
+        "AiL",
+        "AlL",
+        "AmL",
+        "AnL",
+        "ApL",
+        "ArL",
+        "AtL",
+        "AvL",
+        "AwL",
+        "AyL",
+        "L",
+        "LA",
+        "aAL",
+        "bAL",
+        "cAL",
+        "eAL",
+        "fAL",
+        "hAL",
+        "iAL",
+        "jAL",
+        "mAL",
+        "nAL",
+        "oAL",
+        "pAL",
+        "qAL",
+        "sAL",
+        "tAL",
+        "uAL",
+        "vAL",
+        "wAL",
+        "xAL",
+        "yAL",
+        "zAL"
+      ]
+    },
+    {
+      "name": "mc",
+      "value": [
+        "AMI-1",
+        "AMI-2",
+        "AMI-3",
+        "AMI-4",
+        "AMI-5",
+        "AMI-7A",
+        "AMI-8A",
+        "CAC-1",
+        "CAC-2",
+        "CAC-3",
+        "HF-1",
+        "HF-2",
+        "HF-3",
+        "HF-4",
+        "PN-2",
+        "PN-3B",
+        "PN-4",
+        "PN-5C",
+        "PN-6",
+        "PN-7",
+        "SCIP-CARD-2",
+        "SCIP-INF-1",
+        "SCIP-INF-2",
+        "SCIP-INF-3",
+        "SCIP-INF-4",
+        "SCIP-INF-6",
+        "SCIP-VTE-1",
+        "SCIP-VTE-2"
+      ]
+    },
+    {
+      "name": "score",
+      "value": [
+        "0%",
+        "100%",
+        "12%",
+        "14%",
+        "25%",
+        "32%",
+        "33%",
+        "36%",
+        "38%",
+        "4%",
+        "40%",
+        "43%",
+        "45%",
+        "46%",
+        "47%",
+        "50%",
+        "53%",
+        "54%",
+        "57%",
+        "60%",
+        "62%",
+        "63%",
+        "64%",
+        "65%",
+        "66%",
+        "67%",
+        "68%",
+        "69%",
+        "71%",
+        "72%",
+        "74%",
+        "75%",
+        "76%",
+        "77%",
+        "78%",
+        "79%",
+        "80%",
+        "81%",
+        "82%",
+        "83%",
+        "84%",
+        "85%",
+        "86%",
+        "87%",
+        "88%",
+        "89%",
+        "90%",
+        "91%",
+        "92%",
+        "93%",
+        "94%",
+        "95%",
+        "96%",
+        "97%",
+        "98%",
+        "99%"
+      ]
+    },
+    {
+      "name": "stateavg",
+      "value": [
+        "AK_AMI-1",
+        "AK_AMI-2",
+        "AK_HF-1",
+        "AK_HF-2",
+        "AK_HF-3",
+        "AK_HF-4",
+        "AK_PN-2",
+        "AK_PN-3B",
+        "AK_PN-4",
+        "AK_PN-5C",
+        "AK_PN-6",
+        "AK_PN-7",
+        "AK_SCIP-CARD-2",
+        "AK_SCIP-INF-1",
+        "AK_SCIP-INF-2",
+        "AK_SCIP-INF-3",
+        "AK_SCIP-INF-4",
+        "AK_SCIP-INF-6",
+        "AK_SCIP-VTE-1",
+        "AK_SCIP-VTE-2",
+        "AL_AMI-1",
+        "AL_AMI-2",
+        "AL_AMI-3",
+        "AL_AMI-4",
+        "AL_AMI-5",
+        "AL_AMI-7A",
+        "AL_AMI-8A",
+        "AL_CAC-1",
+        "AL_CAC-2",
+        "AL_CAC-3",
+        "AL_HF-1",
+        "AL_HF-2",
+        "AL_HF-3",
+        "AL_HF-4",
+        "AL_PN-2",
+        "AL_PN-3B",
+        "AL_PN-4",
+        "AL_PN-5C",
+        "AL_PN-6",
+        "AL_PN-7",
+        "AL_SCIP-CARD-2",
+        "AL_SCIP-INF-1",
+        "AL_SCIP-INF-2",
+        "AL_SCIP-INF-3",
+        "AL_SCIP-INF-4",
+        "AL_SCIP-INF-6",
+        "AL_SCIP-VTE-1",
+        "AL_SCIP-VTE-2"
+      ]
+    }
+  ]
+}

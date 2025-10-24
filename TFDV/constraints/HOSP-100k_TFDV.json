@@ -1,0 +1,133 @@
+{
+  "feature": [
+    {
+      "name": "state",
+      "type": "BYTES",
+      "presence": {
+        "minFraction": 1.0,
+        "minCount": "1"
+      },
+      "shape": {
+        "dim": [
+          {
+            "size": "1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "zip",
+      "valueCount": {
+        "min": "1",
+        "max": "1"
+      },
+      "type": "FLOAT",
+      "presence": {
+        "minCount": "1"
+      }
+    },
+    {
+      "name": "phone",
+      "type": "BYTES",
+      "presence": {
+        "minFraction": 1.0,
+        "minCount": "1"
+      },
+      "shape": {
+        "dim": [
+          {
+            "size": "1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "mc",
+      "type": "BYTES",
+      "domain": "mc",
+      "presence": {
+        "minFraction": 1.0,
+        "minCount": "1"
+      },
+      "shape": {
+        "dim": [
+          {
+            "size": "1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "score",
+      "valueCount": {
+        "min": "1",
+        "max": "1"
+      },
+      "type": "BYTES",
+      "presence": {
+        "minCount": "1"
+      }
+    },
+    {
+      "name": "sample",
+      "valueCount": {
+        "min": "1",
+        "max": "1"
+      },
+      "type": "BYTES",
+      "presence": {
+        "minCount": "1"
+      }
+    },
+    {
+      "name": "stateavg",
+      "type": "BYTES",
+      "presence": {
+        "minFraction": 1.0,
+        "minCount": "1"
+      },
+      "shape": {
+        "dim": [
+          {
+            "size": "1"
+          }
+        ]
+      }
+    }
+  ],
+  "stringDomain": [
+    {
+      "name": "mc",
+      "value": [
+        "AMI-1",
+        "AMI-2",
+        "AMI-3",
+        "AMI-4",
+        "AMI-5",
+        "AMI-7A",
+        "AMI-8A",
+        "CAC-1",
+        "CAC-2",
+        "CAC-3",
+        "HF-1",
+        "HF-2",
+        "HF-3",
+        "HF-4",
+        "PN-2",
+        "PN-3B",
+        "PN-4",
+        "PN-5C",
+        "PN-6",
+        "PN-7",
+        "SCIP-CARD-2",
+        "SCIP-INF-1",
+        "SCIP-INF-2",
+        "SCIP-INF-3",
+        "SCIP-INF-4",
+        "SCIP-INF-6",
+        "SCIP-VTE-1",
+        "SCIP-VTE-2"
+      ]
+    }
+  ]
+}

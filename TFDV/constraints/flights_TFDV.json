@@ -1,0 +1,193 @@
+{
+  "feature": [
+    {
+      "name": "Flight varchar(55)",
+      "type": "BYTES",
+      "domain": "'Flight varchar(55)'",
+      "presence": {
+        "minFraction": 1.0,
+        "minCount": "1"
+      },
+      "shape": {
+        "dim": [
+          {
+            "size": "1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ScheduledDeparture time",
+      "valueCount": {
+        "min": "1",
+        "max": "1"
+      },
+      "type": "BYTES",
+      "presence": {
+        "minCount": "1"
+      }
+    },
+    {
+      "name": "ActualDeparture time",
+      "valueCount": {
+        "min": "1",
+        "max": "1"
+      },
+      "type": "BYTES",
+      "presence": {
+        "minCount": "1"
+      }
+    },
+    {
+      "name": "DepartureGate varchar(55)",
+      "valueCount": {
+        "min": "1",
+        "max": "1"
+      },
+      "type": "BYTES",
+      "presence": {
+        "minCount": "1"
+      }
+    },
+    {
+      "name": "ScheduledArrival time",
+      "valueCount": {
+        "min": "1",
+        "max": "1"
+      },
+      "type": "BYTES",
+      "presence": {
+        "minCount": "1"
+      }
+    },
+    {
+      "name": "ActualArrival time",
+      "valueCount": {
+        "min": "1",
+        "max": "1"
+      },
+      "type": "BYTES",
+      "presence": {
+        "minCount": "1"
+      }
+    },
+    {
+      "name": "ArrivalGate varchar(55)",
+      "valueCount": {
+        "min": "1",
+        "max": "1"
+      },
+      "type": "BYTES",
+      "presence": {
+        "minCount": "1"
+      }
+    }
+  ],
+  "stringDomain": [
+    {
+      "name": "Flight varchar(55)",
+      "value": [
+        "AA-1007-MIA-PHX",
+        "AA-1165-JFK-MIA",
+        "AA-1221-MCO-ORD",
+        "AA-1279-DFW-PHX",
+        "AA-1434-DFW-MCO",
+        "AA-1522-SFO-ORD",
+        "AA-1544-SAN-ORD",
+        "AA-1640-MIA-MCO",
+        "AA-1664-MIA-ATL",
+        "AA-1733-ORD-PHX",
+        "AA-1886-BOS-MIA",
+        "AA-1917-JFK-MCO",
+        "AA-204-LAX-MCO",
+        "AA-2050-ORD-MIA",
+        "AA-222-LAX-BOS",
+        "AA-2268-PHX-ORD",
+        "AA-2312-DFW-DTW",
+        "AA-2525-DFW-MIA",
+        "AA-271-MIA-LAX",
+        "AA-2957-DFW-CVG",
+        "AA-3-JFK-LAX",
+        "AA-3063-SLC-LAX",
+        "AA-3468-CVG-MIA",
+        "AA-3756-ORD-SLC",
+        "AA-3786-IAH-ORD",
+        "AA-3804-PHL-ORD",
+        "AA-3809-PHX-LAX",
+        "AA-3823-LAX-DEN",
+        "AA-3842-MSP-ORD",
+        "AA-3859-IAH-ORD",
+        "AA-3979-CVG-ORD",
+        "AA-400-DFW-JFK",
+        "AA-404-MIA-MCO",
+        "AA-415-BOS-ORD",
+        "AA-4198-ORD-CLE",
+        "AA-4277-CVG-JFK",
+        "AA-4307-ORD-DTW",
+        "AA-431-MIA-SFO",
+        "AA-4330-CVG-ORD",
+        "AA-4344-ORD-DTW",
+        "AA-446-DFW-PHL",
+        "AA-466-IAH-MIA",
+        "AA-484-DFW-MIA",
+        "AA-518-MIA-JFK",
+        "AA-59-JFK-SFO",
+        "AA-616-DFW-DTW",
+        "AA-643-MIA-ORD",
+        "AA-649-ORD-SNA",
+        "AA-789-ORD-DEN",
+        "AA-85-JFK-SFO",
+        "CO-1023-IAH-DEN",
+        "CO-1088-CLE-IAH",
+        "CO-1090-BOS-IAH",
+        "CO-1193-EWR-MCO",
+        "CO-1250-MIA-IAH",
+        "CO-1561-PHX-IAH",
+        "CO-1586-IAH-MCO",
+        "CO-16-LAX-EWR",
+        "CO-1614-LAX-IAH",
+        "CO-1694-LAX-IAH",
+        "CO-45-EWR-MIA",
+        "CO-47-IAH-LAX",
+        "CO-4888-IAH-DAL",
+        "CO-50-CLE-EWR",
+        "CO-52-IAH-LAX",
+        "CO-58-DEN-IAH",
+        "CO-62-IAH-EWR",
+        "CO-63-EWR-IAH",
+        "CO-89-IAH-EWR",
+        "UA-1500-IAH-GUA",
+        "UA-2314-ATL-PHL",
+        "UA-233-LAX-JFK",
+        "UA-248-PHX-ORD",
+        "UA-2515-DFW-CLT",
+        "UA-257-JFK-SFO",
+        "UA-2704-DTW-PHX",
+        "UA-2708-EWR-CLT",
+        "UA-2726-FLL-PHL",
+        "UA-2830-MCO-CLT",
+        "UA-2906-PHL-MCO",
+        "UA-2945-PHL-CLT",
+        "UA-3050-PHX-CLT",
+        "UA-3099-PHX-PHL",
+        "UA-3373-IAD-PHL",
+        "UA-3515-IAD-MSP",
+        "UA-37-EDI-EWR",
+        "UA-37-EWR-MCO",
+        "UA-382-IAD-LAX",
+        "UA-3925-IAD-ORF",
+        "UA-397-JFK-SFO",
+        "UA-414-LAX-SFO",
+        "UA-5487-SFO-MRY",
+        "UA-62-IAH-EWR",
+        "UA-6273-YYC-SFO",
+        "UA-664-ORD-PHL",
+        "UA-828-SFO-ORD",
+        "UA-843-LAX-ORD",
+        "UA-854-SFO-IAH",
+        "UA-858-PVG-SFO",
+        "UA-938-DEN-ORD"
+      ]
+    }
+  ]
+}
